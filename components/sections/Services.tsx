@@ -7,18 +7,15 @@ export default function Services() {
   const services = [
     {
       icon: <Flower2 className="w-10 h-10 text-[#C9A961]" strokeWidth={1.5} />,
-      title: 'Psychotherapy',
-      subtitle: 'Emotional Healing',
+      title: 'Psychotherapy'
     },
     {
       icon: <MessageCircle className="w-10 h-10 text-[#C9A961]" strokeWidth={1.5} />,
-      title: 'Counselling',
-      subtitle: 'Stress & Relationships',
+      title: 'Counselling'
     },
     {
       icon: <Sparkles className="w-10 h-10 text-[#C9A961]" strokeWidth={1.5} />,
-      title: 'NLP Coaching',
-      subtitle: 'Mindset & Growth',
+      title: 'NLP Coaching'
     },
   ];
 
@@ -37,7 +34,6 @@ export default function Services() {
               key={service.title}
               icon={service.icon}
               title={service.title}
-              subtitle={service.subtitle}
             />
           ))}
         </div>

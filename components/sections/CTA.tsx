@@ -8,7 +8,7 @@ export default function CTA() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground mb-3 text-balance">
-          Ready to Begin Your Healing Journey?
+          Don't see what you're looking for or have a question?
         </h2>
 
         {/* Description */}
@@ -18,9 +18,8 @@ export default function CTA() {
 
         {/* CTA Button */}
         <CustomButton
-          variant="dark"
+          variant="outline"
           size="lg"
-          className="bg-primary-foreground text-primary hover:bg-opacity-90"
         >
           Book Session →
         </CustomButton>

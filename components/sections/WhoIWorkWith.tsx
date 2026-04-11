@@ -8,8 +8,7 @@ export default function WhoIWorkWith() {
     'Professionals facing burnout',
     'Relationship challenges',
     'Life transitions',
-    'Emotional overwhelm',
-    'Immigrant adjustment',
+    'Emotional overwhelm'
   ];
 
   return (

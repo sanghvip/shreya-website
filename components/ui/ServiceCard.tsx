@@ -6,10 +6,9 @@ import { Flower2, MessageCircle, Brain } from 'lucide-react';
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
-  subtitle: string;
 }
 
-export default function ServiceCard({ icon, title, subtitle }: ServiceCardProps) {
+export default function ServiceCard({ icon, title }: ServiceCardProps) {
   return (
     <div className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
       {/* Icon Container */}
@@ -21,9 +20,6 @@ export default function ServiceCard({ icon, title, subtitle }: ServiceCardProps)
       <h3 className="text-lg font-semibold text-foreground text-center mb-2">
         {title}
       </h3>
-
-      {/* Subtitle */}
-      <p className="text-sm text-muted-foreground text-center mb-4">{subtitle}</p>
 
       {/* Learn More Link */}
       <div className="text-center">

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
+import Impact from '@/components/sections/Impact';
 import Services from '@/components/sections/Services';
 import WhoIWorkWith from '@/components/sections/WhoIWorkWith';
 import Testimonials from '@/components/sections/Testimonials';
@@ -24,6 +25,13 @@ export default function Home() {
 
       {/* Hero Section */}
       <Hero />
+
+      {/* Section Separator */}
+      <SectionSeparator variant="line" />
+
+      {/* Impact Section */}
+      <Impact />
+
 
       {/* Section Separator */}
       <SectionSeparator variant="line" />
