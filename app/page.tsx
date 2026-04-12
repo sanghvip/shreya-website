@@ -8,6 +8,7 @@ import WhoIWorkWith from '@/components/sections/WhoIWorkWith';
 import Testimonials from '@/components/sections/Testimonials';
 import CTA from '@/components/sections/CTA';
 import SectionSeparator from '@/components/ui/SectionSeparator';
+import Bio from '@/components/sections/Bio';
 
 export const metadata: Metadata = {
   title: 'Shreya Sanghvi | Psychotherapist & NLP Coach',
@@ -28,10 +29,15 @@ export default function Home() {
 
       {/* Section Separator */}
       <SectionSeparator variant="line" />
+      
+      {/* Bio Section */}
+      <Bio/>
+
+      {/* Section Separator */}
+      <SectionSeparator variant="line" />
 
       {/* Impact Section */}
       <Impact />
-
 
       {/* Section Separator */}
       <SectionSeparator variant="line" />

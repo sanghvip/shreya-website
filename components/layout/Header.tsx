@@ -27,7 +27,7 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <p className="text-lg font-semibold text-foreground">Shreya Sanghvi</p>
-              <p className="text-xs text-muted-foreground">Psychotherapist & NLP Coach</p>
+              <p className="text-xs text-muted-foreground">Life Coach</p>
             </div>
           </div>
 
