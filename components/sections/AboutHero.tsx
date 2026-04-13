@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { Heart, Award, Users, Sparkles } from 'lucide-react';
+import CustomButton from '../ui/CustomButton';
 
 export default function AboutHero() {
   return (
@@ -25,7 +26,7 @@ export default function AboutHero() {
           {/* Text Content */}
           <div className="flex flex-col justify-center order-1 md:order-2">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 text-balance leading-tight">
-              About Shreya Sanghvi
+              Shreya Sanghvi
             </h1>
 
             <p className="text-base md:text-lg text-foreground mb-6 leading-relaxed">
@@ -36,6 +37,11 @@ export default function AboutHero() {
               My approach integrates evidence-based therapeutic techniques with modern coaching methodologies to address the root causes of stress, anxiety, relationship challenges, and life transitions. I believe that every person has the capacity for growth and healing when provided with the right support and tools.
             </p>
           </div>
+        </div>
+        <div className="flex justify-center w-full mt-8">
+          <CustomButton variant="dark" size="md">
+            BEGIN YOUR JOURNEY
+          </CustomButton>
         </div>
       </div>
     </section>

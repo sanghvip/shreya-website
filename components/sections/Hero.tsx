@@ -54,6 +54,37 @@ export default function Hero() {
             <span className="text-sm font-medium text-foreground">Lives impacted</span>
           </div>
         </div>
+
+        <div className="bg-primary mt-12 md:mt-16 lg:mt-20 py-4 md:py-6 overflow-hidden rounded-lg">
+          <div className="animate-marquee whitespace-nowrap text-sm md:text-base lg:text-lg text-background font-medium italic">
+            <span className="flex items-center gap-3">
+              {Array.from({ length: 2 }).map((_, iteration) => (
+          <div key={iteration} className="flex items-center gap-3">
+            {['Relationship issue', 'Online Sessions', 'Individual Sessions', 'Parenting Workshop', 'Anxiety & Stress', 'Social & Emotional Learning', 'Grief & Loss', 'Corporate Wellness'].map((item, index) => (
+              <div key={`${iteration}-${index}`} className="flex items-center gap-3">
+          <span>{item}</span>
+          <Star size={16} className="text-[#C9A961] flex-shrink-0" />
+              </div>
+            ))}
+          </div>
+              ))}
+            </span>
+          </div>
+        </div>
+
+        <style jsx>{`
+          @keyframes marquee {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-70%);
+            }
+          }
+          .animate-marquee {
+            animation: marquee 40s linear infinite;
+          }
+        `}</style>
       </div>
     </section>
   );

@@ -18,7 +18,10 @@ export default function Impact() {
           <div className="bg-primary flex flex-col items-center justify-center gap-3 bg-card border border-border p-4 sm:p-6 rounded-lg min-h-40 sm:min-h-48 hover:shadow-lg hover:border-primary transition-all duration-300">
             <CalendarHeart className="w-7 sm:w-8 h-7 sm:h-8 text-[#C9A961] flex-shrink-0" strokeWidth={1.5} />
             <span className="text-base sm:text-lg font-medium text-primary-foreground text-center">
-              Therapy That Accommodates Your Schedule & Needs
+              Individual Sessions
+            </span>
+            <span className="text-base sm:text-lg italic font-small text-primary-foreground text-center">
+              One-on-one sessions designed to help you understand your emotions, process challenges, and build lasting mental and emotional wellbeing.
             </span>
           </div>
 
@@ -26,7 +29,10 @@ export default function Impact() {
           <div className="bg-primary flex flex-col items-center justify-center gap-3 bg-card border border-border p-4 sm:p-6 rounded-lg min-h-40 sm:min-h-48 hover:shadow-lg hover:border-primary transition-all duration-300">
             <CalendarClock className="w-7 sm:w-8 h-7 sm:h-8 text-[#C9A961] flex-shrink-0" strokeWidth={1.5} />
             <span className="text-base sm:text-lg font-medium text-primary-foreground text-center">
-              Evening & Weekend Availability for Your Convenience
+              Social & Emotional Learning
+            </span>
+            <span className="text-base sm:text-lg italic font-small text-primary-foreground text-center">
+              Custom SEL curricula, training programmes for individuals, organizations, family, teenagers — building emotionally intelligent communities.
             </span>
           </div>
 
@@ -34,7 +40,10 @@ export default function Impact() {
           <div className="bg-primary flex flex-col items-center justify-center gap-3 bg-card border border-border p-4 sm:p-6 rounded-lg min-h-40 sm:min-h-48 hover:shadow-lg hover:border-primary transition-all duration-300 sm:col-span-2 lg:col-span-1">
             <Armchair className="w-7 sm:w-8 h-7 sm:h-8 text-[#C9A961] flex-shrink-0" strokeWidth={1.5} />
             <span className="text-base sm:text-lg font-medium text-primary-foreground text-center">
-              Virtual/Phone Sessions Across Ontario for Accessibility
+              Corporate Wellness
+            </span>
+            <span className="text-base sm:text-lg italic font-small text-primary-foreground text-center">
+              Workshops and skill development programmes for employees and leadership teams — because corporate wellness at work is not a perk, it is a foundation.
             </span>
           </div>
         </div>

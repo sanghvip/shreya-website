@@ -13,12 +13,12 @@ export default function Bio() {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-full max-w-sm aspect-square">
               <Image
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop"
-                alt="Shreya Sanghvi - Psychotherapist and NLP Coach"
-                width={500}
-                height={500}
-                priority
-                className="rounded-lg object-cover w-full h-full"
+              src="/personalshot.png"
+              alt="Shreya Sanghvi - Psychotherapist and NLP Coach"
+              width={800}
+              height={800}
+              priority
+              className="rounded-lg object-cover w-full h-full"
               />
             </div>
           </div>
@@ -30,6 +30,11 @@ export default function Bio() {
               she founded the mind bridge- a counselling space and social  & emotional learning initiative to bridge the gap between mental health knowledge and everyday living.
             </p>
           </div>
+        </div>
+        <div className="bg-primary text-background italic rounded-lg p-6 md:p-8 lg:p-10 text-center">
+          <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed">
+            We are all capable of living extraordinary lives — sometimes we just need someone to help us find our way back to ourselves.
+          </p>
         </div>
       </div>
     </section>
