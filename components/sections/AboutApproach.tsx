@@ -28,7 +28,7 @@ export default function AboutApproach() {
 
   return (
     <section className="bg-background py-12 md:py-12 lg:py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4 text-center text-balance">
           My Therapeutic Approach
         </h2>

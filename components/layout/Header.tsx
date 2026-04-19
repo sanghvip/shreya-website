@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="bg-background border-b border-border">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-2">
@@ -27,7 +27,6 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <p className="text-lg font-semibold text-foreground">Shreya Sanghvi</p>
-              <p className="text-xs text-muted-foreground">Life Coach</p>
             </div>
           </div>
 

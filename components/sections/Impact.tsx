@@ -6,7 +6,7 @@ import { CalendarHeart, CalendarClock, Armchair } from 'lucide-react';
 export default function Impact() {
   return (
     <section className="bg-background py-8 md:py-12 lg:py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground text-center mb-4 text-balance">
           What You Can Expect in Therapy with Me
         </h2>
