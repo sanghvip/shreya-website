@@ -25,7 +25,7 @@ export default function Header() {
             <div className="w-10 h-10 flex items-center justify-center">
               <Flower2 className="w-8 h-8 text-[#C9A961]" strokeWidth={1.5} />
             </div>
-            <div className="hidden sm:block">
+            <div>
               <p className="text-lg font-semibold text-foreground">Shreya Sanghvi</p>
             </div>
           </div>
