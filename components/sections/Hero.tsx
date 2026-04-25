@@ -8,20 +8,21 @@ import { Globe, Shield, Star } from 'lucide-react';
 // Includes key pillars displayed as benefit pills below the main content
 export default function Hero() {
   return (
-    <section className="bg-background py-8 md:py-12 lg:py-16">
+    <section className="bg-background">
       <div className="px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
           {/* Text Content */}
-          <div className="flex flex-col justify-center">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#C9A961] mb-4 text-balance leading-tight">
-              Creating space for you to<br />
-              <span className="text-primary italic">feel, grow, heal & thrive</span>
-            </h1>
-
-            <p className="text-base md:text-lg text-foreground mb-6 leading-relaxed italic">
-              A safe empowering environment where emotions are understood,not feared-and where your most extraordinary self becomes possible.
-            </p>
-
+          <div className="flex flex-col py-8 md:py-12 lg:py-16 justify-center">
+            {/* Headline Text */}
+            <div className='flex flex-col'>
+              <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#C9A961] mb-4 text-balance leading-tight">
+                Creating space for you to<br />
+                <span className="text-primary italic"><em className='text-[#7A8C7E]'>feel, grow,</em> heal & thrive</span>
+              </h1>
+              <p className="text-base md:text-lg text-foreground mb-6 leading-relaxed italic">
+                A safe empowering environment where emotions are understood,not feared-and where your most extraordinary self becomes possible.
+              </p>
+            </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <CustomButton variant="dark" size="md" className="justify-center sm:justify-start">
@@ -31,6 +32,12 @@ export default function Hero() {
                 Free 15-min Consultation
               </CustomButton>
             </div>
+          </div>
+          <div className='flex flex-col h-full text-white p-4 rounded-lg' style={{background: 'linear-gradient(200deg, #FBF9F6 0%, #7A8C7E 50%, #3A5244 100%)'}}>
+            <p className="text-base md:text-lg font-medium drop-shadow-md">
+              You are not broken. 
+              <br/>You are in the process of becoming.
+            </p>
           </div>
         </div>
 
@@ -59,14 +66,14 @@ export default function Hero() {
           <div className="animate-marquee whitespace-nowrap text-sm md:text-base lg:text-lg text-background font-medium italic">
             <span className="flex items-center gap-3">
               {Array.from({ length: 2 }).map((_, iteration) => (
-          <div key={iteration} className="flex items-center gap-3">
-            {['Relationship issue', 'Online Sessions', 'Individual Sessions', 'Parenting Workshop', 'Anxiety & Stress', 'Social & Emotional Learning', 'Grief & Loss', 'Corporate Wellness'].map((item, index) => (
-              <div key={`${iteration}-${index}`} className="flex items-center gap-3">
-          <span>{item}</span>
-          <Star size={16} className="text-[#C9A961] flex-shrink-0" />
-              </div>
-            ))}
-          </div>
+                <div key={iteration} className="flex items-center gap-3">
+                  {['Relationship issue', 'Online Sessions', 'Individual Sessions', 'Parenting Workshop', 'Anxiety & Stress', 'Social & Emotional Learning', 'Grief & Loss', 'Corporate Wellness'].map((item, index) => (
+                    <div key={`${iteration}-${index}`} className="flex items-center gap-3">
+                      <span>{item}</span>
+                      <Star size={16} className="text-[#C9A961] flex-shrink-0" />
+                    </div>
+                  ))}
+                </div>
               ))}
             </span>
           </div>

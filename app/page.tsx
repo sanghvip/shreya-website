@@ -16,8 +16,6 @@ export const metadata: Metadata = {
     'Find clarity, healing, and transformation. Online therapy and coaching sessions across Canada with Shreya Sanghvi, a registered psychotherapist and NLP certified coach.',
 };
 
-// Main landing page for Shreya Sanghvi psychotherapy practice
-// Combines all modular components in a cohesive, responsive layout
 export default function Home() {
   return (
     <main className="bg-background text-foreground min-h-screen">

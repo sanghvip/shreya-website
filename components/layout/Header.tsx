@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { Menu, X, Flower2 } from 'lucide-react';
 
-// Header component featuring logo, navigation menu, and CTA button
-// Includes mobile hamburger menu that toggles navigation visibility
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
