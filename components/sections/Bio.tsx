@@ -26,8 +26,12 @@ export default function Bio() {
           {/* Text Content */}
           <div className="flex flex-col justify-center text-left">
             <p className="text-base md:text-lg text-foreground mb-6 leading-relaxed italic">
-              Shreya Sanghvi is an NLP practioner, founder, and Women Indian chamber of commerce chapter head for wellness who believes in transformative power of emotional intelligence with a masters degree from IGNOU and a diploma in relationship counselling from [-------]. She brings both clinical rigor and deep human warmth to every session. 
-              she founded the mind bridge- a counselling space and social  & emotional learning initiative to bridge the gap between mental health knowledge and everyday living.
+              We are all capable of extraordinary lives
+I believe emotions are not the enemy  they are the compass. We often fall prey to the huge emotional elephant that sometimes controls the rational rider inside all of us. My work is about helping you understand that elephant, befriend it, and ultimately guide it.
+With a challenging start to my own life, I understand more than most the importance of mental and emotional wellbeing  especially in the growing years. That lived experience shapes everything I do: every session, every curriculum, every workshop.
+Therapy for me is not about fixing people. It is about reminding them of the extraordinary capacity for growth and transformation that was always already inside them.
+Shreya
+
             </p>
           </div>
         </div>

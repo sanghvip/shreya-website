@@ -4,12 +4,10 @@ import Image from 'next/image';
 import CustomButton from '@/components/ui/CustomButton';
 import { Globe, Shield, Star } from 'lucide-react';
 
-// Hero section featuring headline, description, CTA buttons, and professional portrait
-// Includes key pillars displayed as benefit pills below the main content
 export default function Hero() {
   return (
     <section className="bg-background">
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="sm:pl-6 lg:pl-6">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
           {/* Text Content */}
           <div className="flex flex-col py-8 md:py-12 lg:py-16 justify-center">
@@ -33,7 +31,7 @@ export default function Hero() {
               </CustomButton>
             </div>
           </div>
-          <div className='flex flex-col h-full text-white p-4 rounded-lg' style={{background: 'linear-gradient(200deg, #FBF9F6 0%, #7A8C7E 50%, #3A5244 100%)'}}>
+          <div className='flex flex-col h-full text-white p-4' style={{background: 'linear-gradient(180deg, #FBF9F6 0%, #7A8C7E 50%, #3A5244 100%)'}}>
             <p className="text-base md:text-lg font-medium drop-shadow-md">
               You are not broken. 
               <br/>You are in the process of becoming.
@@ -62,7 +60,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="bg-primary mt-12 md:mt-16 lg:mt-20 py-4 md:py-6 overflow-hidden rounded-lg">
+        <div className="bg-primary mt-12 md:mt-16 lg:mt-20 py-4 md:py-6 lg:px-0 overflow-hidden">
           <div className="animate-marquee whitespace-nowrap text-sm md:text-base lg:text-lg text-background font-medium italic">
             <span className="flex items-center gap-3">
               {Array.from({ length: 2 }).map((_, iteration) => (
