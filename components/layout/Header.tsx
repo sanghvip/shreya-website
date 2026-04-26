@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="bg-background border-b border-border">
       <div className="px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-row items-center justify-between">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 flex items-center justify-center">
@@ -29,7 +29,9 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <div className='flex flex-row'>
+          <div className='flex flex-row justify-end mr-5 items-center'>
+          <nav className="hidden md:flex gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -40,10 +42,12 @@ export default function Header() {
               </a>
             ))}
           </nav>
+          </div>
 
           {/* Desktop CTA Button */}
+          <div className='flex flex-row'>
           <button className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-90 transition-all text-sm font-medium">
-            Book a Session
+            BOOK A FREE CALL
           </button>
 
           {/* Mobile Menu Button */}
@@ -58,6 +62,8 @@ export default function Header() {
               <Menu className="w-6 h-6 text-foreground" />
             )}
           </button>
+          </div>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
