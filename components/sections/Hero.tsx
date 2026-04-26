@@ -36,12 +36,12 @@ export default function Hero() {
           </div>
           <div className='flex flex-col h-full justify-end text-white p-4' style={{background: 'linear-gradient(180deg, #FAF8F4 0%, #7A8C7E 50%, #3A5244 100%)'}}>
             <div className='flex flex-col justify-center'>
-              <p className="text-3xl mb-0 text-center font-serif font-light leading-[1.3] lg:mb-20 mx-auto md:text-lg lg:text-4xl drop-shadow-md italic">
-                "Your nervous system is not broken.
+              <p className="text-xl mb-0 text-center font-serif font-light leading-[1.3] lg:mb-20 mx-auto md:text-lg lg:text-2xl drop-shadow-md italic">
+                Your nervous system is not broken.
                 <br />It is running a programme
-                <br />that outlined its original purpose"
+                <br />that outlined its original purpose
                 <br />You are in the process of
-                <br />becoming."
+                <br />becoming.
               </p>
             </div>
             <div className='flex flex-col gap-4 mt-10 sm:py-2 lg:py-2 md:py-2'>
