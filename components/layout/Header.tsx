@@ -9,13 +9,13 @@ export default function Header() {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Services', href: '#' }
+    { label: 'Services', href: '/services' }
   ];
 
   return (
     <header className="bg-background border-b border-border">
       <div className="px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between font-serif">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 flex items-center justify-center">

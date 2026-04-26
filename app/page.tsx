@@ -2,9 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
-import Impact from '@/components/sections/Impact';
-import Services from '@/components/sections/Services';
-import WhoIWorkWith from '@/components/sections/WhoIWorkWith';
+import Services from '@/app/services/Services';
 import Testimonials from '@/components/sections/Testimonials';
 import CTA from '@/components/sections/CTA';
 import SectionSeparator from '@/components/ui/SectionSeparator';
@@ -34,20 +32,20 @@ export default function Home() {
       {/* Section Separator */}
       <SectionSeparator variant="line" />
 
-      {/* Impact Section */}
-      <Impact />
-
-      {/* Section Separator */}
-      <SectionSeparator variant="line" />
-
       {/* Services Section */}
       <Services />
 
       {/* Section Separator */}
-      <SectionSeparator variant="line" />
+      {/* <SectionSeparator variant="line" /> */}
+
+      {/* Services Section */}
+      {/* <Services /> */}
+
+      {/* Section Separator */}
+      {/* <SectionSeparator variant="line" /> */}
 
       {/* Who I Work With Section */}
-      <WhoIWorkWith />
+      {/* <WhoIWorkWith /> */}
 
       {/* Section Separator */}
       <SectionSeparator variant="line" />

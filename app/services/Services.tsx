@@ -89,7 +89,7 @@ const services = [
   }
 ];
 
-export default function Impact() {
+export default function Services() {
   return (
     <section className="bg-background py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,20 +112,19 @@ export default function Impact() {
           {services.map((svc, index) => (
             <div 
               key={index} 
-              className="group flex flex-col space-y-6 p-8 -m-8 rounded-2xl transition-all duration-500 hover:bg-[#7A8C7E]/5 border border-transparent"
+              className="group flex flex-col space-y-6 p-8 -m-8 rounded-2xl transition-all duration-500 hover:bg-[#3A5244]/5 border border-transparent"
             >
               <div className="space-y-4">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A8C7E] block font-medium">
                   {svc.id}
                 </span>
                 <div className="w-12 h-[1px] bg-[#C9A961] transition-all duration-700 group-hover:w-24" />
-                <h3 className="text-3xl font-serif text-primary leading-tight transition-colors duration-500 group-hover:text-[#7A8C7E]">
+                <h3 className="text-3xl font-serif text-primary leading-tight font-bold transition-colors duration-500 group-hover:text-[#7A8C7E]">
                   {svc.title}
                 </h3>
               </div>
 
-              {/* Description at full opacity */}
-              <p className="text-[#7A8C7E] text-[15px] leading-relaxed font-serif">
+              <p className="text-black text-[15px] leading-relaxed font-serif">
                 {svc.description}
               </p>
 
@@ -133,11 +132,10 @@ export default function Impact() {
                 <p className="text-[10px] font-bold tracking-widest text-[#C9A961] uppercase">
                   {svc.outcomeLabel}
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 font-serif">
                   {svc.outcomes.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <ArrowRight className="w-4 h-4 text-[#C9A961] mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
-                      {/* Text at full opacity */}
                       <span className="text-[14px] text-primary leading-snug">{item}</span>
                     </li>
                   ))}
@@ -155,7 +153,7 @@ export default function Impact() {
                 ))}
               </div>
 
-              <p className="text-[13px] leading-relaxed text-primary pt-4 border-t border-black/10 italic mt-auto">
+              <p className="text-[13px] leading-relaxed text-primary pt-4 border-t border-black/10 font-serif italic mt-auto">
                 <strong className="text-primary not-italic font-bold">For: </strong>
                 {svc.for}
               </p>
