@@ -8,17 +8,19 @@ export default function Hero() {
   return (
     <section className="bg-background">
       <div className="sm:pl-6 lg:pl-6">
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 md:gap-12 items-center">
           {/* Text Content */}
-          <div className="flex flex-col py-8 md:py-12 lg:py-16 justify-center">
+          <div className="flex flex-col py-8 px-4 md:py-12 lg:py-16 justify-center">
             {/* Headline Text */}
-            <div className='flex flex-col'>
-              <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#C9A961] mb-4 text-balance leading-tight">
-                Creating space for you to<br />
-                <span className="text-primary italic"><em className='text-[#7A8C7E]'>feel, grow,</em> heal & thrive</span>
+            <div className='flex flex-col mt-3 text-center md:text-left lg:text-left'>
+              <h1 className="text-3xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom font-bold text-[#C9A961] mb-4 text-balance leading-loose">
+                Creating space to<br />
+                <span className="text-primary italic">
+                  <em className='text-[#7A8C7E]'>feel, grow,</em> 
+                  <br/>heal & thrive</span>
               </h1>
-              <p className="text-base md:text-lg text-foreground mb-6 leading-relaxed italic">
-                A safe empowering environment where emotions are understood,not feared-and where your most extraordinary self becomes possible.
+              <p className="text-[#7A8C7E] text-sm md:text-lg mb-6 leading-relaxed italic">
+                A safe empowering environment where emotions are understood, <br/>not feared-and where your most extraordinary self becomes possible.
               </p>
             </div>
             {/* CTA Buttons */}
@@ -31,37 +33,36 @@ export default function Hero() {
               </CustomButton>
             </div>
           </div>
-          <div className='flex flex-col h-full text-white p-4' style={{background: 'linear-gradient(180deg, #FBF9F6 0%, #7A8C7E 50%, #3A5244 100%)'}}>
-            <p className="text-base md:text-lg font-medium drop-shadow-md">
-              You are not broken. 
-              <br/>You are in the process of becoming.
+          <div className='flex flex-col h-full text-white p-4' style={{background: 'linear-gradient(180deg, #FAF8F4 0%, #7A8C7E 50%, #3A5244 100%)'}}>
+            <div className='flex flex-col justify-center'>
+            <p className="text-3xl mb-0 text-center font-serif font-light leading-[1.3] lg:mb-90 mx-auto md:text-lg lg:text-5xl drop-shadow-md italic">
+              "You are not broken. 
+              <br/>You are in the process of 
+              <br/>becoming."
             </p>
+            </div>
+            <div className='flex flex-col gap-4 mt-10 bg-[#1C2B1E] rounded-lg sm:py-2 lg:py-2 md:py-2'>
+              <div className='flex flex-row justify-center mt-5 lg:mt-5 text-[#D4BFA0] tracking-[.2em] font-serif text-xs'>THE MAKING OF YOU</div>
+              <div className="flex flex-row gap-2 lg:gap-8 justify-center w-full py-3">
+                <div className='flex flex-col justify-center items-center'>
+                  <div className='text-[#C9A961] text-2xl lg:text-4xl font-serif'>5+</div>
+                  <div className='text-[#FAF8F4] text-xs mt-2'>Years in Practice</div>
+                </div>
+                <div className='flex flex-col justify-center items-center'>
+                  <div className='text-[#C9A961] text-2xl lg:text-4xl font-serif'>3,000+</div>
+                  <div className='text-[#FAF8F4] text-xs mt-2'>Hours of support/training</div>
+                </div>
+                <div className='flex flex-col justify-center items-center'>
+                  <div className='text-[#C9A961] text-2xl lg:text-4xl font-serif'>1,000+</div>
+                  <div className='text-[#FAF8F4] text-xs mt-2'>Lives impacted</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Key Pillars - Benefit Pills */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
-          {/* Pill 1: Years in Practice */}
-          <div className="flex flex-col items-center gap-2 bg-card border border-border p-6 rounded-lg hover:shadow-md transition-shadow text-center">
-            <span className="text-4xl md:text-5xl font-bold text-[#C9A961]" style={{ fontFamily: 'Google Sans, sans-serif' }}>5+</span>
-            <span className="text-sm font-medium text-foreground">Years in practice</span>
-          </div>
-
-          {/* Pill 2: Hours of Support */}
-          <div className="flex flex-col items-center gap-2 bg-card border border-border p-6 rounded-lg hover:shadow-md transition-shadow text-center">
-            <span className="text-4xl md:text-5xl font-bold text-[#C9A961]" style={{ fontFamily: 'Google Sans, sans-serif' }}>3000+</span>
-            <span className="text-sm font-medium text-foreground">Hours of support/training</span>
-          </div>
-
-          {/* Pill 3: Clients Supported */}
-          <div className="flex flex-col items-center gap-2 bg-card border border-border p-6 rounded-lg hover:shadow-md transition-shadow text-center">
-            <span className="text-4xl md:text-5xl font-bold text-[#C9A961]" style={{ fontFamily: 'Google Sans, sans-serif' }}>1000+</span>
-            <span className="text-sm font-medium text-foreground">Lives impacted</span>
-          </div>
-        </div>
-
-        <div className="bg-primary mt-12 md:mt-16 lg:mt-20 py-4 md:py-6 lg:px-0 overflow-hidden">
-          <div className="animate-marquee whitespace-nowrap text-sm md:text-base lg:text-lg text-background font-medium italic">
+      </div>
+      <div className="bg-black px-0 py-2 lg:px-0 overflow-hidden">
+          <div className="animate-marquee whitespace-nowrap text-sm md:text-sm lg:text-sm text-background italic">
             <span className="flex items-center gap-3">
               {Array.from({ length: 2 }).map((_, iteration) => (
                 <div key={iteration} className="flex items-center gap-3">
@@ -90,7 +91,6 @@ export default function Hero() {
             animation: marquee 40s linear infinite;
           }
         `}</style>
-      </div>
     </section>
   );
 }

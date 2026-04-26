@@ -24,7 +24,7 @@ export default function Header() {
               <Flower2 className="w-8 h-8 text-[#C9A961]" strokeWidth={1.5} />
             </div>
             <div>
-              <p className="text-lg font-semibold text-foreground">Shreya Sanghvi</p>
+              <p className="text-2xl lg:text-2xl lg:font-semibold text-foreground">Shreya Sanghvi</p>
             </div>
           </div>
 
