@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neurom — NLP · Relationship Counselling · Leadership & Change · Toronto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --iv:#FAF8F3;--iv2:#F4F0E8;--iv3:#EBE5D8;--iv4:#E0D8C8;
+  --deep:#1A2B1C;--deep2:#223124;--deep3:#2A3C2C;
+  --sage:#6B8C72;--sage-l:#A8C4AE;--sage-d:#3D5E44;--sage-bg:#EAF0EB;
+  --om:#8B6B3D;--om-l:#C4A878;--om-d:#5E4520;--om-bg:#F5EDD8;
+  --text:#22332A;--muted:#7A8E80;--ghost:#DDD8CC;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--iv);color:var(--text);font-weight:300;line-height:1.65}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--sage-bg);color:var(--sage-d)}
+
+.container{max-width:1180px;margin:0 auto;padding:0 56px}
+.eyebrow{font-size:10px;font-weight:400;letter-spacing:.26em;text-transform:uppercase;color:var(--om)}
+section{padding:100px 0}
+.sec-head{text-align:center;margin-bottom:60px}
+.sec-h{font-family:var(--serif);font-size:clamp(40px,4.2vw,62px);font-weight:300;color:var(--deep);margin-top:14px;line-height:1.06}
+.sec-h em{font-style:italic;color:var(--sage)}
+.sec-sub{font-size:14px;color:var(--muted);max-width:520px;margin:14px auto 0;line-height:1.85}
+
+.btn{display:inline-block;padding:12px 32px;background:var(--deep);color:var(--iv);font-size:11px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;border-radius:1px;transition:all .2s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn:hover{background:var(--sage-d)}
+.btn-o{background:transparent;border:.5px solid var(--deep);color:var(--deep)}.btn-o:hover{background:var(--deep);color:var(--iv)}
+.btn-w{background:transparent;border:.5px solid rgba(255,255,255,.55);color:var(--iv)}.btn-w:hover{background:var(--iv);color:var(--deep)}
+.btn-om{background:var(--om);color:var(--iv)}.btn-om:hover{background:var(--om-d)}
+.btn-sm{padding:9px 22px;font-size:10px}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:400;background:rgba(250,248,243,.97);border-bottom:.5px solid var(--ghost);height:70px;backdrop-filter:blur(8px)}
+.hdr{max-width:1180px;margin:0 auto;padding:0 56px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:baseline;gap:9px}
+.logo-n{font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:.02em;color:var(--deep);line-height:1}
+.logo-s{font-size:9px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--sage)}
+nav{display:flex;align-items:center;gap:26px}
+.nav-a{font-size:11px;letter-spacing:.06em;color:var(--muted);font-weight:400;transition:color .15s}.nav-a:hover{color:var(--text)}
+.nav-drop{position:relative}
+.nav-drop-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--iv);border:.5px solid var(--ghost);padding:8px 0;min-width:200px;display:none;z-index:500}
+.nav-drop:hover .nav-drop-menu{display:block}
+.nav-drop-item{display:block;padding:8px 18px;font-size:12px;color:var(--muted);transition:color .15s}.nav-drop-item:hover{color:var(--text);background:var(--iv2)}
+
+/* HERO */
+.hero{min-height:calc(100vh - 70px);display:grid;grid-template-columns:54% 46%;overflow:hidden}
+.hero-l{padding:80px 56px;display:flex;flex-direction:column;justify-content:center}
+.hero-pre{display:flex;align-items:center;gap:12px;margin-bottom:36px}
+.hero-h{font-family:var(--serif);font-size:clamp(54px,5.5vw,84px);font-weight:300;line-height:1.02;color:var(--deep);letter-spacing:-.018em;margin-bottom:30px}
+.hero-h em{font-style:italic;color:var(--sage)}
+.hero-h .om{color:var(--om)}
+.hero-p{font-size:15px;line-height:1.9;color:var(--muted);max-width:460px;margin-bottom:44px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:52px}
+.hero-trust{display:flex;gap:32px;padding-top:36px;border-top:.5px solid var(--ghost);flex-wrap:wrap}
+.trust-val{font-family:var(--serif);font-size:30px;font-weight:300;color:var(--deep);line-height:1;display:block}
+.trust-lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px;display:block}
+.hero-r{display:flex;flex-direction:column;background:var(--deep)}
+.hero-r-main{flex:1;background:linear-gradient(145deg,var(--deep) 0%,var(--deep3) 45%,#324A36 100%);position:relative;display:flex;align-items:center;justify-content:center;padding:60px 52px;overflow:hidden}
+.hero-r-main::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 70% 40%,rgba(107,140,114,.18) 0%,transparent 70%)}
+.orb{position:absolute;border-radius:50%;border:.5px solid rgba(107,140,114,.12)}
+.hero-quote{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:300;font-style:italic;color:rgba(250,248,243,.82);text-align:center;line-height:1.5;max-width:320px;position:relative;z-index:2}
+.hero-quote-attr{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--om-l);margin-top:18px;text-align:center;position:relative;z-index:2}
+.hero-r-bar{background:var(--om);padding:22px 44px;display:flex;justify-content:space-around;gap:16px}
+.hbar-val{font-family:var(--serif);font-size:24px;font-weight:300;color:var(--iv);line-height:1;display:block}
+.hbar-lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,248,243,.65);margin-top:4px;display:block}
+
+/* MARQUEE */
+.mq{background:var(--sage-d);padding:13px 0;overflow:hidden;white-space:nowrap}
+.mq-inner{display:inline-block;animation:mq 34s linear infinite}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.mq-item{display:inline-block;font-family:var(--serif);font-size:14px;font-weight:300;font-style:italic;color:rgba(250,248,243,.45);padding:0 30px}
+.mq-dot{color:var(--om-l)}
+
+/* PHILOSOPHY */
+.phil-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:96px;align-items:start}
+.phil-h{font-family:var(--serif);font-size:clamp(38px,3.8vw,54px);font-weight:300;line-height:1.1;color:var(--deep);margin:16px 0 26px}
+.phil-h em{font-style:italic;color:var(--sage)}
+.phil-body{font-size:14px;line-height:1.95;color:var(--muted);margin-bottom:14px}
+.presup{border-bottom:.5px solid var(--iv3);padding:22px 26px;position:relative;transition:background .18s;cursor:default}
+.presup:last-child{border-bottom:none}
+.presup:hover{background:var(--iv2)}
+.presup::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:transparent;transition:background .18s}
+.presup:hover::before{background:var(--om)}
+.ps-num{font-size:9.5px;letter-spacing:.2em;color:var(--om);margin-bottom:8px;font-weight:400}
+.ps-t{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--deep);margin-bottom:5px}
+.ps-d{font-size:13px;color:var(--muted);line-height:1.72}
+
+/* ABOUT / PRACTITIONER */
+.about{background:var(--iv2)}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:88px;align-items:start}
+.about-img-block{position:relative}
+.about-img{width:100%;aspect-ratio:4/5;background:linear-gradient(160deg,var(--sage-bg),#C4D5C7 50%,var(--sage) 100%);border-radius:1px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.about-img-text{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-style:italic;font-weight:300;color:rgba(28,43,30,.55);text-align:center;padding:40px}
+.about-badge{position:absolute;bottom:-20px;right:-20px;background:var(--deep);color:var(--iv);padding:20px 24px;text-align:center}
+.ab-val{font-family:var(--serif);font-size:30px;font-weight:300;line-height:1}
+.ab-lbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-l);margin-top:4px}
+.about-h{font-family:var(--serif);font-size:clamp(36px,3.5vw,50px);font-weight:300;color:var(--deep);line-height:1.1;margin:14px 0 22px}
+.about-h em{font-style:italic;color:var(--sage)}
+.about-body{font-size:14px;line-height:1.95;color:var(--muted);margin-bottom:14px}
+.about-creds{margin-top:28px}
+.about-cred{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:.5px solid var(--iv3)}
+.about-cred:last-child{border-bottom:none}
+.cred-dot{width:8px;height:8px;border-radius:50%;background:var(--sage);flex-shrink:0;margin-top:5px}
+.cred-t{font-size:13.5px;font-weight:400;color:var(--deep);margin-bottom:3px}
+.cred-d{font-size:12px;color:var(--muted);line-height:1.6}
+.about-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:24px}
+.at{font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border:.5px solid var(--ghost);color:var(--muted);background:var(--iv)}
+
+/* APPROACH / FBT */
+.appr-grid{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.appr-h{font-family:var(--serif);font-size:clamp(36px,3.5vw,50px);font-weight:300;color:var(--deep);line-height:1.12;margin:14px 0 22px}
+.appr-h em{font-style:italic;color:var(--sage)}
+.appr-body{font-size:14px;line-height:1.95;color:var(--muted);margin-bottom:14px}
+.fbt{display:flex;flex-direction:column;gap:3px;margin-bottom:28px}
+.fbt-step{display:flex;align-items:stretch}
+.fbt-letter{font-family:var(--serif);font-size:52px;font-weight:300;color:var(--iv3);width:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--deep);line-height:1;transition:color .2s}
+.fbt-step:hover .fbt-letter{color:var(--om-l)}
+.fbt-content{flex:1;padding:20px 24px;background:var(--iv2);border-left:2px solid var(--sage);transition:background .2s}
+.fbt-step:hover .fbt-content{background:var(--iv)}
+.fbt-word{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--om);margin-bottom:5px}
+.fbt-text{font-size:13px;color:var(--muted);line-height:1.7}
+.method-box{background:var(--iv2);border:.5px solid var(--ghost);padding:20px 22px;margin-bottom:10px;border-left:2px solid transparent;transition:all .18s}
+.method-box:hover{border-left-color:var(--sage);background:var(--iv)}
+.mb-t{font-size:13px;font-weight:400;color:var(--deep);margin-bottom:4px}
+.mb-d{font-size:12px;color:var(--muted);line-height:1.68}
+
+/* HOW IT WORKS */
+.hiw{background:var(--deep)}
+.hiw-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:52px}
+.hiw-step{background:var(--deep);padding:40px 30px;position:relative;transition:background .18s}
+.hiw-step:hover{background:var(--deep2)}
+.hiw-step::after{content:'→';position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--sage);z-index:2}
+.hiw-step:last-child::after{display:none}
+.hiw-n{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--sage);line-height:1;margin-bottom:18px}
+.hiw-t{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--iv);margin-bottom:10px;line-height:1.2}
+.hiw-d{font-size:13px;color:#7A9A80;line-height:1.75}
+.hiw-note{margin-top:48px;background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.08);padding:24px 32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hiw-note-t{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--iv);font-weight:300}
+.hiw-note-d{font-size:13px;color:#7A9A80;flex:1;line-height:1.7}
+
+/* SERVICES */
+.services{background:var(--iv2)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--ghost)}
+.svc{background:var(--iv2);padding:44px 34px;display:flex;flex-direction:column;transition:background .2s}.svc:hover{background:var(--iv)}
+.svc-n{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--om);margin-bottom:18px;display:block}
+.svc-bar{width:28px;height:1.5px;background:var(--sage);margin-bottom:18px}
+.svc-title{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--deep);margin-bottom:12px;line-height:1.12}
+.svc-desc{font-size:13px;line-height:1.88;color:var(--muted);flex:1}
+.svc-outcomes{margin-top:18px;padding-top:14px;border-top:.5px solid var(--iv3)}
+.svc-out-lbl{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--om);margin-bottom:10px}
+.svc-out-list{list-style:none}
+.svc-out-list li{font-size:12px;color:var(--text);padding:5px 0;border-bottom:.5px solid var(--iv3);display:flex;gap:8px;align-items:flex-start;line-height:1.4}
+.svc-out-list li:last-child{border-bottom:none}
+.svc-out-list li::before{content:'→';color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px}
+.svc-tag{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border:.5px solid var(--ghost);color:var(--muted)}
+.svc-who{margin-top:14px;padding-top:12px;border-top:.5px solid var(--iv3);font-size:12px;color:var(--muted);line-height:1.65}
+.svc-who b{color:var(--sage-d);font-weight:500}
+
+/* SPECIALTIES */
+.specs{background:var(--iv)}
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--ghost)}
+.spec{background:var(--iv);padding:28px 24px;transition:background .15s}.spec:hover{background:var(--iv2)}
+.spec-dot{width:6px;height:6px;border-radius:50%;background:var(--sage);margin-bottom:14px}
+.spec-t{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--deep);margin-bottom:7px;line-height:1.2}
+.spec-d{font-size:12px;color:var(--muted);line-height:1.65}
+
+/* PACKAGES */
+.packages{background:var(--iv3)}
+.pkg-tabs{display:flex;background:var(--ghost)}
+.pkg-tab{padding:14px 28px;font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s;border-right:.5px solid var(--ghost);color:var(--muted);background:var(--iv2);flex:1;text-align:center}
+.pkg-tab.active{background:var(--deep);color:var(--iv)}
+.pkg-panel{display:none}.pkg-panel.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--ghost)}
+.pkg-card{background:var(--iv);padding:40px 30px;display:flex;flex-direction:column;position:relative;transition:background .2s}
+.pkg-card:hover{background:var(--iv2)}
+.pkg-card.feat{background:var(--deep)}
+.pkg-card.feat:hover{background:var(--deep2)}
+.pkg-badge{position:absolute;top:20px;right:20px;background:var(--om);color:var(--iv);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px}
+.pkg-tier{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--om);margin-bottom:16px}
+.pkg-card.feat .pkg-tier{color:var(--om-l)}
+.pkg-name{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--deep);margin-bottom:8px;line-height:1.1}
+.pkg-card.feat .pkg-name{color:var(--iv)}
+.pkg-tag{font-size:12px;color:var(--muted);margin-bottom:18px;line-height:1.55}
+.pkg-card.feat .pkg-tag{color:var(--sage-l)}
+.pkg-price{font-family:var(--serif);font-size:38px;font-weight:300;color:var(--deep);line-height:1;margin-bottom:5px}
+.pkg-card.feat .pkg-price{color:var(--iv)}
+.pkg-pnote{font-size:11px;color:var(--muted);margin-bottom:22px;letter-spacing:.04em}
+.pkg-card.feat .pkg-pnote{color:var(--sage-l)}
+.pkg-div{width:100%;height:.5px;background:var(--iv3);margin-bottom:18px}
+.pkg-card.feat .pkg-div{background:rgba(255,255,255,.08)}
+.pkg-feats{list-style:none;flex:1}
+.pkg-feats li{font-size:12.5px;color:var(--text);padding:8px 0;border-bottom:.5px solid var(--iv3);display:flex;align-items:flex-start;gap:10px;line-height:1.42}
+.pkg-card.feat .pkg-feats li{color:rgba(250,248,243,.75);border-color:rgba(255,255,255,.07)}
+.pkg-feats li:last-child{border-bottom:none}
+.pkg-chk{width:14px;height:14px;border-radius:50%;background:var(--sage-bg);border:.5px solid var(--sage);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:8px;color:var(--sage-d)}
+.pkg-card.feat .pkg-chk{background:rgba(107,140,114,.2);border-color:var(--sage-l);color:var(--sage-l)}
+.pkg-cta{margin-top:22px}
+.pkg-note{font-size:11.5px;color:var(--muted);text-align:center;margin-top:24px;line-height:1.75;padding:16px;background:var(--iv);border:.5px solid var(--ghost)}
+
+/* WHO I WORK WITH */
+.who{background:var(--iv)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--ghost)}
+.who-card{background:var(--iv);padding:40px 34px;border-left:2px solid transparent;transition:all .2s}.who-card:hover{border-left-color:var(--sage);background:var(--iv2)}
+.who-bar{width:32px;height:1.5px;background:var(--om);margin-bottom:20px}
+.who-title{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--deep);margin-bottom:10px;line-height:1.1}
+.who-desc{font-size:13px;line-height:1.85;color:var(--muted);margin-bottom:16px}
+.who-list{list-style:none}
+.who-list li{font-size:13px;color:var(--text);padding:7px 0;border-bottom:.5px solid var(--iv3);display:flex;align-items:center;gap:10px;line-height:1.4}
+.who-list li:last-child{border-bottom:none}
+.who-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--sage);flex-shrink:0}
+
+/* EVENTS */
+.events{background:var(--deep)}
+.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:52px}
+.ev{background:var(--deep);padding:40px 36px;transition:background .18s;display:flex;gap:28px}
+.ev:hover{background:var(--deep2)}
+.ev-num{font-family:var(--serif);font-size:46px;font-weight:300;color:var(--sage);line-height:1;flex-shrink:0}
+.ev-cat{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--om-l);margin-bottom:10px}
+.ev-title{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--iv);margin-bottom:10px;line-height:1.2}
+.ev-desc{font-size:13px;color:#7A9A80;line-height:1.78;margin-bottom:14px}
+.ev-meta{display:flex;gap:20px;flex-wrap:wrap}
+.ev-mi{font-size:11px;color:rgba(250,248,243,.38);letter-spacing:.06em}
+.ev-mi b{color:rgba(250,248,243,.65);font-weight:400}
+.circle-cta{margin-top:48px;background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.08);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.circle-h{font-family:var(--serif);font-size:24px;font-weight:300;font-style:italic;color:var(--iv)}
+.circle-sub{font-size:13px;color:var(--sage-l);margin-top:6px}
+.circle-form{display:flex;gap:10px;flex-wrap:wrap}
+.c-input{padding:10px 16px;border:.5px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:var(--iv);font-family:var(--sans);font-size:13px;font-weight:300;outline:none;min-width:220px;border-radius:1px}
+.c-input::placeholder{color:rgba(255,255,255,.28)}
+.c-input:focus{border-color:var(--sage-l)}
+
+/* WORKSHOPS */
+.workshops{background:var(--iv2)}
+.ws-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--ghost)}
+.ws{background:var(--iv2);padding:36px 30px;display:flex;flex-direction:column;transition:background .2s}.ws:hover{background:var(--iv)}
+.ws-cat{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--om);margin-bottom:14px}
+.ws-bar{width:28px;height:1.5px;background:var(--sage);margin-bottom:16px}
+.ws-title{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--deep);margin-bottom:11px;line-height:1.15}
+.ws-desc{font-size:13px;color:var(--muted);line-height:1.82;flex:1}
+.ws-what{margin-top:16px;padding-top:14px;border-top:.5px solid var(--iv3)}
+.ws-what-lbl{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--om);margin-bottom:8px}
+.ws-what-list{list-style:none}
+.ws-what-list li{font-size:12px;color:var(--text);padding:4px 0;display:flex;gap:7px}
+.ws-what-list li::before{content:'·';color:var(--sage);flex-shrink:0}
+.ws-meta{margin-top:14px;padding-top:12px;border-top:.5px solid var(--iv3)}
+.ws-mr{display:flex;justify-content:space-between;font-size:12px;margin-bottom:5px}
+.ws-ml{color:var(--muted)}.ws-mv{color:var(--text);font-weight:400}
+.ws-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+.ws-tag{font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:3px 8px;border:.5px solid var(--ghost);color:var(--muted)}
+
+/* GRATITUDE JOURNAL */
+.journal{background:var(--om-bg);border-top:.5px solid var(--iv3);border-bottom:.5px solid var(--iv3)}
+.journal-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+.jnl-badge{display:inline-block;font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:5px 12px;background:var(--om);color:var(--iv);margin-bottom:20px}
+.jnl-h{font-family:var(--serif);font-size:clamp(34px,3.5vw,50px);font-weight:300;color:var(--deep);line-height:1.1;margin-bottom:18px}
+.jnl-h em{font-style:italic;color:var(--om)}
+.jnl-body{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:16px}
+.jnl-chapters{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--iv3)}
+.jnl-ch{background:var(--iv);padding:18px 20px;transition:background .15s}.jnl-ch:hover{background:var(--om-bg)}
+.jnl-ch-n{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--om);margin-bottom:5px}
+.jnl-ch-t{font-family:var(--serif);font-size:15px;font-weight:400;color:var(--deep);line-height:1.25}
+.jnl-ch-d{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.55}
+
+/* CONTENT PILLARS */
+.pillars{background:var(--iv)}
+.pillars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--ghost);margin-top:48px}
+.pillar{background:var(--iv);padding:28px 22px;transition:background .18s;text-align:center;cursor:default}
+.pillar:hover{background:var(--iv2)}
+.pillar-pct{font-family:var(--serif);font-size:40px;font-weight:300;color:var(--deep);line-height:1;margin-bottom:10px}
+.pillar-t{font-family:var(--serif);font-size:16px;font-weight:400;color:var(--deep);margin-bottom:8px;line-height:1.2}
+.pillar-d{font-size:12px;color:var(--muted);line-height:1.65}
+.pillar-bar-outer{width:100%;height:3px;background:var(--iv3);margin-top:14px}
+.pillar-bar-inner{height:3px;background:var(--sage);transition:width .6s ease}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--ghost)}
+.t-card{background:var(--iv);padding:36px 28px;transition:background .18s}.t-card:hover{background:var(--iv2)}
+.t-stars{display:flex;gap:3px;margin-bottom:16px}
+.t-star{width:10px;height:10px;background:var(--om);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.t-q{font-family:var(--serif);font-size:16px;font-weight:300;font-style:italic;color:var(--deep);line-height:1.65;margin-bottom:20px}
+.t-name{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--om)}
+.t-role{font-size:12px;color:var(--muted);margin-top:3px}
+
+/* IMPACT */
+.impact{background:var(--sage-d);padding:80px 0}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08);margin-top:48px}
+.imp-c{background:var(--sage-d);padding:40px 28px;transition:background .18s}.imp-c:hover{background:#3E6048}
+.imp-n{font-family:var(--serif);font-size:46px;font-weight:300;color:var(--iv);line-height:1;margin-bottom:10px}
+.imp-t{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--iv);margin-bottom:8px;line-height:1.2}
+.imp-d{font-size:12.5px;color:rgba(250,248,243,.52);line-height:1.72}
+.imp-source{font-size:10px;color:rgba(250,248,243,.3);margin-top:10px;letter-spacing:.06em}
+
+/* SHREYA COLLAB */
+.collab{background:var(--iv2)}
+.collab-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--ghost)}
+.col-card{background:var(--iv2);padding:44px 36px;transition:background .2s}.col-card:hover{background:var(--iv)}
+.col-tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--om);margin-bottom:18px;display:block}
+.col-title{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--deep);margin-bottom:12px;line-height:1.1}
+.col-body{font-size:13px;color:var(--muted);line-height:1.85;margin-bottom:16px}
+.col-list{list-style:none}
+.col-list li{font-size:13px;color:var(--text);padding:7px 0;border-bottom:.5px solid var(--iv3);display:flex;align-items:flex-start;gap:9px;line-height:1.4}
+.col-list li:last-child{border-bottom:none}
+.col-list li::before{content:'→';color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px}
+
+/* CREDENTIALS BAR */
+.creds-bar{background:var(--deep2);padding:56px 0}
+.creds-inner{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.cred-b{background:var(--deep2);padding:28px 24px;text-align:center;transition:background .15s}.cred-b:hover{background:var(--deep)}
+.cred-b-val{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--iv);line-height:1;margin-bottom:6px}
+.cred-b-lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,248,243,.45)}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--ghost);margin-top:52px}
+.blog-card{background:var(--iv);padding:32px 28px;display:flex;flex-direction:column;transition:background .18s}.blog-card:hover{background:var(--iv2)}
+.blog-cat{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--om);margin-bottom:14px}
+.blog-t{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--deep);line-height:1.3;margin-bottom:10px}
+.blog-ex{font-size:13px;color:var(--muted);line-height:1.78;flex:1}
+.blog-read{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-d);margin-top:18px;transition:gap .15s}.blog-read:hover{gap:10px}
+.blog-read::after{content:'→'}
+
+/* FAQ */
+.faq{background:var(--iv2)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--ghost);margin-top:52px}
+.faq-item{background:var(--iv2);padding:22px 26px;cursor:pointer;user-select:none;transition:background .15s}
+.faq-item.open{background:var(--iv)}
+.faq-q{font-size:13.5px;font-weight:400;color:var(--deep);line-height:1.4;display:flex;justify-content:space-between;align-items:start;gap:14px}
+.faq-ico{flex-shrink:0;width:18px;height:18px;border:.5px solid var(--ghost);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted);transition:all .2s;margin-top:1px}
+.faq-item.open .faq-ico{background:var(--sage-d);color:var(--iv);border-color:var(--sage-d)}
+.faq-a{font-size:13px;color:var(--muted);line-height:1.82;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;padding-top:0}
+.faq-item.open .faq-a{max-height:500px;padding-top:12px}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:88px;align-items:start}
+.contact-h{font-family:var(--serif);font-size:clamp(36px,3.5vw,50px);font-weight:300;color:var(--deep);line-height:1.1;margin:14px 0 22px}
+.contact-h em{font-style:italic;color:var(--sage)}
+.contact-body{font-size:14px;line-height:1.9;color:var(--muted);margin-bottom:30px}
+.c-item{display:flex;gap:13px;align-items:flex-start;margin-bottom:16px}
+.c-ico{width:36px;height:36px;border-radius:50%;background:var(--iv2);border:.5px solid var(--ghost);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px}
+.c-lbl{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);margin-bottom:2px;font-weight:500;display:block}
+.c-val{font-size:13px;color:var(--muted);display:block}
+.avail{margin-top:22px;padding:16px 18px;background:var(--iv2);border:.5px solid var(--ghost);display:flex;flex-direction:column;gap:10px}
+.av-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text)}
+.av-dot{width:6px;height:6px;border-radius:50%;background:var(--sage);flex-shrink:0}
+.form-box{background:var(--iv2);padding:38px 34px;border:.5px solid var(--ghost)}
+.form-title{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--deep);margin-bottom:6px}
+.form-sub{font-size:13px;color:var(--muted);margin-bottom:22px;line-height:1.6}
+.f-row{margin-bottom:14px}
+.f-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f-lbl{display:block;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.f-in,.f-sel,.f-area{width:100%;padding:10px 13px;border:.5px solid var(--ghost);background:var(--iv);color:var(--text);font-family:var(--sans);font-size:13.5px;font-weight:300;transition:border-color .15s;outline:none;border-radius:1px}
+.f-in:focus,.f-sel:focus,.f-area:focus{border-color:var(--sage)}
+.f-area{height:88px;resize:none;line-height:1.6}
+.f-sub{width:100%;padding:13px;margin-top:4px;font-size:11px;letter-spacing:.15em}
+
+/* CTA BANNER */
+.cta{background:var(--deep);padding:100px 56px;text-align:center}
+.cta-h{font-family:var(--serif);font-size:clamp(38px,5vw,68px);font-weight:300;color:var(--iv);line-height:1.06;max-width:680px;margin:16px auto 22px}
+.cta-h em{font-style:italic;color:var(--sage-l)}
+.cta-p{font-size:14px;color:#7A9A80;margin-bottom:44px;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.8}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:var(--iv);border-top:.5px solid var(--ghost)}
+.ft-top{padding:64px 0 48px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;border-bottom:.5px solid var(--iv3)}
+.ft-tag{font-size:13px;color:var(--muted);line-height:1.8;margin-top:14px;max-width:260px;font-weight:300}
+.ft-seal{display:inline-flex;align-items:center;gap:7px;margin-top:18px;padding:7px 12px;border:.5px solid var(--ghost)}
+.ft-seal-dot{width:5px;height:5px;border-radius:50%;background:var(--sage)}
+.ft-seal-t{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ft-mission{margin-top:16px;padding:14px 16px;background:var(--iv2);border-left:2px solid var(--sage)}
+.ft-mt{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-d);margin-bottom:5px;font-weight:500}
+.ft-mq{font-family:var(--serif);font-size:13px;font-weight:300;font-style:italic;color:var(--deep);line-height:1.5}
+.ft-col-h{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--om);margin-bottom:16px}
+.ft-lnk{display:block;font-size:12.5px;color:var(--muted);margin-bottom:9px;transition:color .15s;line-height:1.4}.ft-lnk:hover{color:var(--text)}
+.ft-bottom{padding:22px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.ft-copy{font-size:11px;color:var(--muted)}
+.ft-socials{display:flex;gap:20px}
+.ft-socials a{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:color .15s}.ft-socials a:hover{color:var(--text)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .container{padding:0 36px}.hdr{padding:0 36px}.hero-l{padding:64px 36px}
+  .ft-top{grid-template-columns:1fr 1fr;gap:32px}
+  .pillars-grid{grid-template-columns:repeat(3,1fr)}
+  .hiw-steps{grid-template-columns:repeat(2,1fr)}
+  .spec-grid{grid-template-columns:repeat(2,1fr)}
+  .creds-inner{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:768px){
+  .hdr{padding:0 24px}.container{padding:0 24px}
+  nav .nav-a{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}.hero-r{min-height:240px}.hero-l{padding:52px 24px}
+  section{padding:72px 0}
+  .phil-grid,.appr-grid,.contact-grid,.journal-inner,.about-grid,.collab-grid{grid-template-columns:1fr;gap:48px}
+  .svc-grid,.ws-grid,.event-grid,.testi-grid,.blog-grid,.faq-grid,.pkg-grid,.impact-grid,.who-grid,.spec-grid,.pillars-grid,.creds-inner{grid-template-columns:1fr}
+  .pkg-tabs{flex-direction:column}.hero-trust{gap:20px}.circle-cta{flex-direction:column}
+  .ft-top{grid-template-columns:1fr;gap:28px}.ft-bottom{flex-direction:column;text-align:center}
+  .cta{padding:72px 24px}.jnl-chapters{grid-template-columns:1fr}.f-2{grid-template-columns:1fr}
+  .hiw-steps{grid-template-columns:1fr}.hiw-step::after{display:none}
+  .about-badge{bottom:10px;right:10px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="hdr">
+    <a href="#" class="logo">
+      <span class="logo-n">Neurom</span>
+      <span class="logo-s">Back to your original signal</span>
+    </a>
+    <nav>
+      <a href="#about" class="nav-a">About</a>
+      <div class="nav-drop">
+        <a href="#services" class="nav-a">Services ▾</a>
+        <div class="nav-drop-menu">
+          <a href="#services" class="nav-drop-item">NLP & Counselling</a>
+          <a href="#services" class="nav-drop-item">Relationship Counselling</a>
+          <a href="#services" class="nav-drop-item">Leadership Coaching</a>
+          <a href="#services" class="nav-drop-item">Corporate Wellness</a>
+          <a href="#services" class="nav-drop-item">Career Counselling</a>
+          <a href="#services" class="nav-drop-item">Gratitude Workshops</a>
+        </div>
+      </div>
+      <a href="#packages" class="nav-a">Packages</a>
+      <a href="#events" class="nav-a">Events</a>
+      <a href="#journal" class="nav-a">The Journal</a>
+      <a href="#blog" class="nav-a">Blog</a>
+      <a href="#contact" class="btn">Book a free call</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section style="padding:0" class="hero">
+  <div class="hero-l">
+    <div class="hero-pre">
+      <div style="width:28px;height:.5px;background:var(--om)"></div>
+      <span class="eyebrow">NLP Practitioner &nbsp;·&nbsp; Relationship Counsellor &nbsp;·&nbsp; Leadership & Change &nbsp;·&nbsp; Toronto</span>
+    </div>
+    <h1 class="hero-h">Back to your<br><em>original</em><br><span class="om">signal.</span></h1>
+    <p class="hero-p">Neuro — the nervous system. Om — the Sanskrit ground of wholeness. Neurom is the space where neuroscience meets the soul: evidence-based NLP, relationship counselling, and leadership work for people who are ready to understand why they do what they do — and finally, really, change it.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn">Book a free 15-min call</a>
+      <a href="#approach" class="btn btn-o">Explore the approach</a>
+    </div>
+    <div class="hero-trust">
+      <div><span class="trust-val">NLP</span><span class="trust-lbl">Certified practitioner</span></div>
+      <div><span class="trust-val">F·B·T</span><span class="trust-lbl">Original framework</span></div>
+      <div><span class="trust-val">GBC</span><span class="trust-lbl">Adult learning programme</span></div>
+      <div><span class="trust-val">TEDx</span><span class="trust-lbl">Circle speaker</span></div>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="hero-r-main">
+      <div class="orb" style="width:380px;height:380px;right:-80px;top:50%;transform:translateY(-50%);position:absolute"></div>
+      <div class="orb" style="width:260px;height:260px;right:-40px;top:50%;transform:translateY(-50%);position:absolute;border-color:rgba(139,107,61,.12)"></div>
+      <div>
+        <p class="hero-quote">"Your nervous system is not broken. It is running a programme that outlived its original purpose."</p>
+        <p class="hero-quote-attr">— The Neurom approach</p>
+      </div>
+    </div>
+    <div class="hero-r-bar">
+      <div style="text-align:center"><span class="hbar-val">NLP</span><span class="hbar-lbl">State-first</span></div>
+      <div style="text-align:center"><span class="hbar-val">F·B·T</span><span class="hbar-lbl">Feeling leads</span></div>
+      <div style="text-align:center"><span class="hbar-val">🇨🇦</span><span class="hbar-lbl">Toronto · online</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="mq-inner">
+    <span class="mq-item">NLP Counselling <span class="mq-dot">·</span></span>
+    <span class="mq-item">Relationship Therapy <span class="mq-dot">·</span></span>
+    <span class="mq-item">The F-B-T Link <span class="mq-dot">·</span></span>
+    <span class="mq-item">Leadership & Change <span class="mq-dot">·</span></span>
+    <span class="mq-item">Corporate Wellness <span class="mq-dot">·</span></span>
+    <span class="mq-item">The Neurom Circle <span class="mq-dot">·</span></span>
+    <span class="mq-item">Gratitude Practice <span class="mq-dot">·</span></span>
+    <span class="mq-item">Adult Learning <span class="mq-dot">·</span></span>
+    <span class="mq-item">Emotional Intelligence <span class="mq-dot">·</span></span>
+    <span class="mq-item">Career Counselling <span class="mq-dot">·</span></span>
+    <span class="mq-item">South Asian community, Toronto <span class="mq-dot">·</span></span>
+    <span class="mq-item">Hindi sessions available <span class="mq-dot">·</span></span>
+    <span class="mq-item">NLP Counselling <span class="mq-dot">·</span></span>
+    <span class="mq-item">Relationship Therapy <span class="mq-dot">·</span></span>
+    <span class="mq-item">The F-B-T Link <span class="mq-dot">·</span></span>
+    <span class="mq-item">Leadership & Change <span class="mq-dot">·</span></span>
+    <span class="mq-item">Corporate Wellness <span class="mq-dot">·</span></span>
+    <span class="mq-item">The Neurom Circle <span class="mq-dot">·</span></span>
+    <span class="mq-item">Gratitude Practice <span class="mq-dot">·</span></span>
+    <span class="mq-item">Adult Learning <span class="mq-dot">·</span></span>
+    <span class="mq-item">Emotional Intelligence <span class="mq-dot">·</span></span>
+    <span class="mq-item">Career Counselling <span class="mq-dot">·</span></span>
+    <span class="mq-item">South Asian community, Toronto <span class="mq-dot">·</span></span>
+    <span class="mq-item">Hindi sessions available <span class="mq-dot">·</span></span>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section id="about">
+  <div class="container">
+    <div class="phil-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px"><div style="width:28px;height:.5px;background:var(--om)"></div><span class="eyebrow">The philosophy</span></div>
+        <h2 class="phil-h">The feeling always<br>comes <em>first</em></h2>
+        <p class="phil-body">Most approaches to personal change start in the wrong place: the rational mind. 'Change your thinking and your behaviour will follow.' This is almost never true — because behaviour does not live in the rational brain. It lives in the nervous system, in the emotional patterns formed long before you had words for them.</p>
+        <p class="phil-body">The Neurom approach starts where you actually are — in a feeling state. The F-B-T Link (Feeling → Behaviour → Thought), developed through years of practice, reflects a simple insight: when we meet the feeling first, the behaviour becomes navigable. When the behaviour shifts, the thought transforms naturally. Not through effort. Through understanding.</p>
+        <p class="phil-body">Neurom is also built on the belief that culturally fluent mental health is not a luxury — it is a clinical necessity. For South Asian Canadians navigating the intersection of family expectations, immigration stress, identity pressure, and professional ambition, a practitioner who understands both the clinical framework and the cultural context changes everything.</p>
+        <div style="font-family:var(--serif);font-size:20px;font-style:italic;color:var(--sage-d);margin-top:26px">— Neurom</div>
+        <a href="#approach" class="btn btn-o" style="margin-top:28px;display:inline-block">The F-B-T approach →</a>
+      </div>
+      <div>
+        <div class="presup"><div class="ps-num">NLP Presupposition 01</div><div class="ps-t">The map is not the territory</div><p class="ps-d">Your experience of reality is your map of it — drawn by your history, your nervous system, your language. The map is not reality. Maps can be redrawn. When you feel stuck, you are not stuck in reality — you are stuck in your current map of it. NLP is the practice of updating the map.</p></div>
+        <div class="presup"><div class="ps-num">NLP Presupposition 02</div><div class="ps-t">Every behaviour has a positive intention</div><p class="ps-d">The anger, the avoidance, the people-pleasing, the inner critic — every pattern, however painful or self-destructive it appears, is protecting something or meeting a need. This is not an excuse. It is information. When you understand what a behaviour is protecting you from, you can find a better way to meet that need.</p></div>
+        <div class="presup"><div class="ps-num">NLP Presupposition 03</div><div class="ps-t">There is no failure — only feedback</div><p class="ps-d">You did not fail. You got a result that was not the one you wanted. That result tells you something about what needs to change. This reframe — from failure to feedback — is one of the most practically liberating ideas in all of NLP. It is also rigorously supported by the learning science.</p></div>
+        <div class="presup"><div class="ps-num">NLP Presupposition 04</div><div class="ps-t">You have all the resources you need</div><p class="ps-d">You are not broken and you are not missing something. The work is about accessing what is already within your lived experience — not installing something new, but finding what was always there. This is why NLP begins with your best memories, your peak states, your own existing emotional intelligence.</p></div>
+        <div class="presup"><div class="ps-num">NLP Presupposition 05</div><div class="ps-t">The meaning of communication is the response you get</div><p class="ps-d">If someone consistently misunderstands you, the NLP approach is not 'they're not listening.' It is 'what can I do differently?' Not because you are always wrong, but because communication is a feedback loop, and you are responsible for your half of it. Quietly revolutionary in every relationship.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / PRACTITIONER -->
+<section class="about" id="practitioner">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-block">
+        <div class="about-img">
+          <p class="about-img-text">"From chaos to calm — juggling life, work &amp; everything in between."</p>
+        </div>
+        <div class="about-badge">
+          <div class="ab-val">Toronto</div>
+          <div class="ab-lbl">Downtown · Online</div>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:12px"><div style="width:28px;height:.5px;background:var(--om)"></div><span class="eyebrow">The practitioner</span></div>
+        <h2 class="about-h">Shreya <em>Sanghvi</em></h2>
+        <p class="about-body">Shreya Sanghvi is a counselling psychologist, certified NLP practitioner, certified career counsellor, adult learning specialist, and the author of the forthcoming Gratitude Journal. She is currently completing the Workplace Learning and Adult Education programme at George Brown College and is a TEDx Circle Speaker on authenticity and growth.</p>
+        <p class="about-body">Originally from India, where she founded Psychologia Connect — India's first web-based psychology services platform — Shreya now works with individuals, couples, and organisations in Toronto. Her practice sits at a rare intersection: clinical depth, cultural fluency, and genuine lived experience of navigating two worlds simultaneously.</p>
+        <p class="about-body">She developed the F-B-T Link (Feeling → Behaviour → Thought) through years of practice — a coaching framework that starts where people actually are, not where we'd like them to be. This insight runs through every session, every workshop, and every piece of content Neurom produces.</p>
+        <div class="about-creds">
+          <div class="about-cred"><div class="cred-dot"></div><div><div class="cred-t">Certified NLP Practitioner</div><div class="cred-d">Certified in Neuro-Linguistic Programming techniques including anchoring, submodalities, parts work, timeline work, and the meta-model</div></div></div>
+          <div class="about-cred"><div class="cred-dot"></div><div><div class="cred-t">Counselling Psychologist</div><div class="cred-d">Trained across five major clinical settings — trained in neuro-psychology, psychiatry, clinical psychology, de-addiction counselling, and general psychology</div></div></div>
+          <div class="about-cred"><div class="cred-dot"></div><div><div class="cred-t">Certified Career Counsellor</div><div class="cred-d">Specialist in career transitions, newcomer pathway navigation, values-based direction, and professional identity</div></div></div>
+          <div class="about-cred"><div class="cred-dot"></div><div><div class="cred-t">George Brown College — Workplace Learning & Adult Education</div><div class="cred-d">Current programme: Adult Learning Fundamentals, Learning Facilitation & Delivery, Learning Needs Assessment (LNA), Bloom's Taxonomy applied practice</div></div></div>
+          <div class="about-cred"><div class="cred-dot"></div><div><div class="cred-t">TEDx Circle Speaker</div><div class="cred-d">Speaker on authenticity, growth, and the internal conditions that make transformation possible — not just the external steps</div></div></div>
+          <div class="about-cred"><div class="cred-dot"></div><div><div class="cred-t">Founder — Psychologia Connect (India)</div><div class="cred-d">India's first web-based psychology platform — corporate, clinical, counselling, and sports psychology. Multi-sector network of verified practitioners. Proof that the model works.</div></div></div>
+        </div>
+        <div class="about-tags">
+          <span class="at">NLP</span><span class="at">F-B-T Link</span><span class="at">Adult Learning</span><span class="at">Bloom's Taxonomy</span><span class="at">Andragogy</span><span class="at">Career Counselling</span><span class="at">Attachment Theory</span><span class="at">Gottman Method</span><span class="at">Polyvagal Theory</span><span class="at">Hindi · English</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw" id="how">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--om-l)">The process</span>
+      <h2 class="sec-h" style="color:var(--iv)">What happens<br><em style="color:var(--sage-l)">when you work with us</em></h2>
+      <p class="sec-sub" style="color:#7A9A80">Every session follows a deliberate structure — not a script, but a framework that ensures the work goes to the level where change actually happens.</p>
+    </div>
+    <div class="hiw-steps">
+      <div class="hiw-step">
+        <div class="hiw-n">01</div>
+        <div class="hiw-t">The free intro call</div>
+        <p class="hiw-d">15 minutes. No forms, no pressure. You tell us briefly what's going on. We explain what Neurom does and how. Both of us decide if it's the right fit. If it is — we book session one. If it isn't — we'll tell you honestly who we think would serve you better.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-n">02</div>
+        <div class="hiw-t">Session one: the feeling</div>
+        <p class="hiw-d">The first session begins with the F-B-T Link: we start at the feeling. Not a questionnaire — a real conversation. What is the emotional state that is most getting in your way? Where do you feel it in your body? What does it protect you from? The session stays here until we understand it.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-n">03</div>
+        <div class="hiw-t">The NLP work</div>
+        <p class="hiw-d">Once the feeling is understood, we introduce the specific NLP technique most relevant to what the session has revealed — anchoring, submodality shift, parts integration, reframing, the swish pattern, or timeline work. You experience it, not just understand it. You leave with a specific tool to practise before the next session.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-n">04</div>
+        <div class="hiw-t">The change between sessions</div>
+        <p class="hiw-d">The 23 hours between sessions are where real change happens — in the moment of awareness, the micro-choice, the noticing. Every session ends with a specific homework practice. You bring what you noticed back to the next session. The work compounds. This is how lasting change is built — not in a room, but in real life.</p>
+      </div>
+    </div>
+    <div class="hiw-note">
+      <div class="hiw-note-t">A note on how long it takes</div>
+      <p class="hiw-note-d">Some patterns shift noticeably in 3–4 sessions. Others — particularly deep attachment patterns, identity-level beliefs, or long-standing emotional responses — require 8–12 sessions to work properly. We will always be honest about what we think the work requires. We do not prolong sessions unnecessarily. We do not cut them short when they need more time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH / FBT -->
+<section id="approach">
+  <div class="container">
+    <div class="appr-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px"><div style="width:28px;height:.5px;background:var(--om)"></div><span class="eyebrow">The framework</span></div>
+        <h2 class="appr-h">The <em>F-B-T Link</em> —<br>Feeling, Behaviour, Thought</h2>
+        <p class="appr-body">Most therapeutic and coaching models follow the Cognitive Triangle in the traditional sequence: Thought → Feeling → Behaviour. Change your thinking, and your emotions and behaviour will follow. This is theoretically sound — and practically unhelpful for the majority of people who seek it.</p>
+        <p class="appr-body">Because when you are triggered, flooded, anxious, or shut down — your rational mind is the last thing available to you. The prefrontal cortex, which mediates reasoning and perspective-taking, is literally less active when the limbic system is running. No amount of CBT worksheets can reach a nervous system in threat mode.</p>
+        <p class="appr-body">The F-B-T Link reverses the sequence deliberately. Start at the Feeling — acknowledge it, understand what it is communicating, meet it with curiosity rather than suppression. From that understanding, the Behaviour becomes navigable. From the behavioural shift, the Thought transforms naturally. Not through effort. Through alignment.</p>
+        <p class="appr-body">This is the insight that NLP has always operated on — even when it didn't name it this way. Every NLP technique (anchoring, submodality work, parts integration) works at the level of state before it works at the level of cognition. The F-B-T Link makes this explicit and teachable.</p>
+        <a href="#contact" class="btn btn-o" style="margin-top:28px;display:inline-block">Experience it — free intro call</a>
+      </div>
+      <div>
+        <div class="fbt" style="margin-bottom:32px">
+          <div class="fbt-step">
+            <div class="fbt-letter">F</div>
+            <div class="fbt-content">
+              <div class="fbt-word">Feeling — the entry point</div>
+              <p class="fbt-text">The feeling is not a problem to solve. It is a signal to understand. What is this emotion trying to tell you? What is it protecting? What need does it represent? NLP begins here — in the body, in the state, in the nervous system response — before offering any technique or reframe.</p>
+            </div>
+          </div>
+          <div class="fbt-step" style="margin-top:3px">
+            <div class="fbt-letter">B</div>
+            <div class="fbt-content">
+              <div class="fbt-word">Behaviour — the visible pattern</div>
+              <p class="fbt-text">Once the feeling is understood, the behaviour that flows from it becomes visible as a pattern rather than a character flaw. The avoidance, the outburst, the withdrawal, the people-pleasing — each has a structure. NLP tools work here: the swish pattern interrupts the automatic behaviour; parts work resolves the internal conflict; anchoring installs an alternative response.</p>
+            </div>
+          </div>
+          <div class="fbt-step" style="margin-top:3px">
+            <div class="fbt-letter">T</div>
+            <div class="fbt-content">
+              <div class="fbt-word">Thought — the natural transformation</div>
+              <p class="fbt-text">When the feeling has been met and the behaviour has shifted, thought transforms without effort — not through willpower but through a nervous system that is no longer in protection mode. The reframe that was intellectually available but emotionally impossible before now becomes obvious and felt. This is sustainable change.</p>
+            </div>
+          </div>
+        </div>
+        <div class="method-box"><div class="mb-t">NLP Anchoring — access peak states on demand</div><p class="mb-d">Used by athletes, executives, and performers worldwide. Set intentionally at the peak of a genuinely experienced positive state, fired reliably at the moments you most need access to your best self. One of the most practically transformative techniques in all of NLP.</p></div>
+        <div class="method-box"><div class="mb-t">Submodality work — change how memory feels</div><p class="mb-d">Your brain encodes every experience with qualities — size, brightness, distance, sound, movement. Changing those qualities changes how the experience affects you. Make the image smaller, darker, further away — the emotional charge reduces measurably. This is neuroplasticity, not magic.</p></div>
+        <div class="method-box"><div class="mb-t">Parts integration — resolving internal conflict</div><p class="mb-d">When part of you wants to change and part of you doesn't — this is where real change gets stuck. Parts work honours what both parts are trying to achieve and finds a new strategy that meets both sets of needs. Not compromise — synthesis. When it works, change becomes effortless.</p></div>
+        <div class="method-box"><div class="mb-t">The NLP meta-model — precision language</div><p class="mb-d">The meta-model is a set of questions that recover the specific truth beneath generalisations, deletions, and distortions in language. 'Nobody understands me' → 'Who specifically? In what situations? What have you tried?' Precision changes the cognitive landscape immediately.</p></div>
+        <div class="method-box"><div class="mb-t">The STOP process — interrupting trigger responses</div><p class="mb-d">Stop. Take a slow breath (longer exhale than inhale). Observe — where in your body is the tension? Proceed with intention. A four-step process for catching yourself between stimulus and response. Simple to learn. Transformative with practice.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">What we offer</span>
+      <h2 class="sec-h">Work that meets you<br>where you <em>actually are</em></h2>
+      <p class="sec-sub">Every service begins with a free 15-minute intro call — no forms, no pressure. In-person in downtown Toronto or online anywhere in Ontario.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <span class="svc-n">01 · Individual</span>
+        <div class="svc-bar"></div>
+        <h3 class="svc-title">NLP & Counselling Sessions</h3>
+        <p class="svc-desc">One-to-one sessions combining NLP techniques with counselling depth. We work at the level where behaviour actually lives — in the nervous system, in emotional patterns, in the identity stories you tell about who you are. Not talk therapy alone: demonstrated, physically experienced change. The difference between understanding something and knowing it in your body.</p>
+        <div class="svc-outcomes">
+          <div class="svc-out-lbl">What clients typically experience</div>
+          <ul class="svc-out-list">
+            <li>The inner critic becomes significantly quieter — and less threatening</li>
+            <li>Trigger responses become shorter and more navigable</li>
+            <li>Access to confidence, calm, or focus in moments when it was previously unavailable</li>
+            <li>Clarity about the pattern underneath the recurring problem</li>
+          </ul>
+        </div>
+        <div class="svc-tags"><span class="svc-tag">NLP</span><span class="svc-tag">Anchoring</span><span class="svc-tag">Reframing</span><span class="svc-tag">Parts work</span><span class="svc-tag">Submodalities</span><span class="svc-tag">Timeline</span></div>
+        <p class="svc-who"><b>For:</b> Individuals experiencing stuck patterns, anxiety, people-pleasing, imposter syndrome, inner critic, confidence challenges, behavioural loops, or simply wanting to understand themselves at a deeper level.</p>
+      </div>
+      <div class="svc">
+        <span class="svc-n">02 · Relationships</span>
+        <div class="svc-bar"></div>
+        <h3 class="svc-title">Relationship Counselling</h3>
+        <p class="svc-desc">For individuals or couples navigating conflict cycles, attachment patterns, communication breakdown, or the slow erosion of connection over time. We work with the underlying structure of the problem — not just the presenting argument — because the same argument will keep repeating until the pattern changes. Gottman-informed, NLP-enhanced, attachment-aware.</p>
+        <div class="svc-outcomes">
+          <div class="svc-out-lbl">What shifts in relationship work</div>
+          <ul class="svc-out-list">
+            <li>The conflict cycle becomes visible — and breakable</li>
+            <li>Attachment patterns become understandable — not just frustrating</li>
+            <li>Communication tools that work even when you're activated</li>
+            <li>Repair becomes possible — even after significant damage</li>
+          </ul>
+        </div>
+        <div class="svc-tags"><span class="svc-tag">Attachment</span><span class="svc-tag">Conflict</span><span class="svc-tag">Gottman</span><span class="svc-tag">Repair</span><span class="svc-tag">Boundaries</span></div>
+        <p class="svc-who"><b>For:</b> Individuals and couples navigating the same argument, the pursuer-withdrawer dynamic, attachment anxiety or avoidance, boundary challenges, post-conflict repair, or the loss of emotional connection.</p>
+      </div>
+      <div class="svc">
+        <span class="svc-n">03 · Leadership</span>
+        <div class="svc-bar"></div>
+        <h3 class="svc-title">Leadership & Change Coaching</h3>
+        <p class="svc-desc">Leadership is an internal state problem before it is a skills problem. Coaching for leaders navigating burnout, team dynamics, performance anxiety, imposter syndrome, or the gap between knowing what they should do and actually being able to do it under pressure. NLP meets adult learning theory. The F-B-T Link applied to leading others.</p>
+        <div class="svc-outcomes">
+          <div class="svc-out-lbl">Leadership outcomes</div>
+          <ul class="svc-out-list">
+            <li>Access to regulated, clear-headed state in high-stakes moments</li>
+            <li>Understanding of own emotional contagion and how it affects the team</li>
+            <li>Framework for giving feedback without triggering threat responses</li>
+            <li>Clearer leadership identity — who you are, not just what you do</li>
+          </ul>
+        </div>
+        <div class="svc-tags"><span class="svc-tag">Leadership</span><span class="svc-tag">Burnout</span><span class="svc-tag">EI</span><span class="svc-tag">State management</span><span class="svc-tag">SCARF</span></div>
+        <p class="svc-who"><b>For:</b> Leaders, managers, and professionals in transition. Particularly effective for South Asian professionals navigating dual-identity pressure, imposter syndrome, and performance anxiety in Canadian workplaces.</p>
+      </div>
+      <div class="svc">
+        <span class="svc-n">04 · Corporate</span>
+        <div class="svc-bar"></div>
+        <h3 class="svc-title">Corporate Wellness & L&D</h3>
+        <p class="svc-desc">Workplace mental health programmes that combine Neurom's NLP clinical depth with evidence-based adult learning design — Bloom's Taxonomy, andragogy, microlearning, and interactive facilitation. Workshops, lunch-and-learns, and EAP partnerships for organisations ready to address the emotional and psychological layer of performance, not just the skills layer.</p>
+        <div class="svc-outcomes">
+          <div class="svc-out-lbl">Corporate programme outcomes</div>
+          <ul class="svc-out-list">
+            <li>EAP utilisation increases among South Asian employees who previously self-excluded</li>
+            <li>Teams leave with tools they can actually use, not just awareness they already had</li>
+            <li>Leadership teams understand the emotional climate they are creating</li>
+            <li>Measurable reduction in conflict-related absenteeism and presenteeism</li>
+          </ul>
+        </div>
+        <div class="svc-tags"><span class="svc-tag">EAP</span><span class="svc-tag">Workshops</span><span class="svc-tag">Bloom's Taxonomy</span><span class="svc-tag">Andragogy</span><span class="svc-tag">Gamification</span></div>
+        <p class="svc-who"><b>For:</b> HR directors, L&D teams, and People & Culture leaders in Toronto. Particularly valuable for organisations with South Asian workforces where standard EAP has low utilisation due to cultural mismatch.</p>
+      </div>
+      <div class="svc">
+        <span class="svc-n">05 · Career</span>
+        <div class="svc-bar"></div>
+        <h3 class="svc-title">Career Counselling</h3>
+        <p class="svc-desc">For professionals at genuine transition points — newcomers navigating Canadian career pathways without recognising their own credentials, early-career professionals building direction amid competing pressures, or experienced leaders questioning their next chapter. Combines career counselling methodology with NLP tools for values and identity clarity.</p>
+        <div class="svc-outcomes">
+          <div class="svc-out-lbl">Career work outcomes</div>
+          <ul class="svc-out-list">
+            <li>Clear values-based direction that holds even under family or social pressure</li>
+            <li>Interview confidence built through NLP anchoring and state management</li>
+            <li>Clarity on transferable skills — especially for internationally trained professionals</li>
+            <li>A concrete next step that feels right, not just correct</li>
+          </ul>
+        </div>
+        <div class="svc-tags"><span class="svc-tag">Career transitions</span><span class="svc-tag">Values clarity</span><span class="svc-tag">Newcomers</span><span class="svc-tag">Identity</span><span class="svc-tag">Interview prep</span></div>
+        <p class="svc-who"><b>For:</b> International professionals navigating Canadian credential recognition, newcomers to Canada, South Asian individuals navigating family career expectations, and anyone at a meaningful career crossroads.</p>
+      </div>
+      <div class="svc">
+        <span class="svc-n">06 · Gratitude</span>
+        <div class="svc-bar"></div>
+        <h3 class="svc-title">Gratitude Practice & Workshops</h3>
+        <p class="svc-desc">Based on the forthcoming Gratitude Journal by Shreya Sanghvi — a research-grounded, warmly written guide to gratitude as a transformative daily practice. Group workshops combining the neuroscience of gratitude (reward circuits, dopamine, prefrontal cortex activation) with NLP anchoring, mindfulness exercises, and practical daily tools.</p>
+        <div class="svc-outcomes">
+          <div class="svc-out-lbl">What participants leave with</div>
+          <ul class="svc-out-list">
+            <li>A specific daily gratitude practice — not generic journalling, a neurologically grounded ritual</li>
+            <li>A gratitude anchor set using NLP — accessible anytime, anywhere</li>
+            <li>Understanding of why gratitude rewires the brain and builds resilience over time</li>
+            <li>Community — other people doing the same practice, in the same city</li>
+          </ul>
+        </div>
+        <div class="svc-tags"><span class="svc-tag">Gratitude</span><span class="svc-tag">Mindfulness</span><span class="svc-tag">Neuroscience</span><span class="svc-tag">Group work</span><span class="svc-tag">Resilience</span></div>
+        <p class="svc-who"><b>For:</b> Individuals seeking a gentle, evidence-based entry point into psychological wellbeing. Teams building a culture of appreciation. People rebuilding after burnout, grief, or major transition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="specs">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Areas of focus</span>
+      <h2 class="sec-h">Specific challenges<br>Neurom <em>works with</em></h2>
+      <p class="sec-sub">These are the patterns, experiences, and challenges that most frequently bring people to Neurom. If yours is not listed, book a free call — chances are it is closely related to one of these.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Inner critic & self-talk</div><p class="spec-d">The voice that says you are not enough. Where it came from. What it is protecting. And the NLP tools to make it significantly quieter — without pretending it doesn't exist.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Attachment & relationships</div><p class="spec-d">Anxious, avoidant, or fearful-avoidant patterns in close relationships. The conflict cycle. Repair after breakdown. Building the secure base that makes connection feel safe.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Burnout & exhaustion</div><p class="spec-d">Not a workload problem — a meaning, autonomy, and belonging problem. Identifying what has been eroded. Recovering through the nervous system, not just through rest.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">People-pleasing</div><p class="spec-d">Anxiety wearing generosity's clothes. The nervous system root of people-pleasing and why simply deciding to 'just say no' almost never works — and what does.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Imposter syndrome</div><p class="spec-d">The feeling that you don't deserve your successes — and that it will eventually be found out. Why it gets worse as you succeed. And the NLP identity work that addresses the root.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Confidence & state management</div><p class="spec-d">Confidence is a state, not a trait. NLP anchoring makes it reliably accessible — before difficult conversations, presentations, interviews, or boundary-setting moments.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Emotional triggers</div><p class="spec-d">Reacting bigger than the situation warrants — because your body is remembering, not just responding. Understanding the 90-second rule and the STOP process.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Acculturation stress</div><p class="spec-d">The specific psychological burden of navigating two cultures simultaneously — particularly for South Asian Canadians managing family expectations, identity pressure, and professional ambition.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Career transitions</div><p class="spec-d">Direction-finding when external pressure and internal values conflict. Values-based goal setting. Confidence rebuilding. Especially for newcomers navigating Canadian pathways.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Behaviour change</div><p class="spec-d">Why you keep doing the thing you don't want to do — secondary gains explained. The knowing-doing gap. Identity-level change that makes behavioural change sustainable.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Self-worth & identity</div><p class="spec-d">The question underneath almost everything: am I enough? NLP identity work that addresses self-worth at the level where it lives — in belief and nervous system, not in achievement.</p></div>
+      <div class="spec"><div class="spec-dot"></div><div class="spec-t">Grief & transitions</div><p class="spec-d">Every threshold feels like a loss before it feels like a beginning. Working with grief — including the losses nobody talks about: identity, relationships, versions of yourself, the life you expected.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO I WORK WITH -->
+<section class="who" id="who">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Who Neurom serves</span>
+      <h2 class="sec-h">People and organisations<br>who find us <em>useful</em></h2>
+      <p class="sec-sub">Neurom works best for people who are ready to go deeper than awareness — who want to understand the mechanism, not just the symptom.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-bar"></div>
+        <h3 class="who-title">Individuals seeking change</h3>
+        <p class="who-desc">People who understand what the problem is — and are frustrated that understanding it hasn't been enough to change it. They have often read the books, tried the apps, and know the vocabulary of their pattern. What they haven't experienced is change at the level where the pattern actually lives.</p>
+        <ul class="who-list">
+          <li>Adults 25–55 navigating personal growth, stuck patterns, or transition</li>
+          <li>South Asian Canadians navigating dual-identity pressure</li>
+          <li>Newcomers and internationally trained professionals</li>
+          <li>People who have tried other approaches and felt they only scratched the surface</li>
+          <li>Those who prefer a structured, evidence-informed approach over open-ended talking</li>
+        </ul>
+      </div>
+      <div class="who-card">
+        <div class="who-bar"></div>
+        <h3 class="who-title">Couples and partners</h3>
+        <p class="who-desc">Couples who keep having the same argument — and are beginning to wonder if the argument is actually about what they think it's about. People who love each other and are genuinely confused about why connection feels so hard. Those who want to do the work before the relationship reaches a crisis point.</p>
+        <ul class="who-list">
+          <li>Couples in the pursuer-withdrawer dynamic who need a framework to understand it</li>
+          <li>Partners with different attachment styles navigating the resulting conflict</li>
+          <li>Couples navigating major life transitions together (migration, new parenthood, career change)</li>
+          <li>Individuals seeking individual work on their relational patterns</li>
+          <li>Partners who want to repair connection rather than simply manage conflict</li>
+        </ul>
+      </div>
+      <div class="who-card">
+        <div class="who-bar"></div>
+        <h3 class="who-title">Leaders and professionals</h3>
+        <p class="who-desc">High-performing professionals who are succeeding by most external measures but carrying something internally that is not sustainable — imposter syndrome, emotional exhaustion, the gap between how they lead and how they want to lead. Leaders who understand that their internal state is contagious and want to manage it with more skill.</p>
+        <ul class="who-list">
+          <li>Mid-to-senior leaders experiencing burnout or leadership fatigue</li>
+          <li>South Asian professionals navigating imposter syndrome in Canadian organisations</li>
+          <li>Leaders wanting to build psychological safety in their teams</li>
+          <li>Professionals at career crossroads needing values-based direction</li>
+          <li>Anyone for whom 'leadership training' has never addressed what they actually needed</li>
+        </ul>
+      </div>
+      <div class="who-card">
+        <div class="who-bar"></div>
+        <h3 class="who-title">Organisations and teams</h3>
+        <p class="who-desc">Organisations that are ready to go deeper than standard EAP — that understand their employees are not underperforming due to lack of skills but due to the emotional and psychological conditions in which they are asked to work. HR and L&D teams who want culturally adapted, clinically grounded workplace mental health that actually reaches people.</p>
+        <ul class="who-list">
+          <li>Toronto organisations with significant South Asian workforces and low EAP utilisation</li>
+          <li>Companies dealing with burnout, quiet quitting, or high management turnover</li>
+          <li>HR teams wanting a culturally competent mental health provider on their referral list</li>
+          <li>L&D teams wanting wellbeing content that uses adult learning science, not wellness platitudes</li>
+          <li>Start-ups and scale-ups with founder-led culture needing psychological safety foundations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Session packages</span>
+      <h2 class="sec-h">Choose what fits<br>where you <em>are right now</em></h2>
+      <p class="sec-sub">Every package includes a free 15-minute introductory call — no commitment before your first paid session. In-person in downtown Toronto or online anywhere in Ontario. Hindi available on request.</p>
+    </div>
+    <div class="pkg-tabs" id="pkgTabs">
+      <div class="pkg-tab active" onclick="switchPkg('individual',this)">Individual / NLP</div>
+      <div class="pkg-tab" onclick="switchPkg('relationship',this)">Relationships</div>
+      <div class="pkg-tab" onclick="switchPkg('corporate',this)">Corporate</div>
+    </div>
+
+    <div class="pkg-panel active" id="individual">
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-tier">Starter</div>
+          <h3 class="pkg-name">The First Step</h3>
+          <p class="pkg-tag">One session to understand the pattern and experience NLP</p>
+          <div class="pkg-price">CAD $160</div>
+          <p class="pkg-pnote">Single 60-min session</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>60-minute NLP / counselling session</li>
+            <li><span class="pkg-chk">✓</span>Written session summary emailed within 24 hours</li>
+            <li><span class="pkg-chk">✓</span>One specific NLP tool to practise between sessions</li>
+            <li><span class="pkg-chk">✓</span>Free 15-min intro call included before session</li>
+            <li><span class="pkg-chk">✓</span>In-person (George Brown College area) or online</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-o btn-sm" style="width:100%;text-align:center;display:block">Book a session →</a></div>
+        </div>
+        <div class="pkg-card feat">
+          <div class="pkg-badge">Most chosen</div>
+          <div class="pkg-tier">Foundation</div>
+          <h3 class="pkg-name">The Pattern Work</h3>
+          <p class="pkg-tag">Six sessions to understand and genuinely shift the pattern</p>
+          <div class="pkg-price">CAD $870</div>
+          <p class="pkg-pnote">6 sessions · save CAD $90 · 3-month commitment</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>Six 60-minute sessions over 3 months</li>
+            <li><span class="pkg-chk">✓</span>Full NLP toolkit: anchoring, reframing, submodalities, parts work</li>
+            <li><span class="pkg-chk">✓</span>Written session summary + homework after every session</li>
+            <li><span class="pkg-chk">✓</span>WhatsApp check-in support between sessions</li>
+            <li><span class="pkg-chk">✓</span>Free 15-min intro call before commitment</li>
+            <li><span class="pkg-chk">✓</span>In-person or online</li>
+            <li><span class="pkg-chk">✓</span>Digital resource library: 5 NLP tools PDF</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-om btn-sm" style="width:100%;text-align:center;display:block">Book this package →</a></div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-tier">Deep work</div>
+          <h3 class="pkg-name">The Identity Shift</h3>
+          <p class="pkg-tag">Twelve sessions for sustained, identity-level change</p>
+          <div class="pkg-price">CAD $1,680</div>
+          <p class="pkg-pnote">12 sessions · save CAD $240 · 6-month commitment</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>Twelve 60-minute sessions over 6 months</li>
+            <li><span class="pkg-chk">✓</span>Full NLP + counselling integration, all modalities</li>
+            <li><span class="pkg-chk">✓</span>Timeline work and reimprinting for deep-rooted patterns</li>
+            <li><span class="pkg-chk">✓</span>Identity and values architecture (Robert Dilts logical levels)</li>
+            <li><span class="pkg-chk">✓</span>Fortnightly WhatsApp support between sessions</li>
+            <li><span class="pkg-chk">✓</span>Personalised NLP toolkit document with your specific anchors and tools</li>
+            <li><span class="pkg-chk">✓</span>In-person or online</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-o btn-sm" style="width:100%;text-align:center;display:block">Book this package →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-panel" id="relationship">
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-tier">Exploration</div>
+          <h3 class="pkg-name">The First Conversation</h3>
+          <p class="pkg-tag">Understanding the pattern — individually or together</p>
+          <div class="pkg-price">CAD $180</div>
+          <p class="pkg-pnote">Single 75-min session · individual or couples</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>75-minute session — individual or couples</li>
+            <li><span class="pkg-chk">✓</span>Conflict cycle mapping</li>
+            <li><span class="pkg-chk">✓</span>Attachment style overview and discussion</li>
+            <li><span class="pkg-chk">✓</span>Written summary and immediate tool to use this week</li>
+            <li><span class="pkg-chk">✓</span>Free 15-min intro call included</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-o btn-sm" style="width:100%;text-align:center;display:block">Book a session →</a></div>
+        </div>
+        <div class="pkg-card feat">
+          <div class="pkg-badge">Most chosen</div>
+          <div class="pkg-tier">Foundation</div>
+          <h3 class="pkg-name">The Repair Work</h3>
+          <p class="pkg-tag">Six sessions to genuinely shift the conflict cycle</p>
+          <div class="pkg-price">CAD $990</div>
+          <p class="pkg-pnote">6 sessions · save CAD $90 · 3-month commitment</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>Six 75-minute sessions</li>
+            <li><span class="pkg-chk">✓</span>Gottman-informed conflict repair</li>
+            <li><span class="pkg-chk">✓</span>Attachment work: understanding and beginning to shift patterns</li>
+            <li><span class="pkg-chk">✓</span>NLP communication tools for high-activation moments</li>
+            <li><span class="pkg-chk">✓</span>Between-session practice exercises with written guidance</li>
+            <li><span class="pkg-chk">✓</span>WhatsApp check-in support</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-om btn-sm" style="width:100%;text-align:center;display:block">Book this package →</a></div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-tier">Deep work</div>
+          <h3 class="pkg-name">The Pattern Change</h3>
+          <p class="pkg-tag">Twelve sessions for lasting relational transformation</p>
+          <div class="pkg-price">CAD $1,920</div>
+          <p class="pkg-pnote">12 sessions · save CAD $240 · 6-month commitment</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>Twelve 75-minute sessions over 6 months</li>
+            <li><span class="pkg-chk">✓</span>Full attachment reworking — individual and relational</li>
+            <li><span class="pkg-chk">✓</span>NLP parts work for internal conflicts affecting the relationship</li>
+            <li><span class="pkg-chk">✓</span>Personalised communication and repair framework</li>
+            <li><span class="pkg-chk">✓</span>Fortnightly WhatsApp support</li>
+            <li><span class="pkg-chk">✓</span>Optional: one individual session each for both partners</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-o btn-sm" style="width:100%;text-align:center;display:block">Book this package →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-panel" id="corporate">
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-tier">Introduction</div>
+          <h3 class="pkg-name">Lunch & Learn</h3>
+          <p class="pkg-tag">A 90-minute team wellbeing session at your offices</p>
+          <div class="pkg-price">CAD $1,500</div>
+          <p class="pkg-pnote">Per session · up to 30 participants</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>90-minute facilitated session at your premises</li>
+            <li><span class="pkg-chk">✓</span>Choose topic: Burnout, EI, psychological safety, NLP tools, or custom</li>
+            <li><span class="pkg-chk">✓</span>Interactive format — not a lecture</li>
+            <li><span class="pkg-chk">✓</span>Resource pack for all participants to take away</li>
+            <li><span class="pkg-chk">✓</span>Post-session follow-up report to HR/L&D</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-o btn-sm" style="width:100%;text-align:center;display:block">Enquire now →</a></div>
+        </div>
+        <div class="pkg-card feat">
+          <div class="pkg-badge">Best value</div>
+          <div class="pkg-tier">Retainer</div>
+          <h3 class="pkg-name">Wellness Partnership</h3>
+          <p class="pkg-tag">Monthly EAP and workshop retainer for your organisation</p>
+          <div class="pkg-price">CAD $3,500</div>
+          <p class="pkg-pnote">Per month · up to 50 employees · 6-month minimum</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>Monthly 2-hour facilitated workshop (theme rotates per Neurom calendar)</li>
+            <li><span class="pkg-chk">✓</span>8 individual EAP sessions/month available for employees</li>
+            <li><span class="pkg-chk">✓</span>Culturally adapted service — English and Hindi available</li>
+            <li><span class="pkg-chk">✓</span>Monthly anonymised utilisation report to HR/People team</li>
+            <li><span class="pkg-chk">✓</span>Priority booking for leadership 1:1s</li>
+            <li><span class="pkg-chk">✓</span>Neurom Circle tickets for all employees (4/year)</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-om btn-sm" style="width:100%;text-align:center;display:block">Enquire now →</a></div>
+        </div>
+        <div class="pkg-card">
+          <div class="pkg-tier">Intensive</div>
+          <h3 class="pkg-name">Leadership Deep Dive</h3>
+          <p class="pkg-tag">Half-day leadership experience using NLP and adult learning</p>
+          <div class="pkg-price">CAD $4,500</div>
+          <p class="pkg-pnote">Per session · up to 20 leaders</p>
+          <div class="pkg-div"></div>
+          <ul class="pkg-feats">
+            <li><span class="pkg-chk">✓</span>Half-day programme (4 hours including break)</li>
+            <li><span class="pkg-chk">✓</span>NLP state management for high-stakes leadership moments</li>
+            <li><span class="pkg-chk">✓</span>The F-B-T Link applied to leading, feedback, and team dynamics</li>
+            <li><span class="pkg-chk">✓</span>Psychological safety — from theory to specific daily behaviours</li>
+            <li><span class="pkg-chk">✓</span>Each leader leaves with a personal NLP toolkit</li>
+            <li><span class="pkg-chk">✓</span>Optional 3-session individual follow-up coaching package</li>
+          </ul>
+          <div class="pkg-cta"><a href="#contact" class="btn btn-o btn-sm" style="width:100%;text-align:center;display:block">Enquire now →</a></div>
+        </div>
+      </div>
+    </div>
+    <p class="pkg-note">All individual packages include a free 15-minute introductory call — no commitment required before your first paid session. Sliding scale available for COSTI, PCHS, and other settlement service referrals. Culturally adapted sessions available in English and Hindi. CRPO registration in progress — contact for details on current regulatory status.</p>
+  </div>
+</section>
+
+<!-- EVENTS / THE NEUROM CIRCLE -->
+<section class="events" id="events">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--om-l)">Community</span>
+      <h2 class="sec-h" style="color:var(--iv)">The Neurom <em style="color:var(--sage-l)">Circle</em> &amp; events</h2>
+      <p class="sec-sub" style="color:#7A9A80">A growing programme of monthly gatherings, workshops, and community events in downtown Toronto. Not therapy. Not lectures. Guided community practice — the kind of connection that actually changes things.</p>
+    </div>
+    <div class="event-grid">
+      <div class="ev">
+        <div class="ev-num">01</div>
+        <div>
+          <div class="ev-cat">Monthly · Free entry</div>
+          <h3 class="ev-title">The Neurom Circle</h3>
+          <p class="ev-desc">Last Sunday of every month, 4–6pm. A 90-minute guided community gathering at rotating downtown Toronto venues. Format: 20-minute presentation on the month's psychological theme, 40 minutes of facilitated small-group conversation using NLP and gratitude tools, 30 minutes of informal networking with tea and coffee. Venues rotate: CSI Spadina, Boxcar Social King, Toronto Reference Library, Evergreen Brickworks.</p>
+          <div class="ev-meta">
+            <span class="ev-mi"><b>When:</b> Last Sunday monthly</span>
+            <span class="ev-mi"><b>Time:</b> 4–6pm</span>
+            <span class="ev-mi"><b>Entry:</b> Free / $10 suggested donation</span>
+            <span class="ev-mi"><b>Capacity:</b> 30–40 people</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-num">02</div>
+        <div>
+          <div class="ev-cat">Monthly · CAD $25</div>
+          <h3 class="ev-title">The Gratitude Practice</h3>
+          <p class="ev-desc">Second Sunday of every month. A 90-minute workshop built on the Gratitude Journal by Shreya Sanghvi. The science and daily practice of gratitude combined with NLP anchoring tools. Co-facilitated by Shreya Sanghvi (L&D Specialist, author) and Neurom. Warm, research-grounded, and practical — you leave with something you can use the same evening. Maximum 20 people to ensure depth of conversation.</p>
+          <div class="ev-meta">
+            <span class="ev-mi"><b>When:</b> Second Sunday monthly</span>
+            <span class="ev-mi"><b>Cost:</b> CAD $25</span>
+            <span class="ev-mi"><b>Capacity:</b> 20 people max</span>
+            <span class="ev-mi"><b>Co-facilitated:</b> Neurom × Shreya Sanghvi</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-num">03</div>
+        <div>
+          <div class="ev-cat">Corporate · By arrangement</div>
+          <h3 class="ev-title">Corporate Lunch & Learn</h3>
+          <p class="ev-desc">Neurom comes to your organisation. 90-minute facilitated sessions on NLP and workplace wellbeing, psychological safety, burnout, emotional intelligence, or leadership presence. The F-B-T Link applied to your team's specific context. Interactive, not a lecture. Participants leave with a specific tool they can use in their next meeting. Tailored for Toronto's corporate and financial sector.</p>
+          <div class="ev-meta">
+            <span class="ev-mi"><b>Format:</b> At your premises</span>
+            <span class="ev-mi"><b>Duration:</b> 90 minutes</span>
+            <span class="ev-mi"><b>Capacity:</b> Up to 30 people</span>
+            <span class="ev-mi"><b>Cost:</b> CAD $1,500</span>
+          </div>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-num">04</div>
+        <div>
+          <div class="ev-cat">Annual · Coming Q3 2026</div>
+          <h3 class="ev-title">The Gratitude Book Launch</h3>
+          <p class="ev-desc">A downtown Toronto evening event celebrating the publication of the Neurom × Shreya Sanghvi Gratitude Journal. Programme: arrival and book preview (6–6:30pm), opening talk on the neuroscience of gratitude (6:30–6:45pm), Shreya's author talk on the book (6:45–7:05pm), panel conversation on gratitude, NLP, and the mind (7:05–7:35pm), guided live gratitude practice using NLP anchoring (7:35–7:50pm), networking (7:50–9pm), book signing throughout. Venue: Evergreen Brickworks or TIFF Bell Lightbox.</p>
+          <div class="ev-meta">
+            <span class="ev-mi"><b>When:</b> Q3 2026 — date TBC</span>
+            <span class="ev-mi"><b>Tickets:</b> $25 general / $75 VIP (includes signed book + consultation)</span>
+            <span class="ev-mi"><b>Capacity:</b> 150 people</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="circle-cta">
+      <div>
+        <p class="circle-h">Reserve your seat at the next Circle</p>
+        <p class="circle-sub">Last Sunday of every month · 4–6pm · Downtown Toronto · Free or $10 suggested donation</p>
+      </div>
+      <div class="circle-form">
+        <input class="c-input" type="email" placeholder="Your email address">
+        <button class="btn btn-om">Reserve my spot</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section class="workshops" id="workshops">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Workshops & talks</span>
+      <h2 class="sec-h">Group learning that<br>actually goes <em>somewhere</em></h2>
+      <p class="sec-sub">All workshops available as standalone sessions or as part of a series. Available for communities, universities, settlement agencies, and corporate organisations across Toronto.</p>
+    </div>
+    <div class="ws-grid">
+      <div class="ws">
+        <div class="ws-cat">NLP · Foundations</div>
+        <div class="ws-bar"></div>
+        <h3 class="ws-title">What NLP actually is — and why it works</h3>
+        <p class="ws-desc">A clear, jargon-free introduction to NLP for curious beginners and professionals. Covers the five presuppositions, three core techniques demonstrated live (anchoring, reframing, submodality shift), the relationship between NLP and neuroscience, and the honest answer to the evidence question.</p>
+        <div class="ws-what">
+          <div class="ws-what-lbl">Participants leave with</div>
+          <ul class="ws-what-list">
+            <li>One set NLP anchor they experienced in the room</li>
+            <li>The STOP process practised in real time</li>
+            <li>A clear answer to whether NLP is right for them</li>
+          </ul>
+        </div>
+        <div class="ws-meta">
+          <div class="ws-mr"><span class="ws-ml">Duration</span><span class="ws-mv">90 minutes</span></div>
+          <div class="ws-mr"><span class="ws-ml">Format</span><span class="ws-mv">Talk + live demos</span></div>
+          <div class="ws-tags"><span class="ws-tag">NLP</span><span class="ws-tag">Beginners welcome</span><span class="ws-tag">Live demo</span></div>
+        </div>
+      </div>
+      <div class="ws">
+        <div class="ws-cat">Relationships · Communication</div>
+        <div class="ws-bar"></div>
+        <h3 class="ws-title">Why you keep having the same argument</h3>
+        <p class="ws-desc">The conflict cycle explained with clarity and without blame — and how to interrupt it. Attachment theory made practical, the pursuer-withdrawer dynamic named, the Gottman four horsemen identified, and three specific tools people can use this week. For couples, individuals, and workplace teams where communication has broken down.</p>
+        <div class="ws-what">
+          <div class="ws-what-lbl">Participants leave with</div>
+          <ul class="ws-what-list">
+            <li>Their conflict cycle mapped and named</li>
+            <li>One repair attempt tool tested in the room</li>
+            <li>A regulation technique for high-activation moments</li>
+          </ul>
+        </div>
+        <div class="ws-meta">
+          <div class="ws-mr"><span class="ws-ml">Duration</span><span class="ws-mv">120 minutes</span></div>
+          <div class="ws-mr"><span class="ws-ml">Format</span><span class="ws-mv">Talk + breakout pairs</span></div>
+          <div class="ws-tags"><span class="ws-tag">Relationships</span><span class="ws-tag">Conflict cycle</span><span class="ws-tag">Gottman</span></div>
+        </div>
+      </div>
+      <div class="ws">
+        <div class="ws-cat">Emotions · Nervous system</div>
+        <div class="ws-bar"></div>
+        <h3 class="ws-title">Your nervous system has three gears</h3>
+        <p class="ws-desc">Polyvagal theory made practical for non-clinicians. The three states of the nervous system (ventral, sympathetic, dorsal), how to identify which one you're in, co-regulation and emotional contagion explained, and the NLP and somatic tools to move between states. Deeply experiential — participants feel the shift in the room.</p>
+        <div class="ws-what">
+          <div class="ws-what-lbl">Participants leave with</div>
+          <ul class="ws-what-list">
+            <li>Ability to recognise their own nervous system state in real time</li>
+            <li>Three regulation tools practised during the session</li>
+            <li>Understanding of how their state affects those around them</li>
+          </ul>
+        </div>
+        <div class="ws-meta">
+          <div class="ws-mr"><span class="ws-ml">Duration</span><span class="ws-mv">90 minutes</span></div>
+          <div class="ws-mr"><span class="ws-ml">Format</span><span class="ws-mv">Experiential + somatic</span></div>
+          <div class="ws-tags"><span class="ws-tag">Polyvagal</span><span class="ws-tag">Somatic</span><span class="ws-tag">Regulation</span></div>
+        </div>
+      </div>
+      <div class="ws">
+        <div class="ws-cat">Leadership · L&D</div>
+        <div class="ws-bar"></div>
+        <h3 class="ws-title">Leadership is an inside job</h3>
+        <p class="ws-desc">Why leadership training fails — the emotional layer nobody addresses. Three layers of change: knowledge, skill, and emotional willingness. State management and psychological safety in practice. The F-B-T Link applied to leading, giving feedback, and managing conflict. Built using Bloom's Taxonomy, andragogy, and microlearning — not a lecture.</p>
+        <div class="ws-what">
+          <div class="ws-what-lbl">Leaders leave with</div>
+          <ul class="ws-what-list">
+            <li>Personal leadership state anchor built and fired</li>
+            <li>Specific behaviours for psychological safety in their team</li>
+            <li>One feedback conversation they have been avoiding — reframed and practised</li>
+          </ul>
+        </div>
+        <div class="ws-meta">
+          <div class="ws-mr"><span class="ws-ml">Duration</span><span class="ws-mv">Half day (4 hours)</span></div>
+          <div class="ws-mr"><span class="ws-ml">Format</span><span class="ws-mv">Corporate · role plays · cases</span></div>
+          <div class="ws-tags"><span class="ws-tag">Leadership</span><span class="ws-tag">F-B-T</span><span class="ws-tag">Psych safety</span></div>
+        </div>
+      </div>
+      <div class="ws">
+        <div class="ws-cat">Wellbeing · Gratitude</div>
+        <div class="ws-bar"></div>
+        <h3 class="ws-title">Gratitude is not a mood — it's a practice</h3>
+        <p class="ws-desc">The neuroscience of gratitude made accessible: reward circuits, dopamine pathways, prefrontal cortex activation, and the research on how consistent gratitude practice rewires the brain over time. Guided gratitude anchor using NLP. Practical daily tools from the forthcoming Gratitude Journal by Shreya Sanghvi. Co-facilitated when available.</p>
+        <div class="ws-what">
+          <div class="ws-what-lbl">Participants leave with</div>
+          <ul class="ws-what-list">
+            <li>A gratitude anchor set and experienced in real time</li>
+            <li>A specific 5-minute daily practice — not generic journalling</li>
+            <li>Preview copy of the Gratitude Journal</li>
+          </ul>
+        </div>
+        <div class="ws-meta">
+          <div class="ws-mr"><span class="ws-ml">Duration</span><span class="ws-mv">90 minutes</span></div>
+          <div class="ws-mr"><span class="ws-ml">Format</span><span class="ws-mv">Talk + practice + anchor</span></div>
+          <div class="ws-tags"><span class="ws-tag">Gratitude</span><span class="ws-tag">Neuroscience</span><span class="ws-tag">NLP anchor</span></div>
+        </div>
+      </div>
+      <div class="ws">
+        <div class="ws-cat">South Asian community · Hindi available</div>
+        <div class="ws-bar"></div>
+        <h3 class="ws-title">Finding yourself in a new country</h3>
+        <p class="ws-desc">Mental wellness for newcomers and South Asian diaspora in Canada. Normalising acculturation stress without pathologising it. Navigating family expectation vs personal identity and values. NLP tools for uncertainty and transition. How to access mental health support in Ontario. Delivered in English with Hindi available on request — designed specifically for community organisations, settlement agencies, and temple/gurdwara settings.</p>
+        <div class="ws-what">
+          <div class="ws-what-lbl">Participants leave with</div>
+          <ul class="ws-what-list">
+            <li>Their acculturation stress named and normalised, not pathologised</li>
+            <li>One NLP tool for managing uncertainty practised live</li>
+            <li>Clear information on mental health access in Ontario</li>
+          </ul>
+        </div>
+        <div class="ws-meta">
+          <div class="ws-mr"><span class="ws-ml">Duration</span><span class="ws-mv">60 minutes</span></div>
+          <div class="ws-mr"><span class="ws-ml">Languages</span><span class="ws-mv">English · Hindi available</span></div>
+          <div class="ws-tags"><span class="ws-tag">Newcomers</span><span class="ws-tag">South Asian</span><span class="ws-tag">Identity</span><span class="ws-tag">Hindi</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="#contact" class="btn btn-o">Book a workshop for your organisation or community</a>
+    </div>
+  </div>
+</section>
+
+<!-- GRATITUDE JOURNAL -->
+<section class="journal" id="journal">
+  <div class="container">
+    <div class="journal-inner">
+      <div>
+        <div class="jnl-badge">Coming Q3 2026</div>
+        <h2 class="jnl-h">The <em>Gratitude</em><br>Journal</h2>
+        <p class="jnl-body">A research-grounded, warmly written guide to gratitude as a transformative daily practice. Ten chapters covering the science of gratitude, relationships, parenting, professional life, spirituality, and collective change. Written by Shreya Sanghvi — L&D Specialist, TEDx Circle Speaker, and George Brown College Adult Education student. Foreword by Neurom connecting the gratitude neuroscience to NLP practice.</p>
+        <p class="jnl-body" style="font-family:var(--serif);font-style:italic;font-size:17px;color:var(--om-d);line-height:1.6;margin-top:8px">"Gratitude is like Wi-Fi — hard to see but everywhere you look. And just like Wi-Fi, it's essential for a smooth life."</p>
+        <p class="jnl-body" style="margin-top:16px">The book takes gratitude seriously — not as a mood to summon, but as a neurological practice that rewires the brain over time. Practical exercises, daily rituals, and real-world stories throughout every chapter. Available for individual practice and as the foundation for Neurom's monthly Gratitude Practice workshop.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+          <a href="#contact" class="btn btn-om">Get early access — notify me</a>
+          <a href="#events" class="btn btn-o">Join the book launch event</a>
+        </div>
+        <div style="margin-top:28px;padding:18px 20px;background:var(--iv);border:.5px solid var(--iv3)">
+          <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--om);margin-bottom:6px">Author</div>
+          <div style="font-family:var(--serif);font-size:18px;color:var(--deep)">Shreya Sanghvi</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:3px;line-height:1.65">L&D Professional · TEDx Circle Speaker · Workplace Learning & Adult Education, George Brown College · Founder, Psychologia Connect · Toronto, Canada</div>
+        </div>
+      </div>
+      <div>
+        <div style="margin-bottom:12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--om)">10 chapters · complete guide</div>
+        <div class="jnl-chapters">
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 01</div><div class="jnl-ch-t">What is gratitude?</div><div class="jnl-ch-d">Beyond the thank you — across cultures and history</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 02</div><div class="jnl-ch-t">The science behind it</div><div class="jnl-ch-d">Neuroscience, psychology, and what the research shows</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 03</div><div class="jnl-ch-t">Gratitude in daily life</div><div class="jnl-ch-d">Meals, commutes, bedtime — practical integration</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 04</div><div class="jnl-ch-t">Personal relationships</div><div class="jnl-ch-d">Partners, friends, long-term connections</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 05</div><div class="jnl-ch-t">Parenting & family</div><div class="jnl-ch-d">Teaching children gratitude that actually holds</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 06</div><div class="jnl-ch-t">Professional settings</div><div class="jnl-ch-d">Gratitude at work — teams, leaders, culture</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 07</div><div class="jnl-ch-t">Mindfulness & gratitude</div><div class="jnl-ch-d">Integrating presence and appreciation</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 08</div><div class="jnl-ch-t">Spirituality</div><div class="jnl-ch-d">Gratitude as a path to spiritual growth</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 09</div><div class="jnl-ch-t">Practical tools</div><div class="jnl-ch-d">Habits, rituals, and techniques to make it stick</div></div>
+          <div class="jnl-ch"><div class="jnl-ch-n">Ch 10</div><div class="jnl-ch-t">Collective gratitude</div><div class="jnl-ch-d">Community, social change, and shared appreciation</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT PILLARS -->
+<section class="pillars">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Content strategy</span>
+      <h2 class="sec-h">What Neurom writes<br>and talks <em>about</em></h2>
+      <p class="sec-sub">365 blog posts. Weekly Instagram content. Monthly YouTube. Every piece of content follows the Leila Hormozi structure: open mid-sentence, validate, reframe, numbered framework, personal story, generous reward.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-pct">30%</div>
+        <div class="pillar-t">NLP & the mind</div>
+        <p class="pillar-d">Mechanisms, techniques, presuppositions, live demonstrations. NLP explained clearly — without jargon, without exaggeration.</p>
+        <div class="pillar-bar-outer"><div class="pillar-bar-inner" style="width:30%"></div></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-pct">25%</div>
+        <div class="pillar-t">Relationships & communication</div>
+        <p class="pillar-d">Attachment, conflict cycles, repair, communication patterns. Posts people send to their partners. Content that gets shared.</p>
+        <div class="pillar-bar-outer"><div class="pillar-bar-inner" style="width:25%"></div></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-pct">20%</div>
+        <div class="pillar-t">Leadership & change</div>
+        <p class="pillar-d">Burnout, EI, psychological safety, adult learning, the knowing-doing gap. LinkedIn-heavy. Corporate client funnel.</p>
+        <div class="pillar-bar-outer"><div class="pillar-bar-inner" style="width:20%"></div></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-pct">15%</div>
+        <div class="pillar-t">Emotions & the body</div>
+        <p class="pillar-d">Triggers, window of tolerance, polyvagal theory, emotional regulation. Your most relatable pillar — everyone has felt out of control of their own reactions.</p>
+        <div class="pillar-bar-outer"><div class="pillar-bar-inner" style="width:15%"></div></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-pct">10%</div>
+        <div class="pillar-t">Journey & practice</div>
+        <p class="pillar-d">Building in public. Origin stories. What being a fresh practitioner in a new country actually looks like. The most trusted content because it is the most honest.</p>
+        <div class="pillar-bar-outer"><div class="pillar-bar-inner" style="width:10%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHREYA COLLAB -->
+<section class="collab" id="collab">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">The partnership</span>
+      <h2 class="sec-h">Neurom × <em>Shreya Sanghvi</em></h2>
+      <p class="sec-sub">Two practices. One shared insight: the feeling comes first. A brand ambassador relationship built on genuine clinical and philosophical alignment — not an endorsement deal.</p>
+    </div>
+    <div class="collab-grid">
+      <div class="col-card">
+        <span class="col-tag">What Shreya brings</span>
+        <h3 class="col-title">The F-B-T Link + Adult Learning science</h3>
+        <p class="col-body">Shreya Sanghvi developed the F-B-T Link (Feeling → Behaviour → Thought) independently through her coaching practice — arriving at the same foundational insight as NLP through her own work. That makes her an authentic Neurom voice, not a borrowed one. She also brings deep adult learning expertise — Bloom's Taxonomy, andragogy, microlearning, gamification — that makes every Neurom workshop and corporate offering measurably better designed.</p>
+        <ul class="col-list">
+          <li>Active L&D and 500+ LinkedIn network including HR directors and L&D specialists</li>
+          <li>TEDx Circle speaking credential — enables co-hosted events with authority</li>
+          <li>The Gratitude Journal — a publishable asset that becomes workshops, lead magnets, and a book launch event</li>
+          <li>George Brown College connections — student and faculty networks in Toronto's professional education ecosystem</li>
+          <li>South Asian community presence and cultural fluency in downtown Toronto</li>
+          <li>Active Instagram content creator — natural cross-promotion without manufactured endorsement</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <span class="col-tag">What Neurom brings</span>
+        <h3 class="col-title">Clinical depth + NLP framework + practice credibility</h3>
+        <p class="col-body">Neurom gives Shreya's F-B-T framework the scientific grounding and clinical depth that makes it significantly more powerful. NLP's state management tools — anchoring, submodalities, parts integration — are the practical implementation of the F-B-T insight. Together they are a more complete system than either is alone. For Shreya's career building, association with a credentialed NLP and counselling practice adds clinical authority to her L&D and coaching work.</p>
+        <ul class="col-list">
+          <li>Corporate event access — Neurom's workshops are the vehicle through which Shreya delivers her L&D programmes</li>
+          <li>Publishing and content platform — Shreya's gratitude book finds its Neurom foreword, clinical authority, and workshop home</li>
+          <li>Psychologia Connect network — cross-referral between the India platform's alumni network and the Toronto practice</li>
+          <li>Collective brand presence — two credentialed South Asian professionals together draw significantly larger event audiences</li>
+          <li>Revenue sharing model on jointly developed workshops and corporate programmes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS BAR -->
+<section class="creds-bar">
+  <div class="container">
+    <div class="creds-inner">
+      <div class="cred-b">
+        <div class="cred-b-val">NLP</div>
+        <div class="cred-b-lbl">Certified practitioner · anchoring, submodalities, meta-model, parts work, timeline</div>
+      </div>
+      <div class="cred-b">
+        <div class="cred-b-val">GBC</div>
+        <div class="cred-b-lbl">George Brown College · Workplace Learning & Adult Education</div>
+      </div>
+      <div class="cred-b">
+        <div class="cred-b-val">TEDx</div>
+        <div class="cred-b-lbl">Circle speaker · authenticity and growth</div>
+      </div>
+      <div class="cred-b">
+        <div class="cred-b-val">CRPO</div>
+        <div class="cred-b-lbl">Registered Psychotherapist (application in progress)</div>
+      </div>
+      <div class="cred-b">
+        <div class="cred-b-val">PC·CA</div>
+        <div class="cred-b-lbl">Psychologia Connect · India platform founder · Toronto chapter building</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">What people say</span>
+      <h2 class="sec-h">The work, through<br><em>their eyes</em></h2>
+      <p class="sec-sub">Real words from people who have sat in the room — and from those who brought Neurom into their organisations.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card">
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <p class="t-q">"I came in understanding why I kept people-pleasing. I left actually feeling it differently. That is the difference between reading about NLP and experiencing it. The session changed something at a level I can't fully explain — but I can feel it in my body."</p>
+        <div class="t-name">Priya M.</div>
+        <div class="t-role">Marketing Manager · Toronto</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <p class="t-q">"As a South Asian woman navigating career pressure, family expectations, and a new city all at once — finding a practitioner who understands all three without me having to explain the context first was extraordinary. Neurom gets it. Genuinely."</p>
+        <div class="t-name">Anu K.</div>
+        <div class="t-role">Software Engineer · Mississauga</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <p class="t-q">"The Neurom Circle changed how I experience my Sunday evenings. It is not therapy — it is community. People who think deeply, share honestly, and go home with something they can actually use. I recommend it to everyone I know in Toronto."</p>
+        <div class="t-name">James T.</div>
+        <div class="t-role">Consultant · Downtown Toronto</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <p class="t-q">"We brought Neurom in for a corporate lunch-and-learn on burnout. The team walked out with actual tools — not just awareness. Our People team has been trying to find this exact combination of clinical depth and practical delivery for three years."</p>
+        <div class="t-name">HR Director · Financial Services</div>
+        <div class="t-role">Bay Street, Toronto</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <p class="t-q">"I have tried CBT, journalling, and three different apps. What worked was NLP — because it didn't ask me to think my way out of something I was feeling my way through. Six sessions later, the inner critic is genuinely quieter. Not suppressed. Quieter."</p>
+        <div class="t-name">Rohan S.</div>
+        <div class="t-role">Entrepreneur · Toronto</div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars"><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div></div>
+        <p class="t-q">"The conflict cycle workshop was the most useful two hours my partner and I have spent on our relationship. We finally understood what we were actually doing — not just arguing about who was right. The pursuer-withdrawer framework alone changed everything."</p>
+        <div class="t-name">Neha & Dev</div>
+        <div class="t-role">Workshop participants · Brampton</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="impact">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--om-l)">Why this matters</span>
+      <h2 class="sec-h" style="color:var(--iv)">The gap Neurom<br><em style="color:var(--sage-l)">exists to fill</em></h2>
+      <p class="sec-sub" style="color:#7A9A80">The South Asian mental health gap in Canada is not a niche. It is the largest unmet mental health need of any ethnic group in the country — and it has almost nothing to do with awareness.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="imp-c">
+        <div class="imp-n">48%</div>
+        <div class="imp-t">Unmet mental health need</div>
+        <p class="imp-d">South Asian Canadians with major depression report the highest proportion of unmet mental health care needs of any ethnic group in Canada — 48%. Not because services don't exist. Because the services available don't understand them.</p>
+        <div class="imp-source">CAMH / Canadian Community Health Survey</div>
+      </div>
+      <div class="imp-c">
+        <div class="imp-n">85%</div>
+        <div class="imp-t">Less likely to seek treatment</div>
+        <p class="imp-d">South Asian Canadians with depression are 85% less likely to seek treatment than other Canadians. The barriers: stigma, cultural mismatch, lack of trust in Western therapeutic models, and the absence of practitioners who understand both worlds.</p>
+        <div class="imp-source">PMC Research, 2024</div>
+      </div>
+      <div class="imp-c">
+        <div class="imp-n">52%</div>
+        <div class="imp-t">Of Brampton's population</div>
+        <p class="imp-d">South Asians make up 52.4% of Brampton's population and significant proportions of Mississauga, Scarborough, and North York — the largest underserved mental health community in the GTA. Neurom is built to serve it from the inside.</p>
+        <div class="imp-source">Statistics Canada, 2021 Census</div>
+      </div>
+      <div class="imp-c">
+        <div class="imp-n">1</div>
+        <div class="imp-t">The bridge between worlds</div>
+        <p class="imp-d">Neurom is built by a South Asian professional who understands both the clinical framework and the cultural context — who can move between Hindi and English mid-session, who doesn't need the family dynamics explained. That combination, in Toronto, is extraordinarily rare.</p>
+        <div class="imp-source">Neurom's founding premise</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">The Neurom blog</span>
+      <h2 class="sec-h">365 posts on<br>the mind, the <em>signal.</em></h2>
+      <p class="sec-sub">One year of depth — NLP, relationships, emotions, leadership, and behaviour change. Every post written using Leila Hormozi's structural DNA: open mid-sentence, validate, bold reframe, numbered framework, personal story, generous reward. All 365 available.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-cat">NLP · Foundations</div>
+        <h3 class="blog-t">What is NLP — and does it actually work? An honest answer</h3>
+        <p class="blog-ex">Underneath the jargon and the occasionally over-enthusiastic practitioners is a set of techniques that, used carefully, are genuinely life-changing. Here is the complete honest version — including what the evidence does and doesn't support.</p>
+        <a href="#blog" class="blog-read">Read post</a>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat">Relationships</div>
+        <h3 class="blog-t">Your attachment style was formed before you could choose it — but it can change</h3>
+        <p class="blog-ex">The 4 attachment styles explained without jargon. And the answer to the most important question: can yours actually change? Yes — and here is exactly what changes it.</p>
+        <a href="#blog" class="blog-read">Read post</a>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat">Emotions · Nervous system</div>
+        <h3 class="blog-t">The window of tolerance — the zone where all change is possible</h3>
+        <p class="blog-ex">There is exactly one zone where real change happens. Most people spend their entire lives outside it — and nobody told them. This post changes that. Includes polyvagal theory, somatic tools, and NLP regulation techniques.</p>
+        <a href="#blog" class="blog-read">Read post</a>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat">Leadership</div>
+        <h3 class="blog-t">Burnout is not a workload problem. It never was.</h3>
+        <p class="blog-ex">Every burned-out person I have worked with was not simply working too many hours. The real causes — meaning, autonomy, belonging — are almost never addressed by standard burnout interventions. Here is what actually works.</p>
+        <a href="#blog" class="blog-read">Read post</a>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat">Self-worth</div>
+        <h3 class="blog-t">People-pleasing is anxiety wearing generosity's clothes</h3>
+        <p class="blog-ex">Here is the thing nobody says about people-pleasing: it is not about being kind. It is about being safe. And until you understand that, the advice to 'just say no' will never work. Here is the NLP approach that does.</p>
+        <a href="#blog" class="blog-read">Read post</a>
+      </div>
+      <div class="blog-card">
+        <div class="blog-cat">Behaviour change</div>
+        <h3 class="blog-t">Secondary gains — why you can't change even when you desperately want to</h3>
+        <p class="blog-ex">You have made the decision to change a hundred times. And a hundred times you have slipped back. This post explains exactly what is happening — and the NLP parts work that addresses the root, not the symptom.</p>
+        <a href="#blog" class="blog-read">Read post</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="#blog" class="btn btn-o">View all 365 posts →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Common questions</span>
+      <h2 class="sec-h">Everything you want<br>to <em>know first</em></h2>
+      <p class="sec-sub">Genuine questions from real people — answered honestly, without marketing language or clinical evasion.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">What actually happens in a Neurom NLP session?<span class="faq-ico">+</span></div>
+        <div class="faq-a">A Neurom session begins at the feeling — not with a questionnaire, an intake form, or a CBT worksheet. Using the F-B-T Link, we first understand the emotional state: what is it communicating? What is it protecting? Where is it felt in the body? Only once the feeling is understood do we introduce a specific NLP technique. The technique is chosen based on what the session reveals — not a predetermined script. You will leave with a written session summary, a specific practice to try before the next session, and a genuine shift that you can feel, not just understand.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">Is this therapy, coaching, or something else?<span class="faq-ico">+</span></div>
+        <div class="faq-a">It is a careful integration of all three. Counselling psychology provides the depth, relational safety, and clinical framework. NLP provides specific, demonstrable state-changing techniques. Adult learning theory (from Shreya's George Brown College programme) provides the understanding of how adults change — through experiential learning, personal relevance, and reflective practice. If you are in active mental health crisis, experiencing psychosis, or need psychiatric assessment, Neurom will refer you to the appropriate clinical support. For the vast majority of people navigating stuck patterns, relationship challenges, confidence, burnout, or career transition, Neurom provides exactly the depth they need.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">Do you offer sessions in Hindi?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Yes. Sessions are available in English, Hindi, and a natural blend of both. For South Asian clients — particularly those discussing family dynamics, relationship patterns, cultural identity, or the specific pressure of izzat and family expectation — the ability to move between both languages in a single session is clinically significant. Some emotional content is simply more accurately expressed in the language it was originally experienced in. Neurom actively encourages this. You never have to translate yourself.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">How is NLP different from CBT or regular talk therapy?<span class="faq-ico">+</span></div>
+        <div class="faq-a">CBT works primarily at the level of thought — changing cognitive patterns through identification, challenge, and replacement. It is evidence-based and genuinely useful for many people. NLP works primarily at the level of state and subconscious processing — it changes how experiences are encoded in the nervous system before addressing the cognitive layer. The F-B-T Link reflects this: Feeling before Thought. For people who have found CBT helpful but surface-level, or who understand their patterns cognitively but find them unchanged behaviourally, NLP often addresses the layer that CBT didn't reach. Talk therapy, while valuable, typically does not involve the specific technical interventions NLP offers — the live demonstrations, the anchoring, the submodality work. Neurom integrates all three where appropriate.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">What is the Neurom Circle and who is it for?<span class="faq-ico">+</span></div>
+        <div class="faq-a">The Neurom Circle is a free monthly community gathering held on the last Sunday of every month (4–6pm) at rotating venues across downtown Toronto. It is not therapy, it is not a workshop, and it is not a sales pitch for individual sessions. It is a community of practice — a guided gathering for people who want to think more clearly, connect more honestly, and go home with something they can actually use. The format: 20-minute presentation on the month's psychological theme (follows Neurom's content calendar), 40 minutes of facilitated small-group conversation, 30 minutes of informal connection with tea and coffee. Free entry or $10 suggested donation. Open to everyone. No prior experience with NLP or counselling required.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">Is NLP backed by scientific evidence?<span class="faq-ico">+</span></div>
+        <div class="faq-a">The honest answer: the NLP evidence base is mixed. The foundational research was conducted in the 1970s with methodology that wouldn't pass peer review today, and some systematic reviews have found limited evidence for specific NLP claims. What is also true is that many individual NLP techniques draw directly on principles that are robustly supported in adjacent research areas — somatic anchoring draws on Pavlovian conditioning, submodality work draws on the well-established neuroscience of memory reconsolidation, parts integration draws on Internal Family Systems theory, and state management draws on polyvagal regulation research. Neurom uses NLP within a broader therapeutic framework that takes the clinical evidence seriously. We will always be honest about what the research does and does not show — and our commitment is to what demonstrably works in the room, not what sounds good on paper.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">Do you offer a sliding scale for lower-income clients?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Yes. Neurom offers a limited number of sliding-scale spots for clients referred through COSTI, Punjabi Community Health Services, India Rainbow Community Services, and other settlement agencies in the GTA. If you have been referred by a settlement organisation, please mention this in your contact form. For private individuals who are experiencing genuine financial hardship, please reach out directly — we will always try to find a way to make sessions accessible. The community workshops and Neurom Circle are free or by donation for this reason: we believe access to psychological tools should not be exclusively available to those who can afford premium pricing.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q">How do corporate workshops differ from standard EAP?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Standard EAP (Employee Assistance Programmes) typically offers 3–6 confidential counselling sessions to employees who self-refer. The utilisation rate across Canadian organisations averages 5–10%. Among South Asian employees, this drops significantly due to cultural stigma and the perception that Western therapeutic models don't understand their context. Neurom's corporate offering is fundamentally different: culturally adapted (available in English and Hindi, understanding of South Asian workplace dynamics), clinically grounded (NLP + counselling + adult learning, not wellness platitudes), actively facilitated (sessions go to people, not just available to them), and measurably designed (Bloom's Taxonomy, interactive formats, specific tools to take away). We work with HR teams to make mental health genuinely accessible to the employees who most need it — not just the ones already comfortable seeking it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px"><div style="width:28px;height:.5px;background:var(--om)"></div><span class="eyebrow">Get in touch</span></div>
+        <h2 class="contact-h">Let's begin the<br><em>conversation</em></h2>
+        <p class="contact-body">The free 15-minute intro call is genuinely free and genuinely introductory. No intake forms, no clinical questionnaires, no commitment required. You tell us briefly what's going on. We explain what Neurom does and how. Both of us decide whether it is the right fit for where you are right now.</p>
+        <p class="contact-body">If Neurom is not the right fit — we will tell you honestly. And we will try to point you toward something that is. That is the only way we know how to work.</p>
+        <div class="c-item">
+          <div class="c-ico">📍</div>
+          <div><span class="c-lbl">Location</span><span class="c-val">Downtown Toronto · George Brown College area (200 King Street East) · Clients online across Ontario</span></div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">📧</div>
+          <div><span class="c-lbl">Email</span><span class="c-val">hello@neurom.in</span></div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">📸</div>
+          <div><span class="c-lbl">Instagram</span><span class="c-val">@neuromco · @sunrockshreya (Shreya Sanghvi)</span></div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">💼</div>
+          <div><span class="c-lbl">LinkedIn</span><span class="c-val">Neurom · Shreya Sanghvi (linkedin.com/in/shreyapsanghvi)</span></div>
+        </div>
+        <div class="c-item">
+          <div class="c-ico">▶</div>
+          <div><span class="c-lbl">YouTube</span><span class="c-val">Neurom · Educational content on NLP, relationships, and leadership</span></div>
+        </div>
+        <div class="avail">
+          <div class="av-item"><div class="av-dot"></div>Individual sessions — weekdays 9am–7pm, weekends 10am–4pm</div>
+          <div class="av-item"><div class="av-dot"></div>Hindi sessions available on request — mention in the form</div>
+          <div class="av-item"><div class="av-dot"></div>Corporate enquiries — response within 2 business days</div>
+          <div class="av-item"><div class="av-dot"></div>Sliding scale available — settlement service referrals welcome</div>
+          <div class="av-item"><div class="av-dot"></div>Neurom Circle — last Sunday of every month, no booking required</div>
+          <div class="av-item"><div class="av-dot"></div>Online sessions available to clients anywhere in Ontario</div>
+        </div>
+      </div>
+      <div>
+        <div class="form-box">
+          <h3 class="form-title">Book your free intro call</h3>
+          <p class="form-sub">Tell us briefly what's going on — enough that we can prepare for the conversation. Nothing you write here is part of your clinical record. It is just a starting point.</p>
+          <div class="f-row f-2">
+            <div><label class="f-lbl">First name</label><input class="f-in" type="text" placeholder="Your name"></div>
+            <div><label class="f-lbl">Last name</label><input class="f-in" type="text" placeholder="Family name"></div>
+          </div>
+          <div class="f-row"><label class="f-lbl">Email address</label><input class="f-in" type="email" placeholder="your@email.com"></div>
+          <div class="f-row"><label class="f-lbl">Phone (optional)</label><input class="f-in" type="tel" placeholder="+1 (416)"></div>
+          <div class="f-row"><label class="f-lbl">What brings you to Neurom?</label>
+            <select class="f-sel">
+              <option value="">Select a focus area</option>
+              <option>NLP & individual counselling</option>
+              <option>Relationship counselling (individual)</option>
+              <option>Relationship counselling (couples)</option>
+              <option>Leadership & career coaching</option>
+              <option>Corporate wellness / L&D enquiry</option>
+              <option>Career counselling (newcomer / transition)</option>
+              <option>Gratitude workshop or The Neurom Circle</option>
+              <option>The Gratitude Journal (early access)</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="f-row"><label class="f-lbl">Preferred language for sessions</label>
+            <select class="f-sel">
+              <option>English</option>
+              <option>Hindi</option>
+              <option>English and Hindi (I'll switch between both)</option>
+            </select>
+          </div>
+          <div class="f-row"><label class="f-lbl">Preferred session format</label>
+            <select class="f-sel">
+              <option>In-person (downtown Toronto)</option>
+              <option>Online (anywhere in Ontario)</option>
+              <option>No preference</option>
+            </select>
+          </div>
+          <div class="f-row"><label class="f-lbl">Tell me briefly what's going on (optional but helpful)</label>
+            <textarea class="f-area" placeholder="No clinical language required. No pressure to be comprehensive. A sentence or two about what's on your mind is enough. This is just to help me prepare for our conversation — nothing here is part of a formal clinical record."></textarea>
+          </div>
+          <button class="btn f-sub">Send my request — I'll respond within 24 hours</button>
+          <p style="font-size:11px;color:var(--muted);margin-top:12px;line-height:1.6;text-align:center">Your information is kept completely confidential. Neurom does not share any personal information with third parties. CRPO registration in progress.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta">
+  <span class="eyebrow" style="color:var(--om-l)">The first step</span>
+  <h2 class="cta-h">Something in you already<br>knows it's time to <em>shift</em></h2>
+  <p class="cta-p">The free intro call costs nothing and commits you to nothing. Fifteen minutes — to see if Neurom is the right place for where you are right now. No pressure. No commitment. Just a conversation.</p>
+  <div class="cta-btns">
+    <a href="#contact" class="btn btn-w">Book a free call</a>
+    <a href="#events" class="btn btn-om">Join the Neurom Circle</a>
+    <a href="#workshops" class="btn btn-w">Book a workshop</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-top">
+      <div>
+        <a href="#" class="logo"><span class="logo-n">Neurom</span></a>
+        <p class="ft-tag">NLP · Relationship Counselling · Leadership & Change · Toronto, Canada. Serving individuals, couples, and organisations in downtown Toronto and online across Ontario. Hindi sessions available.</p>
+        <div class="ft-seal"><div class="ft-seal-dot"></div><span class="ft-seal-t">CRPO registration in progress</span></div>
+        <div class="ft-mission">
+          <div class="ft-mt">The mission</div>
+          <p class="ft-mq">"Back to your original signal — the state that was always there, beneath the noise."</p>
+        </div>
+      </div>
+      <div>
+        <div class="ft-col-h">Services</div>
+        <a href="#services" class="ft-lnk">NLP & Counselling</a>
+        <a href="#services" class="ft-lnk">Relationship Counselling</a>
+        <a href="#services" class="ft-lnk">Leadership Coaching</a>
+        <a href="#services" class="ft-lnk">Corporate Wellness & L&D</a>
+        <a href="#services" class="ft-lnk">Career Counselling</a>
+        <a href="#services" class="ft-lnk">Gratitude Workshops</a>
+      </div>
+      <div>
+        <div class="ft-col-h">Community</div>
+        <a href="#events" class="ft-lnk">The Neurom Circle (free monthly)</a>
+        <a href="#events" class="ft-lnk">The Gratitude Practice workshop</a>
+        <a href="#workshops" class="ft-lnk">All workshops & talks</a>
+        <a href="#journal" class="ft-lnk">The Gratitude Journal</a>
+        <a href="#collab" class="ft-lnk">Neurom × Shreya Sanghvi</a>
+        <a href="#blog" class="ft-lnk">The Blog — 365 posts</a>
+      </div>
+      <div>
+        <div class="ft-col-h">About & connect</div>
+        <a href="#about" class="ft-lnk">Philosophy & approach</a>
+        <a href="#practitioner" class="ft-lnk">Shreya Sanghvi — practitioner</a>
+        <a href="#approach" class="ft-lnk">The F-B-T Link framework</a>
+        <a href="#packages" class="ft-lnk">Packages & pricing</a>
+        <a href="#faq" class="ft-lnk">FAQ</a>
+        <a href="#contact" class="ft-lnk">Book a free intro call</a>
+      </div>
+      <div>
+        <div class="ft-col-h">South Asian community</div>
+        <a href="#services" class="ft-lnk">Hindi sessions available</a>
+        <a href="#workshops" class="ft-lnk">Newcomer workshops</a>
+        <a href="#services" class="ft-lnk">Sliding scale access</a>
+        <a href="#impact" class="ft-lnk">Why culturally fluent care matters</a>
+        <a href="#contact" class="ft-lnk">Settlement agency referrals</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span class="ft-copy">© 2026 Neurom · neurom.in · Toronto, Canada · hello@neurom.in · @neuromco</span>
+      <div class="ft-socials">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">YouTube</a>
+        <a href="#">@sunrockshreya</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function switchPkg(id,el){
+  document.querySelectorAll('.pkg-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.pkg-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+function toggleFAQ(el){
+  el.classList.toggle('open');
+  const ico=el.querySelector('.faq-ico');
+  if(ico)ico.textContent=el.classList.contains('open')?'−':'+';
+}
+// Scroll-reveal
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
+},{threshold:.07});
+document.querySelectorAll('.svc,.ws,.ev,.blog-card,.t-card,.imp-c,.presup,.pkg-card,.jnl-ch,.col-card,.spec,.who-card,.pillar,.about-cred,.hiw-step').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(16px)';
+  el.style.transition='opacity .5s ease, transform .5s ease';
+  obs.observe(el);
+});
+// Pillar bars animate on scroll
+const barObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const bar=e.target.querySelector('.pillar-bar-inner');
+      if(bar){const w=bar.style.width;bar.style.width='0';setTimeout(()=>{bar.style.width=w},200);}
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.pillar').forEach(p=>barObs.observe(p));
+</script>
+</body>
+</html>
