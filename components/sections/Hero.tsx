@@ -30,6 +30,7 @@ export default function Hero() {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center lg:justify-start items-center">
+              
               <CustomButton
                 variant="dark"
                 size={buttonSize}
@@ -37,14 +38,14 @@ export default function Hero() {
               >
                 BOOK A FREE INTRO CALL →
               </CustomButton>
-
+              <a href='/services'>
               <CustomButton
                 variant="outline"
                 size={buttonSize}
                 className="sm:w-fit justify-center lg:justify-start"
               >
-                VIEW PACKAGES
-              </CustomButton>
+                VIEW SERVICES
+              </CustomButton></a>
             </div>
           </div>
           <div className='flex flex-col h-full justify-end text-white p-4' style={{ background: 'linear-gradient(180deg, #FAF8F4 0%, #7A8C7E 50%, #3A5244 100%)' }}>

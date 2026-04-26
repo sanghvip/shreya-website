@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import CustomButton from '@/components/ui/CustomButton';
-import { Minus } from 'lucide-react';
 
 export default function Bio() {
   return (
@@ -36,7 +35,7 @@ export default function Bio() {
             <div className='flex flex-row justify-center'>
               <a href='#approach'>
               <CustomButton variant="dark" size="md" className="justify-center sm:justify-start">
-                The F-B-T Approach
+                THE F-B-T APPROACH
               </CustomButton>
               </a>
             </div>

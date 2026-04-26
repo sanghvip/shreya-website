@@ -88,6 +88,7 @@ export default function Footer() {
           {/* Bottom Row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs">RP • NLP Certified • CCPA Member</p>
+            <a href="#contact">
             <button
               className="flex items-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-sm font-medium"
               aria-label="Ask a question on WhatsApp"
@@ -95,6 +96,7 @@ export default function Footer() {
               <MessageCircle className="w-5 h-5 text-[#C9A961]" />
               <span>Ask a Question</span>
             </button>
+            </a>
           </div>
         </div>
       </div>

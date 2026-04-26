@@ -3,7 +3,6 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Services from '@/app/services/Services';
-import Testimonials from '@/components/sections/Testimonials';
 import CTA from '@/components/sections/CTA';
 import SectionSeparator from '@/components/ui/SectionSeparator';
 import Bio from '@/components/sections/Bio';
@@ -11,6 +10,7 @@ import HowItWorks from '@/components/sections/HowItWorks';
 import Approach from '@/components/sections/Approach';
 import Contact from '@/components/sections/Contact';
 import Audience from '@/components/sections/Audience';
+import ScrollToTop from '@/components/ui/ScroolToTop';
 
 export const metadata: Metadata = {
   title: 'Shreya Sanghvi | Psychotherapist & NLP Coach',
@@ -64,6 +64,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

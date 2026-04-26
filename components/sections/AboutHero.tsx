@@ -148,7 +148,7 @@ export default function AboutHero() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
               <a
-                href="mailto:hello@neurom.in"
+                href="/home#contact"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#1A2B1C] hover:bg-[#FAF8F3] transition-all duration-300 rounded-sm font-medium text-sm group"
               >
                 <Mail className="w-4 h-4" />
