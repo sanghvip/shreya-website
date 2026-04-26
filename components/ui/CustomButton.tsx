@@ -23,7 +23,7 @@ export default function CustomButton({
   };
 
   const sizes = {
-    sm: 'px-3 py-1.5 text-xs',
+    sm: 'px-1 py-1.5 text-xs',
     md: 'px-6 py-2.5 text-sm',
     lg: 'px-8 py-3 text-base',
   };

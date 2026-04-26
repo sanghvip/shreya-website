@@ -24,28 +24,28 @@ export default function About() {
       <AboutHero />
 
       {/* Section Separator */}
-      <SectionSeparator variant="organic" />
+      {/* <SectionSeparator variant="organic" /> */}
 
       {/* Therapeutic Approach Section */}
-      <AboutApproach />
+      {/* <AboutApproach /> */}
 
       {/* Section Separator */}
-      <SectionSeparator variant="gradient" />
+      {/* <SectionSeparator variant="gradient" /> */}
 
       {/* Personal Journey Section */}
-      <PersonalJourney />
+      {/* <PersonalJourney /> */}
 
       {/* Section Separator */}
-      <SectionSeparator variant="organic" />
+      {/* <SectionSeparator variant="organic" /> */}
 
       {/* Credentials Section */}
-      <Credentials />
+      {/* <Credentials /> */}
 
       {/* Section Separator */}
-      <SectionSeparator variant="dots" />
+      {/* <SectionSeparator variant="dots" /> */}
 
       {/* CTA Section */}
-      <CTA />
+      {/* <CTA /> */}
 
       {/* Footer */}
       <Footer />

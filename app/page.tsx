@@ -10,6 +10,7 @@ import Bio from '@/components/sections/Bio';
 import HowItWorks from '@/components/sections/HowItWorks';
 import Approach from '@/components/sections/Approach';
 import Contact from '@/components/sections/Contact';
+import Audience from '@/components/sections/Audience';
 
 export const metadata: Metadata = {
   title: 'Shreya Sanghvi | Psychotherapist & NLP Coach',
@@ -38,6 +39,10 @@ export default function Home() {
       {/* Services Section */}
       <HowItWorks />
 
+      <SectionSeparator variant="line" />
+      
+      <Audience/>
+      
       {/* Section Separator */}
       <SectionSeparator variant="line" />
 

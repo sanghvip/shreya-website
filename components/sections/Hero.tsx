@@ -3,8 +3,12 @@
 import Image from 'next/image';
 import CustomButton from '@/components/ui/CustomButton';
 import { Globe, Shield, Dot } from 'lucide-react';
+import { useMediaQuery } from "@/hooks/user-media-query";
 
 export default function Hero() {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const buttonSize = isDesktop ? "md" : "sm";
+
   return (
     <section className="bg-background">
       <div className="sm:pl-6 lg:pl-6">
@@ -13,7 +17,7 @@ export default function Hero() {
           <div className="flex flex-col py-8 px-4 md:py-12 lg:py-16 justify-center">
             {/* Headline Text */}
             <div className='flex flex-col mt-3 lg:mb-10 text-center md:text-left lg:text-left'>
-              <h1 className="text-3xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-[#C9A961] mb-4 text-balance ">
+              <h1 className="text-4xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-[#C9A961] mb-4 text-balance ">
                 Creating space to<br />
                 <span className="text-primary italic">
                   <em className='text-[#7A8C7E]'>feel, grow,</em> 
@@ -25,14 +29,23 @@ export default function Hero() {
               </p>
             </div>
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <CustomButton variant="dark" size="md" className="justify-center sm:justify-start">
-                BOOK A FREE INTRO CALL →
-              </CustomButton>
-              <CustomButton variant="outline" size="md" className="justify-center sm:justify-start">
-                VIEW PACKAGES
-              </CustomButton>
-            </div>
+            <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center lg:justify-start items-center">
+  <CustomButton 
+    variant="dark" 
+    size={buttonSize}
+    className="sm:w-fit justify-center lg:justify-start"
+  >
+    BOOK A FREE INTRO CALL →
+  </CustomButton>
+  
+  <CustomButton 
+    variant="outline" 
+    size={buttonSize}
+    className="sm:w-fit justify-center lg:justify-start"
+  >
+    VIEW PACKAGES
+  </CustomButton>
+</div>
           </div>
           <div className='flex flex-col h-full justify-end text-white p-4' style={{background: 'linear-gradient(180deg, #FAF8F4 0%, #7A8C7E 50%, #3A5244 100%)'}}>
             <div className='flex flex-col justify-center'>
@@ -45,20 +58,37 @@ export default function Hero() {
               </p>
             </div>
             <div className='flex flex-col gap-4 mt-10 sm:py-2 lg:py-2 md:py-2'>
-              <div className="flex flex-row gap-2 rounded-lg bg-[#1C2B1E] lg:gap-5 justify-center py-3">
-                <div className='flex flex-col justify-center items-center'>
-                  <div className='text-[#C9A961] text-2xl lg:text-4xl font-serif'>NLP</div>
-                  <div className='text-[#FAF8F4] text-xs mt-2 font-thin'>STATE-FIRST APPROACH</div>
-                </div>
-                <div className='flex flex-col justify-center items-center'>
-                  <div className='text-[#C9A961] text-2xl lg:text-4xl font-serif'>F.B.T.</div>
-                  <div className='text-[#FAF8F4] text-xs mt-2 font-thin'>FEELING LEADS</div>
-                </div>
-                <div className='flex flex-col justify-center items-center'>
-                  <div className='text-[#C9A961] text-2xl lg:text-4xl font-serif'>GTA</div>
-                  <div className='text-[#FAF8F4] text-xs mt-2 font-thin'>TORONTO BASED</div>
-                </div>
-              </div>
+              <div className="grid grid-cols-3 rounded-lg bg-[#1A2B1C] py-6 px-4">
+  {/* NLP Section */}
+  <div className="flex flex-col items-center text-center px-2">
+    <div className="text-[#C9A961] text-2xl lg:text-4xl font-serif tracking-tight">
+      NLP
+    </div>
+    <div className="text-[#FAF8F4] text-[10px] lg:text-xs mt-3 font-light tracking-[0.2em] uppercase leading-tight">
+      State-First<br className="sm:hidden" /> Approach
+    </div>
+  </div>
+
+  {/* F.B.T. Section - with vertical dividers */}
+  <div className="flex flex-col items-center text-center border-x border-[#FAF8F4]/10 px-2">
+    <div className="text-[#C9A961] text-2xl lg:text-4xl font-serif tracking-tight">
+      F.B.T.
+    </div>
+    <div className="text-[#FAF8F4] text-[10px] lg:text-xs mt-3 font-light tracking-[0.2em] uppercase leading-tight">
+      Feeling<br className="sm:hidden" /> Leads
+    </div>
+  </div>
+
+  {/* GTA Section */}
+  <div className="flex flex-col items-center text-center px-2">
+    <div className="text-[#C9A961] text-2xl lg:text-4xl font-serif tracking-tight">
+      GTA
+    </div>
+    <div className="text-[#FAF8F4] text-[10px] lg:text-xs mt-3 font-light tracking-[0.2em] uppercase leading-tight">
+      Toronto<br className="sm:hidden" /> Based
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
