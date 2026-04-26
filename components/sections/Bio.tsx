@@ -18,7 +18,7 @@ export default function Bio() {
               </div>
             </div>
             <div className='font-serif'>
-              <p className='text-primary text-6xl'>The feeling always 
+              <p className='text-primary text-4xl lg:text-6xl'>The feeling always 
                 <br/>comes
                 <em className='text-[#C9A961]'> first</em></p>
             </div>
