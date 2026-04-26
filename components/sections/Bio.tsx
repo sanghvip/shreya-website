@@ -34,9 +34,11 @@ export default function Bio() {
               </p>
             </div>
             <div className='flex flex-row justify-center'>
+              <a href='#approach'>
               <CustomButton variant="dark" size="md" className="justify-center sm:justify-start">
                 The F-B-T Approach
               </CustomButton>
+              </a>
             </div>
           </div>
           <div className="flex flex-row md:justify-center lg:justify-center">

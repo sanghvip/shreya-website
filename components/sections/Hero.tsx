@@ -13,7 +13,7 @@ export default function Hero() {
           <div className="flex flex-col py-8 px-4 md:py-12 lg:py-16 justify-center">
             {/* Headline Text */}
             <div className='flex flex-col mt-3 lg:mb-10 text-center md:text-left lg:text-left'>
-              <h1 className="text-3xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom italic leading-[1.3] text-[#C9A961] mb-4 text-balance ">
+              <h1 className="text-3xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-[#C9A961] mb-4 text-balance ">
                 Creating space to<br />
                 <span className="text-primary italic">
                   <em className='text-[#7A8C7E]'>feel, grow,</em> 
