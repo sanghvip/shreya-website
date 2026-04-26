@@ -39,10 +39,10 @@ export default function Bio() {
               </CustomButton>
             </div>
           </div>
-          <div className="flex flex-col md:justify-center lg:justify-end">
+          <div className="flex flex-row md:justify-center lg:justify-center">
             <div className="aspect-square">
               <Image
-              src="/personalshot.png"
+              src="/personalshot.jpeg"
               alt="Shreya Sanghvi"
               width={500}
               height={500}
