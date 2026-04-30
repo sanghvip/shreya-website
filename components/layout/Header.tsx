@@ -44,9 +44,11 @@ export default function Header() {
 
           {/* Desktop CTA Button */}
           <div className='flex flex-row'>
+            <a href='https://calendly.com/shreyasanghvi/new-meeting'>
           <button className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-90 transition-all text-sm font-medium">
             BOOK A FREE CALL
           </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button

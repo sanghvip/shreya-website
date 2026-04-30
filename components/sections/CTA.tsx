@@ -16,13 +16,14 @@ export default function CTA() {
           Book a confidential session today.
         </p>
 
-        {/* CTA Button */}
+        <a href='https://calendly.com/shreyasanghvi/new-meeting'>
         <CustomButton
           variant="outline"
           size="lg"
         >
           Book Session →
         </CustomButton>
+        </a>
       </div>
     </section>
   );

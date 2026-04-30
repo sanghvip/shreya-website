@@ -30,14 +30,14 @@ export default function Hero() {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center lg:justify-start items-center">
-              
+              <a href="https://calendly.com/shreyasanghvi/new-meeting?month=2026-04">
               <CustomButton
                 variant="dark"
                 size={buttonSize}
                 className="sm:w-fit justify-center lg:justify-start"
               >
                 BOOK A FREE INTRO CALL →
-              </CustomButton>
+              </CustomButton></a>
               <a href='/services'>
               <CustomButton
                 variant="outline"

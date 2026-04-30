@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           {/* Services Links */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-sm mb-3">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -58,27 +58,17 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Section */}
           <div>
             <h3 className="font-semibold text-sm mb-3">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="/home#contact" className="hover:opacity-80 transition-opacity">
                   Email
                 </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
-                  Whatsapp
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
-                  Online Sessions
-                </a>
-              </li>
+              </li>              
             </ul>
           </div>
         </div>
@@ -88,7 +78,7 @@ export default function Footer() {
           {/* Bottom Row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs">RP • NLP Certified • CCPA Member</p>
-            <a href="#contact">
+            <a href="/home#contact">
             <button
               className="flex items-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-sm font-medium"
               aria-label="Ask a question on WhatsApp"
