@@ -184,7 +184,7 @@ export default function Contact() {
               <ContactLink 
                 icon={<Linkedin className="w-5 h-5" />} 
                 label="LinkedIn" 
-                value="Neurom · Shreya Sanghvi" 
+                value="Shreya Sanghvi" 
                 url="https://www.linkedin.com/in/shreyapsanghvi"
               />
             </div>
