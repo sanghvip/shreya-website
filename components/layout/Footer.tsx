@@ -9,11 +9,10 @@ export default function Footer() {
         {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo Section */}
-          <div className="flex flex-col items-start gap-2">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <Flower2 className="w-6 h-6 text-[#C9A961]" strokeWidth={1.5} />
+          <div className="flex flex-col items-center gap-2">
+              <div className="w-40 h-40 flex items-center justify-center rounded-full overflow-hidden bg-[#F5F3F0]">
+              <img src="/logo.jpeg" alt="Shreya Sanghvi Logo" className="w-4/5 h-4/5 object-contain" />
             </div>
-            <p className="text-sm font-semibold">LOGO</p>
           </div>
 
           {/* Quick Links */}
