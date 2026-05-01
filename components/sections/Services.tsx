@@ -96,7 +96,7 @@ export default function Services() {
         
         {/* Header Section */}
         <div className="flex flex-col items-center justify-center gap-4 mb-20">
-          <p className='text-[#C9A961] font-bold tracking-[0.2em] text-xs uppercase'>WHAT WE OFFER</p>
+          <p className='text-[#C9A961] font-bold tracking-[0.2em] text-xs uppercase'>WHAT <I></I> OFFER</p>
           <h2 className="text-4xl lg:text-6xl md:text-5xl font-serif text-primary text-center leading-tight text-balance">
             Work that meets you
             <br />where you 

@@ -18,14 +18,13 @@ export default function Hero() {
             {/* Headline Text */}
             <div className='flex flex-col mt-3 lg:mb-10 text-center md:text-left lg:text-left'>
               <h1 className="text-4xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-[#C9A961] mb-4 text-balance ">
-                Creating space to<br />
+                Creating space for you<br />
                 <span className="text-primary italic">
                   <em className='text-[#7A8C7E]'>feel, grow,</em>
-                  <br />heal & thrive</span>
+                  <br />and thrive</span>
               </h1>
               <p className="text-[#7A8C7E] text-sm lg:text-m md:text-lg mb-6 font-serif leading-relaxed">
-                A safe empowering environment where emotions are understood, <br />not feared-and where your most extraordinary self becomes possible.
-                <br />Because you are always, already in the making, back to your original signal.
+                A safe, empowering environment where emotions are understood, not feared—and your most extraordinary self emerges. You are always, already in the making, finding your way back to your original signal.
               </p>
             </div>
             {/* CTA Buttons */}
@@ -51,11 +50,11 @@ export default function Hero() {
           <div className='flex flex-col h-full justify-end text-white p-4' style={{ background: 'linear-gradient(180deg, #FAF8F4 0%, #7A8C7E 50%, #3A5244 100%)' }}>
             <div className='flex flex-col justify-center'>
               <p className="text-xl mb-0 text-center font-serif font-light leading-[1.3] lg:mb-20 mx-auto md:text-lg lg:text-2xl drop-shadow-md italic">
-                Your nervous system is not broken.
-                <br />It is running a programme
-                <br />that outlined its original purpose
-                <br />You are in the process of
-                <br />becoming.
+                "Your nervous system is not broken.
+                <br />It is running an old program, one that once protected you,
+                <br />but no longer reflects who you truly are. 
+                <br />ou are becoming who you
+                <br /> were always meant to be."
               </p>
             </div>
             <div className='flex flex-col gap-4 mt-10 sm:py-2 lg:py-2 md:py-2'>

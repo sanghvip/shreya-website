@@ -61,10 +61,10 @@ export default function Audience() {
           <span className="text-[#C9A961] font-bold tracking-[0.3em] text-xs uppercase">
             Who I work with
           </span>
-          <h2 className="text-4xl md:text-6xl font-serif text-[#1A2B1C] leading-tight">
-            A space for <span className="italic text-[#7A8C7E]">everyone</span><br />
-            in their making
-          </h2>
+          <h1 className="text-1xl md:text-2xl font-serif text-[#1A2B1C] leading-tight">
+           Individuals and evolving organizations<span className="italic text-[#7A8C7E]"> seeking to unlock </span><br />
+            their next level.
+          </h1>
         </div>
 
         {/* Grid Section */}

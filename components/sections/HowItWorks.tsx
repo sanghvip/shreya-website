@@ -11,11 +11,11 @@ export default function HowItWorks() {
             The process
           </span>
           <h2 className="text-4xl md:text-6xl font-serif text-[#1A2B1C] leading-[1.1] mb-8">
-            What happens<br />
-            <span className="italic text-[#7A8C7E]">when you work with us</span>
+            What happens ?<br />
+            <span className="italic text-[#7A8C7E]">when you work with me</span>
           </h2>
           <p className="text-lg md:text-xl text-[#7A8C7E] font-serif leading-relaxed max-w-2xl">
-            Every session follows a deliberate structure — not a script, but a framework that ensures the work goes to the level where change actually happens.
+            Every session follows a deliberate curated & structure as per need it not a script, but a framework that ensures the work goes to the level where change actually happens. My approach doesn't follow a rigid script; we follow a dynamic framework. ach session is structured to meet your specific needs while ensuring the work reaches the level where actual growth and shifts happen.
           </p>
         </div>
 
@@ -25,18 +25,17 @@ export default function HowItWorks() {
             {
               num: "01",
               title: "The free intro call",
-              desc: "15 minutes. No forms, no pressure. You tell us briefly what's going on. We explain what Neurom does and how. Both of us decide if it's the right fit. If it isn't — we'll tell you honestly who would serve you better."
+              desc: "15 minutes. Let’s bypass the paperwork and focus on your objectives. We will discuss your goals and evaluate how my methodology aligns with your vision. If we aren’t a strategic fit, I’ll ensure you leave with a direct referral to the specific expert or resource better suited for your journey."
             },
             {
               num: "02",
-              title: "Session one: the feeling",
-              desc: "The first session begins with the F-B-T Link: we start at the feeling. Not a questionnaire — a real conversation. What is the emotional state that is most getting in your way? The session stays here until we understand it."
+              title: "The Internal State",
+              desc: "By starting with the Internal State, we bypass the intellectual \"noise\" that often fills up questionnaires. This isn't about what you think is wrong; it's about what you are actually experiencing. We remain in this exploration until we understand the mechanism, because you cannot shift what you haven't first clearly identified.",
             },
             {
               num: "03",
-              title: "The NLP work",
-              desc: "Once the feeling is understood, we introduce the specific NLP technique relevant to you — anchoring, submodality shift, or parts integration. You experience it, not just understand it."
-            },
+              title: "The Mechanics of Change",
+              desc: "Once your current patterns are identified, I introduce a cognitive shift technique curated to your needs—anchoring, submodality shift, or parts integration. You experience the change directly, rather than just discussing it."},
             {
               num: "04",
               title: "The change between sessions",
@@ -68,7 +67,7 @@ export default function HowItWorks() {
             </h4>
             <div className="max-w-5xl">
               <p className="text-[#3D5E44] text-base md:text-lg lg:text-xl font-serif leading-relaxed italic">
-                "Some patterns shift noticeably in 3–4 sessions. Others — particularly deep attachment patterns, identity-level beliefs, or long-standing emotional responses — require 8–12 sessions to work properly. We will always be honest about what we think the work requires. We do not prolong sessions unnecessarily. We do not cut them short when they need more time."
+                I prioritize efficient results, delivering rapid shifts within 4 sessions or deeper transformations through 12. My commitment is to provide the precise duration necessary for sustainable outcomes, ensuring integrity and focused progress.
               </p>
             </div>
           </div>

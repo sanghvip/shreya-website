@@ -75,7 +75,7 @@ export default function Approach() {
               href="https://calendly.com/shreyasanghvi/new-meeting" 
               className="inline-flex items-center gap-3 px-8 py-4 bg-[#1A2B1C] text-white rounded-sm hover:bg-[#3A5244] transition-colors duration-300 font-medium group"
             >
-              Experience it — free intro call
+              EXPERIENCE IT FOR YOURSELF
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
