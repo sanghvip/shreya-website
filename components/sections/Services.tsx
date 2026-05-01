@@ -124,7 +124,7 @@ export default function Services() {
   };
 
   return (
-    <section className="bg-background py-16 md:py-24">
+    <section className="bg-background py-8 md:py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}

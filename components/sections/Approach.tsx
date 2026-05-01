@@ -33,7 +33,7 @@ const methods = [
 
 export default function Approach() {
   return (
-    <section className="bg-white py-20 md:py-32" id="approach">
+    <section className="bg-white py-20 md:py-3" id="approach">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           
@@ -78,36 +78,27 @@ export default function Approach() {
               EXPERIENCE IT FOR YOURSELF
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
+            <div className="block md:hidden mt-8">
+              <img
+                src="/fbtapproach.jpeg"
+                alt="F-B-T Approach"
+                className="w-full h-auto rounded-xl object-cover"
+              />
+            </div>
           </div>
 
-          {/* Right Column: Steps & Methods */}
+          {/* Right Column: Image & Methods */}
           <div className="space-y-12">
-            
-            {/* F-B-T Visual Steps */}
-            <div className="space-y-4">
-              {[
-                { l: 'F', w: 'Feeling', t: 'The entry point. NLP begins here — in the nervous system response — before offering any technique.' },
-                { l: 'B', w: 'Behaviour', t: 'The visible pattern. Interrupt automatic outbursts or withdrawal loops with structural shifts.' },
-                { l: 'T', w: 'Thought', t: 'The natural transformation. Change occurs not through willpower, but through alignment.' }
-              ].map((step, i) => (
-                <div key={i} className="flex gap-6 p-6 rounded-xl transition-all duration-500 hover:bg-[#3A5244]/5 border border-transparent hover:border-[#3A5244]/10 group">
-                  <div className="text-4xl md:text-5xl text-primary/30 rounded-lg font-serif group-hover:text-[#C9A961] transition-colors duration-500 w-12 text-center">
-                    {step.l}
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-bold text-[#1A2B1C] uppercase tracking-widest text-xs">
-                      {step.w}
-                    </h4>
-                    <p className="text-sm text-[#3D5E44] leading-relaxed font-serif">
-                      {step.t}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            <div className="hidden md:block">
+              <img
+                src="/fbtapproach.jpeg"
+                alt="F-B-T Approach"
+                className="w-full h-auto rounded-xl object-cover"
+              />
             </div>
 
             {/* Method Boxes Grid */}
-            <div className="grid grid-cols-1 gap-4">
+            {/* <div className="grid grid-cols-1 gap-4">
               {methods.map((method, i) => (
                 <div key={i} className="p-6 bg-[#FAF8F3] border border-[#EBE5D8] rounded-sm hover:border-[#C9A961]/40 transition-colors group">
                   <div className="flex items-start gap-4">
@@ -123,7 +114,7 @@ export default function Approach() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
         </div>

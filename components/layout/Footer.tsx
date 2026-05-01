@@ -21,17 +21,17 @@ export default function Footer() {
             <h3 className="font-semibold text-sm mb-3">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="/home" className="hover:opacity-80 transition-opacity">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="/about" className="hover:opacity-80 transition-opacity">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
+                <a href="/services" className="hover:opacity-80 transition-opacity">
                   Services
                 </a>
               </li>

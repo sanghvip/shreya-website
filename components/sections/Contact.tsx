@@ -135,7 +135,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-[#FAF8F3] py-20 md:py-32" id="contact">
+    <section className="bg-[#FAF8F3] py-10 md:py-15" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           
@@ -296,6 +296,8 @@ export default function Contact() {
                         <option value="Relationship counselling">Relationship counselling</option>
                         <option value="Leadership & career coaching">Leadership & career coaching</option>
                         <option value="Corporate wellness enquiry">Corporate wellness enquiry</option>
+                        <option value="Corporate wellness enquiry">Career Counselling</option>
+                        <option value="Corporate wellness enquiry">Gratitude Practice & Workshops</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
                         <svg className="w-4 h-4 text-[#7A8C7E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

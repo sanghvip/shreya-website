@@ -35,15 +35,15 @@ export default function AboutHero() {
             {/* Left Column: Image & Badge (Span 5) */}
             <div className="lg:col-span-5 relative">
               {/* Main Container Box with 1A2B1C/40 background */}
-              <div className="flex flex-col items-center justify-center p-8 md:p-12 bg-primary/40 rounded-2xl gap-8 group">
+              <div className="flex flex-col items-center justify-center p-6 md:p-8 bg-primary/40 rounded-2xl gap-8 group">
 
                 {/* Image Section */}
-                <div className="relative w-full max-w-sm aspect-square">
+                <div className="relative w-full max-w-md md:max-w-lg aspect-square">
                   <Image
                     src="/personalshotdesk.jpeg"
                     alt="Shreya Sanghvi - Psychotherapist and NLP Coach"
-                    width={500}
-                    height={500}
+                    width={600}
+                    height={600}
                     priority
                     className="rounded-lg object-cover w-full h-full shadow-lg"
                   />

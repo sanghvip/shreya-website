@@ -120,7 +120,7 @@ export default function Hero() {
             }
           }
           .animate-marquee {
-            animation: marquee 40s linear infinite;
+            animation: marquee 10s linear infinite;
           }
         `}</style>
     </section>
