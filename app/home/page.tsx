@@ -39,9 +39,9 @@ export default function Home() {
       {/* Services Section */}
       <HowItWorks />
 
-      <SectionSeparator variant="line" />
+      {/* <SectionSeparator variant="line" />
       
-      <Audience/>
+      <Audience/> */}
       
       {/* Section Separator */}
       <SectionSeparator variant="line" />

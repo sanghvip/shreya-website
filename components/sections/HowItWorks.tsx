@@ -2,7 +2,7 @@
 
 export default function HowItWorks() {
   return (
-    <section className="bg-[#FAF8F3] py-20 md:py-32" id="how">
+    <section className="bg-[#FAF8F3] py-20 md:py-3" id="how">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -60,7 +60,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Note Box - Updated for full width and readability */}
-        <div className="mt-20 md:mt-32 p-8 md:p-12 lg:p-16 bg-[#3A5244]/5 border border-[#3A5244]/10 rounded-2xl w-full">
+        {/* <div className="mt-20 md:mt-32 p-8 md:p-12 lg:p-16 bg-[#3A5244]/5 border border-[#3A5244]/10 rounded-2xl w-full">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-start">
             <h4 className="text-[#C9A961] font-bold tracking-widest text-xs uppercase whitespace-nowrap pt-1.5">
               A note on how long it takes
@@ -71,7 +71,7 @@ export default function HowItWorks() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>
