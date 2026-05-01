@@ -172,22 +172,20 @@ export default function Contact() {
               <ContactLink 
                 icon={<Mail className="w-5 h-5" />} 
                 label="Email" 
-                value="hello@neurom.in" 
+                value="info@kalptriva.com" 
+                url="mailto:info@kalptriva.com"
               />
               <ContactLink 
                 icon={<Instagram className="w-5 h-5" />} 
                 label="Instagram" 
-                value="@neuromco · @sunrockshreya" 
+                value="@sunrockshreya" 
+                url="https://www.instagram.com/sunrockshreya"
               />
               <ContactLink 
                 icon={<Linkedin className="w-5 h-5" />} 
                 label="LinkedIn" 
                 value="Neurom · Shreya Sanghvi" 
-              />
-              <ContactLink 
-                icon={<Youtube className="w-5 h-5" />} 
-                label="YouTube" 
-                value="Educational content on NLP, relationships, and leadership" 
+                url="https://www.linkedin.com/in/shreyapsanghvi"
               />
             </div>
 
@@ -371,15 +369,17 @@ export default function Contact() {
 
 
 // Helper Components
-function ContactLink({ icon, label, value }) {
+function ContactLink({ icon, label, value, url = '' }) {
   return (
     <div className="flex gap-5 group">
-      <div className="w-10 h-10 rounded-full bg-[#3A5244]/5 flex items-center justify-center text-[#7A8C7E] group-hover:bg-[#C9A961] group-hover:text-white transition-all duration-500 shrink-0">
-        {icon}
-      </div>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <div className="w-10 h-10 rounded-full bg-[#3A5244]/5 flex items-center justify-center text-[#7A8C7E] group-hover:bg-[#C9A961] group-hover:text-white transition-all duration-500 shrink-0">
+          {icon}
+        </div>
+      </a>
       <div>
         <span className="block text-[10px] uppercase tracking-widest font-bold text-[#C9A961] mb-1">{label}</span>
-        <span className="text-[15px] text-[#1A2B1C] font-serif leading-snug">{value}</span>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="text-[15px] text-[#1A2B1C] font-serif leading-snug">{value}</a>
       </div>
     </div>
   );
