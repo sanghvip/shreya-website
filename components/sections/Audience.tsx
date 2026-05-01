@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { User, Users, GraduationCap, Briefcase, Check } from 'lucide-react';
 
 const audiences = [
@@ -52,9 +52,47 @@ const audiences = [
 ];
 
 export default function Audience() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [active, setActive] = useState(1);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const children = Array.from(el.children) as HTMLElement[];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = children.indexOf(entry.target as HTMLElement);
+            if (idx !== -1) setActive(idx);
+          }
+        });
+      },
+      { root: el, threshold: 0.6 }
+    );
+
+    children.forEach((c) => observer.observe(c));
+
+    // On first load show the second card (Families & Parents)
+    setTimeout(() => {
+      const start = children[1] as HTMLElement | undefined;
+      start?.scrollIntoView({ behavior: 'auto', inline: 'center', block: 'nearest' });
+    }, 60);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollTo = (i: number) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const child = el.children[i] as HTMLElement | undefined;
+    child?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  };
+
   return (
     <section className="bg-white py-20 md:py-32" id="audience">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl md:ml-30 md:mr-30 px-4 sm:px-6 lg:px-2">
         
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-24 space-y-4">
@@ -67,8 +105,55 @@ export default function Audience() {
           </h1>
         </div>
 
-        {/* Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Mobile carousel (shows one card at a time) */}
+        <div className="md:hidden">
+          <div
+            ref={containerRef}
+            className="flex gap-4 overflow-x-auto px-4 -mx-4 snap-x snap-mandatory touch-pan-x scrollbar-hide"
+            role="list"
+          >
+            {audiences.map((aud, index) => (
+              <div
+                key={index}
+                className="snap-center shrink-0 w-full max-w-[92%] mx-auto p-6 bg-[#FAF8F3] border border-[#EBE5D8] rounded-2xl"
+                role="listitem"
+              >
+                <div className="flex flex-col space-y-5">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#C9A961] border border-[#EBE5D8]">
+                    {aud.icon}
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-serif text-[#1A2B1C]">{aud.title}</h3>
+                    <p className="text-[#7A8C7E] text-[15px] leading-relaxed font-serif">{aud.desc}</p>
+                  </div>
+                  <ul className="pt-4 border-t border-[#EBE5D8] grid grid-cols-1 gap-y-3">
+                    {aud.list.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <Check className="w-4 h-4 text-[#C9A961] mt-0.5 shrink-0" />
+                        <span className="text-[13px] text-[#3D5E44] leading-snug">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Indicators */}
+          <div className="flex items-center justify-center gap-3 mt-6">
+            {audiences.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollTo(i)}
+                aria-label={`Go to ${i + 1}`}
+                className={`w-3 h-3 rounded-full transition-colors ${i === active ? 'bg-[#C9A961]' : 'bg-[#D9D9D9]'}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop grid */}
+        <div className="hidden md:grid grid-cols-3 gap-8 lg:gap-12">
           {audiences.map((aud, index) => (
             <div 
               key={index} 

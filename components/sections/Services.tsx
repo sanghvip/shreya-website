@@ -1,5 +1,6 @@
 'use client';
 
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const services = [
@@ -90,6 +91,38 @@ const services = [
 ];
 
 export default function Services() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const children = Array.from(el.children) as HTMLElement[];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = children.indexOf(entry.target as HTMLElement);
+            if (idx !== -1) setActive(idx);
+          }
+        });
+      },
+      { root: el, threshold: 0.6 }
+    );
+
+    children.forEach((c) => observer.observe(c));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollTo = (i: number) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const child = el.children[i] as HTMLElement | undefined;
+    child?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  };
+
   return (
     <section className="bg-background py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,19 +140,94 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Service Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 border-t border-black/10 pt-12">
+        {/* Mobile carousel (shows one card at a time) */}
+        <div className="md:hidden">
+          <div
+            ref={containerRef}
+            className="flex gap-4 overflow-x-auto px-4 -mx-4 snap-x snap-mandatory touch-pan-x scrollbar-hide border-t border-black/10 pt-12"
+            role="list"
+          >
+            {services.map((svc, index) => (
+              <div
+                key={index}
+                className="snap-center shrink-0 w-full max-w-[92%] mx-auto p-8 rounded-2xl bg-background border border-transparent"
+                role="listitem"
+              >
+                <div className="flex flex-col space-y-6">
+                  <div className="space-y-4">
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A8C7E] block font-medium">
+                      {svc.id}
+                    </span>
+                    <div className="w-12 h-[1px] bg-[#C9A961] transition-all duration-700" />
+                    <h3 className="text-3xl font-serif text-primary leading-tight font-bold">
+                      {svc.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-black text-[15px] leading-relaxed font-serif">
+                    {svc.description}
+                  </p>
+
+                  <div className="space-y-4 py-4">
+                    <p className="text-[10px] font-bold tracking-widest text-[#C9A961] uppercase">
+                      {svc.outcomeLabel}
+                    </p>
+                    <ul className="space-y-3 font-serif">
+                      {svc.outcomes.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <ArrowRight className="w-4 h-4 text-[#C9A961] mt-0.5 flex-shrink-0" />
+                          <span className="text-[14px] text-primary leading-snug">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {svc.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 border border-black/20 rounded-sm text-[10px] uppercase tracking-wider text-[#7A8C7E]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="text-[13px] leading-relaxed text-primary pt-4 border-t border-black/10 font-serif italic mt-auto">
+                    <strong className="text-primary not-italic font-bold">For: </strong>
+                    {svc.for}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Indicators */}
+          <div className="flex items-center justify-center gap-3 mt-6">
+            {services.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollTo(i)}
+                aria-label={`Go to ${i + 1}`}
+                className={`w-3 h-3 rounded-full transition-colors ${i === active ? 'bg-[#C9A961]' : 'bg-[#D9D9D9]'}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 border-t border-black/10 pt-12">
           {services.map((svc, index) => (
             <div 
               key={index} 
-              className="group flex flex-col space-y-6 p-8 -m-8 rounded-2xl transition-all duration-500 hover:bg-[#3A5244]/5 border border-transparent"
+              className="group flex flex-col space-y-6 p-8 -m-8 rounded-2xl transition-all duration-500 hover:border-2 hover:border-[#C9A961] border border-transparent"
             >
               <div className="space-y-4">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A8C7E] block font-medium">
                   {svc.id}
                 </span>
                 <div className="w-12 h-[1px] bg-[#C9A961] transition-all duration-700 group-hover:w-24" />
-                <h3 className="text-3xl font-serif text-primary leading-tight font-bold transition-colors duration-500 group-hover:text-[#7A8C7E]">
+                <h3 className="text-3xl font-serif text-primary leading-tight font-bold transition-colors duration-500">
                   {svc.title}
                 </h3>
               </div>
