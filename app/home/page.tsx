@@ -59,8 +59,8 @@ export default function Home() {
 
       <Contact/>
 
-      {/* CTA Section */}
-      <CTA />
+      {/* CTA Section
+      <CTA /> */}
 
       {/* Footer */}
       <Footer />

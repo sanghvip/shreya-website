@@ -10,11 +10,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo Section */}
           <div className="flex flex-col items-center gap-2">
-              <div className="w-40 h-40 flex items-center justify-center rounded-full overflow-hidden bg-[#F5F3F0]">
-              <img src="/logo.jpeg" alt="Shreya Sanghvi Logo" className="w-4/5 h-4/5 object-contain" />
+            <div className="w-40 h-40 flex items-center justify-center rounded-full overflow-hidden bg-[#F5F3F0]">
+              <img
+                src="/logo.png"
+                alt="Shreya Sanghvi Logo"
+                className="w-7/8 h-7/8 object-contain"
+              />
             </div>
           </div>
-
+          <div>
+            <p className="text-2xl lg:text-2xl lg:font-semibold font-serif text-white">Shreya Sanghvi</p>
+          </div>
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-sm mb-3">Navigation</h3>
@@ -67,24 +73,19 @@ export default function Footer() {
                 <a href="/home#contact" className="hover:opacity-80 transition-opacity">
                   Email
                 </a>
-              </li>              
+              </li>
             </ul>
           </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-primary-foreground border-opacity-20 pt-6">
           {/* Bottom Row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs">RP • NLP Certified • CCPA Member</p>
             <a href="/home#contact">
-            <button
-              className="flex items-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-sm font-medium"
-              aria-label="Ask a question on WhatsApp"
-            >
-              <MessageCircle className="w-5 h-5 text-[#C9A961]" />
-              <span>Ask a Question</span>
-            </button>
+              <button
+                className="flex items-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-sm font-medium"
+                aria-label="Ask a question on WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5 text-[#C9A961]" />
+                <span>Ask a Question</span>
+              </button>
             </a>
           </div>
         </div>

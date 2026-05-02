@@ -18,8 +18,8 @@ export default function Header() {
         <div className="flex flex-row items-center justify-between font-serif">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 flex items-center justify-center rounded-full overflow-hidden">
-              <img src="/logo.jpeg" alt="Shreya Sanghvi Logo" className="w-full h-full object-cover" />
+            <div className="w-20 h-20 flex items-center justify-center rounded-full overflow-hidden">
+              <img src="/logo.png" alt="Shreya Sanghvi Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-2xl lg:text-2xl lg:font-semibold text-foreground">Shreya Sanghvi</p>
