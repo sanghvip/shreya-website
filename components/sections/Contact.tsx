@@ -192,11 +192,9 @@ export default function Contact() {
             {/* Availability / Small Notes */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 pt-8 border-t border-[#EBE5D8]">
               {[
-                "Individual sessions — 7 days a week",
-                "Hindi sessions available on request",
+                "Individual sessions",
                 "Corporate response within 2 business days",
                 "Sliding scale & settlement referrals",
-                "Neurom Circle — Monthly community group",
                 "Online sessions across Ontario"
               ].map((note, i) => (
                 <div key={i} className="flex items-center gap-3 text-[13px] text-[#7A8C7E]">
