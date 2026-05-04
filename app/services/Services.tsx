@@ -93,6 +93,24 @@ const services = [
 export default function Services() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [active, setActive] = useState(0);
+  const tabDefinitions = [
+    {
+      id: 'counselling',
+      label: 'Counselling',
+      titles: ['NLP & Counselling Sessions', 'Relationship Counselling', 'Career Counselling']
+    },
+    {
+      id: 'corporate',
+      label: 'Corporate Wellness',
+      titles: ['Corporate Wellness & L&D']
+    },
+    {
+      id: 'trainings',
+      label: 'Trainings & Workshops',
+      titles: ['Gratitude Practice & Workshops', 'Leadership & Change Coaching']
+    }
+  ];
+  const [tab, setTab] = useState(tabDefinitions[0].id);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -123,13 +141,19 @@ export default function Services() {
     child?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   };
 
+  const filteredServices = services.filter((s) =>
+    tabDefinitions.find((d) => d.id === tab)!.titles.includes(s.title)
+  );
+  const desktopGridClass = `hidden md:grid ${filteredServices.length <= 2 ? 'justify-items-center' : ''} grid-cols-1 md:grid-cols-2 ${filteredServices.length >= 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-x-12 gap-y-16 border-t border-black/10 pt-12`;
+  const itemCenterClass = filteredServices.length <= 2 ? 'justify-self-center' : '';
+
   return (
-    <section className="bg-background py-16 md:py-24">
+    <section className="bg-background py-8 md:py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="flex flex-col items-center justify-center gap-4 mb-20">
-          <p className='text-[#C9A961] font-bold tracking-[0.2em] text-xs uppercase'>WHAT WE OFFER</p>
+          <p className='text-[#C9A961] font-bold tracking-[0.2em] text-xs uppercase'>WHAT <i></i> OFFER</p>
           <h2 className="text-4xl lg:text-6xl md:text-5xl font-serif text-primary text-center leading-tight text-balance">
             Work that meets you
             <br />where you 
@@ -140,11 +164,36 @@ export default function Services() {
           </p>
         </div>
 
+        {/* Tabs (desktop only) */}
+        <div className="hidden md:block w-full mb-6">
+          <nav aria-label="Service categories" role="tablist" className="flex items-center justify-center gap-6">
+            {tabDefinitions.map((t) => {
+              const selected = t.id === tab;
+              return (
+                <div key={t.id} className="flex flex-col items-center">
+                  <button
+                    role="tab"
+                    aria-selected={selected}
+                    aria-controls={`panel-${t.id}`}
+                    id={`tab-${t.id}`}
+                    onClick={() => setTab(t.id)}
+                    className={`whitespace-nowrap px-5 py-2 rounded-full font-medium font-serif transition-colors duration-200 focus:outline-none ${selected ? 'bg-[#0f1a16] text-white border border-transparent' : 'bg-transparent text-[#7A8C7E] border border-black/10'}`}
+                  >
+                    {t.label}
+                  </button>
+
+                  <span aria-hidden className={`block mt-2 h-0.5 rounded-full transition-all duration-200 ${selected ? 'w-8 bg-[#C9A961]' : 'w-6 bg-transparent'}`} />
+                </div>
+              );
+            })}
+          </nav>
+        </div>
+
         {/* Mobile carousel (shows one card at a time) */}
         <div className="md:hidden">
           <div
             ref={containerRef}
-            className="flex gap-4 overflow-x-auto px-4 -mx-4 snap-x snap-mandatory touch-pan-x scrollbar-hide border-t border-black/10 pt-12"
+            className="flex gap-4 overflow-x-auto px-4 -mx-4 snap-x snap-mandatory scrollbar-hide border-t border-black/10 pt-12"
             role="list"
           >
             {services.map((svc, index) => (
@@ -216,11 +265,11 @@ export default function Services() {
         </div>
 
         {/* Desktop grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 border-t border-black/10 pt-12">
-          {services.map((svc, index) => (
+        <div className={desktopGridClass}>
+          {filteredServices.map((svc, index) => (
             <div 
               key={index} 
-              className="group flex flex-col space-y-6 p-8 -m-8 rounded-2xl transition-all duration-500 hover:border-2 hover:border-[#C9A961] border border-transparent"
+              className={`group flex flex-col space-y-6 p-8 -m-8 rounded-2xl transition-all duration-500 hover:border-2 hover:border-[#C9A961] border border-transparent ${itemCenterClass}`}
             >
               <div className="space-y-4">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-[#7A8C7E] block font-medium">

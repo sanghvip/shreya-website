@@ -31,10 +31,10 @@ export default function Home() {
       <SectionSeparator variant="line" />
       
       {/* Bio Section */}
-      <Bio/>
+      {/* <Bio/> */}
 
       {/* Section Separator */}
-      <SectionSeparator variant="line" />
+      {/* <SectionSeparator variant="line" /> */}
 
       {/* Services Section */}
       <HowItWorks />

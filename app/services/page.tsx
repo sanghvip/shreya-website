@@ -8,7 +8,6 @@ export default function Services() {
     <main className="bg-background text-foreground min-h-screen">
       {/* Header Navigation */}
       <Header />
-
       <ServiceList/>
       {/* Footer */}
       <Footer />

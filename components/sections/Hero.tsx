@@ -18,13 +18,13 @@ export default function Hero() {
             {/* Headline Text */}
             <div className='flex flex-col mt-3 lg:mb-10 text-center md:text-left lg:text-left'>
               <h1 className="text-4xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-[#C9A961] mb-4 text-balance ">
-                Creating space for you<br />
+                Get your space<br />
                 <span className="text-primary italic">
-                  <em className='text-[#7A8C7E]'>feel, grow,</em>
+                  <em className='text-[#7A8C7E]'>to grow</em>
                   <br />and thrive</span>
               </h1>
               <p className="text-[#7A8C7E] text-sm lg:text-m md:text-lg mb-6 font-serif leading-relaxed">
-                A safe, empowering environment where emotions are understood, not feared—and your most extraordinary self emerges. You are always, already in the making, finding your way back to your original signal.
+                Are you ready to explore your transformation journey?
               </p>
             </div>
             {/* CTA Buttons */}
