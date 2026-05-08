@@ -53,14 +53,8 @@ export default function Approach() {
 
             <div className="space-y-6 text-[#3D5E44] font-serif text-lg leading-relaxed">
               <p>
-                Most therapeutic models follow the Cognitive Triangle: Thought → Feeling → Behaviour. 
-                Change your thinking, and your emotions follow. This is theoretically sound — 
-                and practically unhelpful for the majority of people who seek it.
-              </p>
-              <p>
-                Because when you are triggered or flooded, your rational mind is the last thing available to you. 
-                No amount of CBT worksheets can reach a nervous system in threat mode.
-              </p>
+                Pivots from traditional cognitive models by prioritizing the somatic and emotional experience over intellectual analysis. While classical Cognitive Behavioral Therapy (CBT) often relies on "top-down" processing, your model advocates for a "bottom-up" approach that respects the biological reality of the nervous system.
+              </p>  
               <p className="border-l-2 border-[#C9A961]/30 pl-6 py-2 italic text-[#1A2B1C]">
                 The F-B-T Link reverses the sequence. Start at the Feeling. From that understanding, 
                 the Behaviour becomes navigable. From the behavioural shift, the Thought transforms naturally.
