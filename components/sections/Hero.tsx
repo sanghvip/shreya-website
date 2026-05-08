@@ -17,14 +17,14 @@ export default function Hero() {
           <div className="flex flex-col py-8 px-4 md:py-12 lg:py-16 justify-center">
             {/* Headline Text */}
             <div className='flex flex-col mt-3 lg:mb-10 text-center md:text-left lg:text-left'>
-              <h1 className="text-4xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-[#C9A961] mb-4 text-balance ">
-                Get your space<br />
+              <h1 className="text-4xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-foreground mb-4 text-balance ">
+                The Story You Tell<br />
                 <span className="text-primary italic">
-                  <em className='text-[#7A8C7E]'>to grow</em>
-                  <br />and thrive</span>
+                  <em className='text-[#7A8C7E]'>Is the Life</em>
+                  <br/><div className='text-[#C9A961]'>You Build</div></span>
               </h1>
               <p className="text-[#7A8C7E] text-sm lg:text-m md:text-lg mb-6 font-serif leading-relaxed">
-                Are you ready to explore your transformation journey?
+                Quit justifying your past. Design your future. Who are you choosing to be right now?
               </p>
             </div>
             {/* CTA Buttons */}
@@ -43,18 +43,14 @@ export default function Hero() {
                 size={buttonSize}
                 className="sm:w-fit justify-center lg:justify-start"
               >
-                VIEW SERVICES
+                START THE TRANSFORMATION
               </CustomButton></a>
             </div>
           </div>
           <div className='flex flex-col h-full justify-end text-white p-4' style={{ background: 'linear-gradient(180deg, #FAF8F4 0%, #7A8C7E 50%, #3A5244 100%)' }}>
             <div className='flex flex-col justify-center'>
               <p className="text-xl mb-0 text-center font-serif font-light leading-[1.3] lg:mb-20 mx-auto md:text-lg lg:text-2xl drop-shadow-md italic">
-                "Your nervous system is not broken.
-                <br />It is running an old program, one that once protected you,
-                <br />but no longer reflects who you truly are. 
-                <br />ou are becoming who you
-                <br /> were always meant to be."
+                "We live in the space between who we are and who we are permitted to be."
               </p>
             </div>
             <div className='flex flex-col gap-4 mt-10 sm:py-2 lg:py-2 md:py-2'>
