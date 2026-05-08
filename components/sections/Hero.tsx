@@ -47,10 +47,11 @@ export default function Hero() {
               </CustomButton></a>
             </div>
           </div>
-          <div className='flex flex-col h-full justify-end text-white p-4' style={{ background: 'linear-gradient(180deg, #FAF8F4 0%, #7A8C7E 50%, #3A5244 100%)' }}>
+          <div className='flex flex-col h-full justify-end text-white p-4' style={{ background: 'linear-gradient(180deg,  #C9A961 0%,#3A5244 90%, #7A8C7E 100%' }}>
             <div className='flex flex-col justify-center'>
               <p className="text-xl mb-0 text-center font-serif font-light leading-[1.3] lg:mb-20 mx-auto md:text-lg lg:text-2xl drop-shadow-md italic">
-                "We live in the space between who we are and who we are permitted to be."
+                "We live in the space between who we are 
+                <br/>and who we are permitted to be."
               </p>
             </div>
             <div className='flex flex-col gap-4 mt-10 sm:py-2 lg:py-2 md:py-2'>
@@ -61,17 +62,17 @@ export default function Hero() {
                     NLP
                   </div>
                   <div className="text-[#FAF8F4] text-[10px] lg:text-xs mt-3 font-light tracking-[0.2em] uppercase leading-tight">
-                    State-First<br className="sm:hidden" /> Approach
+                    Certified<br className="sm:hidden" /> Practioner
                   </div>
                 </div>
 
                 {/* F.B.T. Section - with vertical dividers */}
                 <div className="flex flex-col items-center text-center border-x border-[#FAF8F4]/10 px-2">
                   <div className="text-[#C9A961] text-2xl lg:text-4xl font-serif tracking-tight">
-                    F.B.T.
+                    TEDx
                   </div>
                   <div className="text-[#FAF8F4] text-[10px] lg:text-xs mt-3 font-light tracking-[0.2em] uppercase leading-tight">
-                    Feeling<br className="sm:hidden" /> Leads
+                    Circle<br className="sm:hidden" /> Speaker
                   </div>
                 </div>
 
