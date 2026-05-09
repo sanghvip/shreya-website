@@ -14,7 +14,7 @@ export default function CustomButton({
   className = '',
 }: CustomButtonProps) {
   const baseStyles =
-    'font-medium rounded transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap';
+    'rounded-xl transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap';
 
   const variants = {
     dark: 'bg-primary text-primary-foreground hover:bg-opacity-90',
@@ -23,7 +23,7 @@ export default function CustomButton({
   };
 
   const sizes = {
-    sm: 'px-1 py-1.5 text-xs',
+    sm: 'px-3 py-1.5 text-xs',
     md: 'px-6 py-2.5 text-sm',
     lg: 'px-8 py-3 text-base',
   };

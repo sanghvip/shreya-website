@@ -1,4 +1,4 @@
-import { Flower2, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 // Footer component with deep forest green background
 // Displays logo, navigation links, certifications, and social contact options
@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo Section */}
           <div className="flex flex-col items-center gap-2">
-            <div className="w-40 h-40 flex items-center justify-center rounded-full overflow-hidden bg-[#F5F3F0]">
+            <div className="w-20 h-20 flex items-center justify-center rounded-full overflow-hidden bg-[#F5F3F0]">
               <img
                 src="/logo.png"
                 alt="Shreya Sanghvi Logo"

@@ -17,12 +17,12 @@ export default function Header() {
       <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-row items-center justify-between font-serif">
           {/* Logo and Company Name */}
-          <div className="flex items-center gap-2">
-            <div className="w-20 h-20 flex items-center justify-center rounded-full overflow-hidden">
+          <div className="flex items-center gap-10">
+            <div className="w-15 h-15 flex items-center justify-center rounded-full overflow-hidden">
               <img src="/logo.png" alt="Shreya Sanghvi Logo" className="w-full h-full object-cover" />
             </div>
-            <div>
-              <p className="text-2xl lg:text-2xl lg:font-semibold text-foreground">Shreya Sanghvi</p>
+            <div className="flex flex-row justify-center items-center">
+              <p className="text-xl lg:text-2xl text-foreground">Shreya Sanghvi</p>
             </div>
           </div>
 
