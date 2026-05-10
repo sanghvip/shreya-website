@@ -18,10 +18,10 @@ export default function Hero() {
             {/* Headline Text */}
             <div className='flex flex-col mt-3 lg:mb-10 text-center md:text-left lg:text-left'>
               <h1 className="text-4xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-foreground mb-4 text-balance ">
-                The Story You Tell<br />
+                Regulate the nervous system.<br />
                 <span className="text-primary italic">
-                  <em className='text-[#7A8C7E]'>Is the Life</em>
-                  <br/><div className='text-[#C9A961]'>You Build</div></span>
+                  <em className='text-[#7A8C7E]'>Transform</em>
+                  <br/><div className='text-[#C9A961]'>emotional patterns. Rebuild your life</div></span>
               </h1>
               <p className="text-[#7A8C7E] text-sm lg:text-m md:text-lg mb-6 font-serif leading-relaxed">
                 Quit justifying your past. Design your future. Who are you choosing to be right now?
