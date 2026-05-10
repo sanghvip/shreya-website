@@ -35,22 +35,18 @@ export default function Approach() {
   return (
     <section className="bg-white md:py-3" id="approach">
       <div className="mx-auto px-4 sm:px-6">
-        <div className="flex flex-col lg:flex-row md:flex-row gap-16 lg:gap-24 items-start">
-          
+        <div className="flex flex-col lg:flex-row md:flex-row gap-16 items-start">
           {/* Left Column: Theory & Narrative */}
           <div className="space-y-8">
             <div className="flex items-center gap-4">
-              <div className="w-8 h-[1px] bg-[#C9A961]"></div>
               <span className="text-[#C9A961] font-bold tracking-[0.3em] text-xs uppercase">
                 The framework
               </span>
             </div>
-
-            <h2 className="text-4xl md:text-5xl font-serif text-[#1A2B1C] leading-tight">
+            <div className="flex flex-col space-y-6 text-[#3D5E44] font-serif text-lg leading-relaxed">
+              <h2 className="text-4xl md:text-5xl font-serif text-[#1A2B1C] leading-tight">
             <span className="italic text-[#C9A961]">The Feeling Always Comes First </span><br />
             </h2>
-
-            <div className="space-y-6 text-[#3D5E44] font-serif text-lg leading-relaxed">
               <p>
                 Most therapy starts with the thought. We start with the feeling. The deepest behaviours do not live in the rational brain  they live in the nervous system, in patterns formed long before you had language to describe them.
 <br/><br/>
@@ -71,44 +67,16 @@ We have spent decades treating ourselves and our workplaces like machines to be 
               EXPERIENCE IT FOR YOURSELF
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <div className="block md:hidden mt-8">
-              <img
-                src="/fbtapproach.png"
-                alt="F-B-T Approach"
-                className="w-fit h-fit rounded-xl object-cover"
-              />
-            </div>
           </div>
-
           <div className="flex flex-col space-y-12">
-            <div className=" flex flex-col align-center justify-center hidden md:block">
+            <div className=" flex flex-col align-center justify-center hidden md:block lg:block">
               <img
                 src="/fbtapproach.png"
                 alt="F-B-T Approach"
-                className="md:w-500 md:h-200 rounded-xl"
+                className="md:w-500 md:h-500 lg:w-200 lg:h-200 rounded-xl"
               />
             </div>
-
-            {/* Method Boxes Grid */}
-            {/* <div className="grid grid-cols-1 gap-4">
-              {methods.map((method, i) => (
-                <div key={i} className="p-6 bg-[#FAF8F3] border border-[#EBE5D8] rounded-sm hover:border-[#C9A961]/40 transition-colors group">
-                  <div className="flex items-start gap-4">
-                    <div className="text-[#C9A961] mt-1">{method.icon}</div>
-                    <div className="space-y-2">
-                      <h5 className="font-bold text-[#1A2B1C] text-sm leading-tight">
-                        {method.title}
-                      </h5>
-                      <p className="text-[13px] text-[#7A8C7E] leading-relaxed">
-                        {method.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
           </div>
-
         </div>
       </div>
     </section>

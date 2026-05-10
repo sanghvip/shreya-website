@@ -21,8 +21,9 @@ export default function Header() {
             <div className="w-15 h-15 flex items-center justify-center rounded-full overflow-hidden">
               <img src="/logo.png" alt="Shreya Sanghvi Logo" className="w-full h-full object-cover" />
             </div>
-            <div className="flex flex-row justify-center items-center">
+            <div className="flex flex-col justify-start items-center gap-1">
               <p className="text-xl lg:text-2xl text-foreground">Shreya Sanghvi</p>
+              <p className="text-sm lg:text-sm text-foreground">Integrated Psychotherapist | NLP Practitioner</p>
             </div>
           </div>
 

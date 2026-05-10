@@ -11,6 +11,7 @@ import Approach from '@/components/sections/Approach';
 import Contact from '@/components/sections/Contact';
 import Audience from '@/components/sections/Audience';
 import ScrollToTop from '@/components/ui/ScroolToTop';
+import Testimonials from '@/components/sections/Testimonials';
 
 export const metadata: Metadata = {
   title: 'Shreya Sanghvi | Psychotherapist & NLP Coach',
@@ -54,6 +55,10 @@ export default function Home() {
 
       <Approach/>
 
+      {/* Section Separator */}
+      <SectionSeparator variant="line" />
+
+      <Testimonials/>
       {/* Section Separator */}
       <SectionSeparator variant="line" />
 

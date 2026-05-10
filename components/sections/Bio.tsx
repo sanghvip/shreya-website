@@ -18,7 +18,7 @@ export default function Bio() {
               </div>
             </div>
             <div className='font-serif'>
-              <p className='text-primary text-4xl lg:text-6xl'>Release what no longer fits
+              <p className='text-primary text-4xl md:text-xl lg:text-5xl'>Release what no longer fits
                 <br />
                 <em className='text-[#C9A961]'> Step into your power</em></p>
             </div>
