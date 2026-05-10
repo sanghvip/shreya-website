@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shreya Sanghvi — In the Making · Therapy, coaching, and counselling for the in-between</title>
+<meta name="description" content="Therapy, coaching, and counselling for the in-between. For South Asian Canadians, newcomers, leaders, and couples. NLP-driven. ICF-certified. Hindi & English. Toronto + online." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream:        #FAF6EE;
+    --cream-deep:   #F2EBDB;
+    --paper:        #F7F1E3;
+    --forest:       #2D3F33;
+    --forest-deep:  #1F2D24;
+    --terracotta:   #B8643D;
+    --terracotta-deep: #9B5230;
+    --saffron:      #C8932E;
+    --ink:          #1A1F1B;
+    --ink-soft:     #4A524C;
+    --line:         #D9CFBE;
+    --line-soft:    #E8DFCC;
+
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans:  'DM Sans', system-ui, sans-serif;
+
+    --max:    1320px;
+    --gutter: clamp(20px, 4vw, 56px);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  /* paper-grain overlay for warmth */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.7 0 0 0 0 0.65 0 0 0 0 0.55 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
+  button { font: inherit; cursor: pointer; border: none; background: none; }
+
+  /* ─── Typography ─── */
+  .display, h1, h2, h3 {
+    font-family: var(--serif);
+    font-weight: 300;
+    color: var(--forest);
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin: 0;
+  }
+  h1 { font-size: clamp(56px, 11vw, 168px); }
+  h2 { font-size: clamp(40px, 6vw, 84px); line-height: 1.04; }
+  h3 { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.15; }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+  .lede {
+    font-family: var(--serif);
+    font-size: clamp(20px, 1.7vw, 24px);
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.45;
+    font-weight: 300;
+  }
+  p { margin: 0 0 1em; }
+  em, .italic { font-style: italic; }
+
+  /* ─── Container ─── */
+  .container {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─── Section base ─── */
+  section {
+    position: relative;
+    z-index: 2;
+    padding: clamp(80px, 10vw, 160px) 0;
+  }
+  .section-num {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--ink-soft);
+    opacity: 0.5;
+  }
+
+  /* ──────────────────────── HEADER ──────────────────────── */
+  header.site {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 22px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    transition: padding 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+    border-bottom: 1px solid transparent;
+    backdrop-filter: blur(0px);
+  }
+  header.site.scrolled {
+    padding: 14px var(--gutter);
+    background: rgba(250, 246, 238, 0.88);
+    backdrop-filter: blur(14px);
+    border-bottom-color: var(--line);
+  }
+  .wordmark {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--forest);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wordmark .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    margin-bottom: 2px;
+  }
+  .wordmark em {
+    font-style: italic;
+    font-weight: 300;
+  }
+  nav.primary {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  nav.primary a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    transition: color 0.2s;
+    position: relative;
+  }
+  nav.primary a:hover { color: var(--terracotta); }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--forest);
+    color: var(--cream);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: transform 0.25s, background 0.25s;
+  }
+  .cta-btn:hover { background: var(--forest-deep); transform: translateY(-1px); }
+  .cta-btn .arrow { transition: transform 0.25s; }
+  .cta-btn:hover .arrow { transform: translateX(3px); }
+  .menu-toggle { display: none; }
+  @media (max-width: 880px) {
+    nav.primary a { display: none; }
+    nav.primary .cta-btn { padding: 10px 16px; font-size: 12px; }
+  }
+
+  /* ──────────────────────── HERO ──────────────────────── */
+  .hero {
+    padding-top: clamp(140px, 18vw, 220px);
+    padding-bottom: clamp(100px, 12vw, 160px);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(40px, 5vw, 80px);
+    align-items: end;
+  }
+  .hero-eyebrow {
+    margin-bottom: 36px;
+  }
+  .hero h1 {
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 0;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
+  }
+  .hero h1 .making {
+    display: block;
+    margin-left: clamp(40px, 8vw, 140px);
+  }
+  .hero h1 .punc {
+    color: var(--terracotta);
+    font-style: normal;
+  }
+  .hero-meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-top: clamp(40px, 6vw, 72px);
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+  }
+  @media (min-width: 880px) {
+    .hero-meta {
+      grid-template-columns: 1.4fr 1fr;
+      align-items: start;
+    }
+  }
+  .hero-subhead {
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.2vw, 32px);
+    font-style: italic;
+    color: var(--forest);
+    line-height: 1.3;
+    margin: 0 0 28px;
+    font-weight: 300;
+  }
+  .hero-body {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    line-height: 1.65;
+  }
+  .hero-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .trust-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .trust-list li {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.4);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+  }
+  .link-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--forest);
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    transition: color 0.25s, border-color 0.25s;
+  }
+  .link-action:hover { color: var(--terracotta); border-color: var(--terracotta); }
+  .link-action::after {
+    content: "→";
+    transition: transform 0.25s;
+  }
+  .link-action:hover::after { transform: translateX(3px); }
+
+  /* Quiet decorative motif behind hero */
+  .hero-motif {
+    position: absolute;
+    right: -8vw;
+    top: 14vw;
+    width: 38vw;
+    max-width: 540px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(184,100,61,0.10), rgba(184,100,61,0));
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-mark {
+    position: absolute;
+    right: var(--gutter);
+    top: clamp(120px, 16vw, 200px);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(24px, 2.2vw, 32px);
+    color: var(--terracotta);
+    opacity: 0.5;
+    z-index: 2;
+    transform: rotate(-4deg);
+  }
+
+  /* ──────────────────────── WHO I'M FOR ──────────────────────── */
+  .audience {
+    background: var(--cream-deep);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .audience-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: clamp(48px, 6vw, 96px);
+    align-items: end;
+  }
+  @media (min-width: 880px) {
+    .audience-head { grid-template-columns: 1fr 1.6fr; gap: 80px; }
+  }
+  .audience-head h2 {
+    margin-top: 16px;
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
+  }
+  .audience-head p {
+    font-size: 18px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 540px;
+    margin: 0;
+  }
+
+  .persona-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(36px, 4vw, 56px);
+  }
+  .persona {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 3vw, 48px);
+    padding: clamp(36px, 4vw, 56px);
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    position: relative;
+    transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+  }
+  .persona:hover {
+    transform: translateY(-4px);
+    border-color: var(--terracotta);
+    box-shadow: 0 30px 60px -30px rgba(45, 63, 51, 0.15);
+  }
+  @media (min-width: 880px) {
+    .persona { grid-template-columns: 0.55fr 1.45fr; }
+    .persona:nth-child(even) {
+      background: var(--paper);
+    }
+  }
+  .persona-portrait {
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(140deg, #E8D6C0 0%, #D9B697 50%, #B8643D 100%);
+  }
+  .persona-portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 70% 35%, rgba(255,255,255,0.18), transparent 50%),
+      radial-gradient(circle at 30% 70%, rgba(45,63,51,0.20), transparent 60%);
+  }
+  .persona-portrait .label {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 16px 20px;
+    background: linear-gradient(transparent, rgba(45,63,51,0.85));
+    color: var(--cream);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .persona:nth-child(2) .persona-portrait {
+    background: linear-gradient(140deg, #C8B79C 0%, #8C9A7C 50%, #2D3F33 100%);
+  }
+  .persona:nth-child(3) .persona-portrait {
+    background: linear-gradient(140deg, #E8C39B 0%, #C8932E 60%, #8C5E14 100%);
+  }
+  .persona-body { display: flex; flex-direction: column; gap: 18px; }
+  .persona-tag {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+  }
+  .persona h3 {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100;
+    margin: 0;
+  }
+  .persona-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    border-left: 2px solid var(--terracotta);
+    padding-left: 18px;
+    margin: 6px 0 8px;
+    font-weight: 300;
+  }
+  .persona-prose {
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .persona-prose p { margin: 0 0 12px; }
+  .persona-fit {
+    margin-top: 8px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .persona-fit-label {
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+  }
+  .persona-fit-label strong {
+    color: var(--forest);
+    font-weight: 500;
+  }
+
+  /* ──────────────────────── F-B-T APPROACH ──────────────────────── */
+  .approach {
+    background: var(--forest);
+    color: var(--cream);
+    position: relative;
+  }
+  .approach .eyebrow { color: #E8B58A; }
+  .approach .eyebrow::before { background: #E8B58A; }
+  .approach-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: center;
+  }
+  @media (min-width: 980px) {
+    .approach-grid { grid-template-columns: 1fr 1.1fr; }
+  }
+  .approach h2 {
+    color: var(--cream);
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
+    margin-top: 18px;
+    margin-bottom: 28px;
+  }
+  .approach-prose p {
+    color: rgba(250, 246, 238, 0.78);
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 520px;
+  }
+  .approach-prose .read-more {
+    margin-top: 24px;
+    color: var(--cream);
+    border-color: rgba(250,246,238,0.3);
+  }
+  .approach-prose .read-more:hover { color: #E8B58A; border-color: #E8B58A; }
+
+  /* F-B-T diagram */
+  .fbt-diagram {
+    position: relative;
+    aspect-ratio: 1.1;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .fbt-diagram svg { width: 100%; height: 100%; }
+  .fbt-diagram .layer-label {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 26px;
+    fill: var(--cream);
+    font-weight: 300;
+  }
+  .fbt-diagram .layer-tag {
+    font-family: var(--sans);
+    font-size: 10px;
+    fill: rgba(232, 181, 138, 0.85);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .fbt-diagram .layer-desc {
+    font-family: var(--sans);
+    font-size: 12px;
+    fill: rgba(250, 246, 238, 0.62);
+  }
+
+  /* ──────────────────────── WAYS TO WORK ──────────────────────── */
+  .ways {
+    background: var(--cream);
+  }
+  .ways-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: clamp(48px, 6vw, 96px);
+    align-items: end;
+  }
+  @media (min-width: 880px) {
+    .ways-head { grid-template-columns: 1.2fr 1fr; }
+  }
+  .ways-head h2 {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
+    margin-top: 16px;
+  }
+  .ways-head p {
+    color: var(--ink-soft);
+    font-size: 18px;
+    max-width: 460px;
+    margin: 0;
+  }
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .tier {
+    background: var(--cream);
+    padding: clamp(28px, 3vw, 44px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background 0.3s;
+    position: relative;
+    min-height: 380px;
+  }
+  .tier:hover { background: var(--paper); }
+  .tier-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--terracotta);
+    letter-spacing: 0.04em;
+  }
+  .tier h3 {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100;
+    font-size: 32px;
+    margin: 4px 0 0;
+  }
+  .tier-price {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    margin-top: -4px;
+  }
+  .tier-desc {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 8px 0 0;
+    flex-grow: 1;
+  }
+  .tier-cta {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--forest);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.25s;
+  }
+  .tier:hover .tier-cta { color: var(--terracotta); }
+  .tier-cta::after {
+    content: "→";
+    transition: transform 0.25s;
+  }
+  .tier:hover .tier-cta::after { transform: translateX(4px); }
+
+  /* ──────────────────────── ABOUT BRIEF ──────────────────────── */
+  .about-brief {
+    background: var(--cream-deep);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: center;
+  }
+  @media (min-width: 880px) {
+    .about-grid { grid-template-columns: 0.85fr 1.15fr; }
+  }
+  .about-portrait {
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    background: linear-gradient(150deg, #D9B697 0%, #B8643D 60%, #2D3F33 100%);
+    position: relative;
+    overflow: hidden;
+    max-width: 460px;
+  }
+  .about-portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 65% 30%, rgba(255,255,255,0.20), transparent 55%),
+      radial-gradient(circle at 30% 75%, rgba(45,63,51,0.22), transparent 60%);
+  }
+  .about-portrait .caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(45,63,51,0.85));
+    color: var(--cream);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    z-index: 2;
+  }
+  .about-prose .greeting {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(40px, 5vw, 64px);
+    color: var(--terracotta);
+    line-height: 1.05;
+    margin: 0 0 32px;
+    font-weight: 300;
+    font-variation-settings: "SOFT" 100;
+  }
+  .about-prose p {
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 0 18px;
+    max-width: 580px;
+  }
+
+  /* ──────────────────────── TESTIMONIAL ──────────────────────── */
+  .testimony {
+    background: var(--cream);
+    text-align: center;
+    padding-top: clamp(100px, 12vw, 160px);
+    padding-bottom: clamp(100px, 12vw, 160px);
+  }
+  .testimony-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
+    font-size: clamp(32px, 4.4vw, 60px);
+    line-height: 1.2;
+    color: var(--forest);
+    max-width: 18ch;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+  .testimony-quote .mark {
+    color: var(--terracotta);
+    font-style: normal;
+    display: block;
+    font-size: 0.7em;
+    margin-bottom: -0.1em;
+  }
+  .testimony-attr {
+    margin-top: 40px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .testimony-attr strong {
+    color: var(--forest);
+    font-weight: 500;
+  }
+
+  /* ──────────────────────── LIBRARY TEASER ──────────────────────── */
+  .library {
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+  }
+  .library-head h2 {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
+    margin-top: 16px;
+    max-width: 14ch;
+  }
+  .library-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    margin-top: 64px;
+    align-items: start;
+  }
+  @media (min-width: 880px) {
+    .library-grid { grid-template-columns: 1.3fr 1fr; }
+  }
+  .essay-list { list-style: none; padding: 0; margin: 0; }
+  .essay-list li {
+    border-top: 1px solid var(--line);
+    padding: 22px 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: baseline;
+    transition: border-color 0.25s;
+    cursor: pointer;
+  }
+  .essay-list li:last-child { border-bottom: 1px solid var(--line); }
+  .essay-list li:hover { border-color: var(--terracotta); }
+  .essay-list li:hover + li { border-top-color: var(--terracotta); }
+  .essay-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-style: italic;
+    color: var(--forest);
+    line-height: 1.3;
+    font-weight: 300;
+    margin: 0;
+  }
+  .essay-meta {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .signup {
+    background: var(--cream);
+    padding: clamp(32px, 4vw, 48px);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+  .signup .eyebrow { margin-bottom: 18px; }
+  .signup h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 16px;
+    font-variation-settings: "SOFT" 100;
+  }
+  .signup p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .signup-form {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .signup-form input {
+    flex: 1 1 200px;
+    border: 1px solid var(--line);
+    background: var(--cream);
+    padding: 12px 16px;
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink);
+    border-radius: 999px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .signup-form input:focus { border-color: var(--terracotta); }
+  .signup-form button {
+    padding: 12px 22px;
+    background: var(--forest);
+    color: var(--cream);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: background 0.25s;
+  }
+  .signup-form button:hover { background: var(--terracotta); }
+  .signup-meta {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  /* ──────────────────────── CONTACT ──────────────────────── */
+  .contact {
+    background: var(--forest);
+    color: var(--cream);
+  }
+  .contact .eyebrow { color: #E8B58A; }
+  .contact .eyebrow::before { background: #E8B58A; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(48px, 5vw, 96px);
+    align-items: start;
+  }
+  @media (min-width: 980px) {
+    .contact-grid { grid-template-columns: 1fr 1.1fr; }
+  }
+  .contact h2 {
+    color: var(--cream);
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
+    margin: 16px 0 28px;
+  }
+  .contact-prose p {
+    color: rgba(250, 246, 238, 0.78);
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+    max-width: 460px;
+  }
+  .contact-prose .channels {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(250,246,238,0.18);
+    list-style: none;
+    padding-left: 0;
+  }
+  .contact-prose .channels li {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: rgba(250, 246, 238, 0.85);
+  }
+  .contact-prose .channels strong {
+    display: inline-block;
+    width: 95px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(232, 181, 138, 0.9);
+    font-weight: 500;
+  }
+  .contact-form {
+    background: rgba(250, 246, 238, 0.04);
+    padding: clamp(32px, 4vw, 48px);
+    border: 1px solid rgba(250,246,238,0.18);
+    border-radius: 4px;
+    display: grid;
+    gap: 16px;
+  }
+  .contact-form .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 600px) {
+    .contact-form .row { grid-template-columns: 1fr; }
+  }
+  .contact-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(232, 181, 138, 0.85);
+    font-weight: 500;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(250,246,238,0.3);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 15px;
+    padding: 8px 0 10px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus { border-bottom-color: #E8B58A; }
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: var(--sans);
+  }
+  .contact-form select option { color: var(--ink); background: var(--cream); }
+  .contact-form button {
+    margin-top: 12px;
+    padding: 16px 24px;
+    background: var(--terracotta);
+    color: var(--cream);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: background 0.25s, transform 0.25s;
+  }
+  .contact-form button:hover {
+    background: #E8B58A;
+    color: var(--forest-deep);
+    transform: translateY(-1px);
+  }
+  .form-note {
+    font-size: 11px;
+    color: rgba(250,246,238,0.55);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+
+  /* ──────────────────────── FOOTER ──────────────────────── */
+  footer.site {
+    background: var(--forest-deep);
+    color: var(--cream);
+    padding: clamp(60px, 7vw, 100px) 0 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 48px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid rgba(250,246,238,0.15);
+  }
+  .footer-brand .wordmark { color: var(--cream); font-size: 24px; }
+  .footer-brand .wordmark .dot { background: var(--terracotta); }
+  .footer-tagline {
+    margin-top: 16px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(250, 246, 238, 0.7);
+    max-width: 240px;
+    line-height: 1.5;
+  }
+  .footer-col h4 {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(232, 181, 138, 0.85);
+    font-weight: 500;
+    margin: 4px 0 20px;
+  }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; }
+  .footer-col ul li { margin: 0 0 10px; }
+  .footer-col ul a {
+    color: rgba(250, 246, 238, 0.78);
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: #E8B58A; }
+  .footer-bottom {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 12px;
+    color: rgba(250, 246, 238, 0.45);
+  }
+  .footer-bottom .creds {
+    letter-spacing: 0.06em;
+  }
+
+  /* WhatsApp sticky */
+  .wa-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    box-shadow: 0 12px 30px -8px rgba(0,0,0,0.3);
+    transition: transform 0.25s;
+  }
+  .wa-float:hover { transform: scale(1.08); }
+  .wa-float svg { width: 26px; height: 26px; fill: white; }
+  @media (max-width: 600px) {
+    .wa-float { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+    .wa-float svg { width: 22px; height: 22px; }
+  }
+
+  /* Reveal-on-scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal.delay-1 { transition-delay: 0.1s; }
+  .reveal.delay-2 { transition-delay: 0.2s; }
+  .reveal.delay-3 { transition-delay: 0.3s; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* Hero load animation */
+  @keyframes heroFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow { animation: heroFade 0.9s ease 0.05s both; }
+  .hero h1 .in { animation: heroFade 1.1s cubic-bezier(0.2,0.6,0.2,1) 0.15s both; }
+  .hero h1 .making { animation: heroFade 1.1s cubic-bezier(0.2,0.6,0.2,1) 0.35s both; }
+  .hero-subhead { animation: heroFade 1s ease 0.55s both; }
+  .hero-body { animation: heroFade 1s ease 0.65s both; }
+  .hero-side { animation: heroFade 1s ease 0.75s both; }
+  .hero-mark { animation: heroFade 1.2s ease 0.95s both; }
+
+</style>
+</head>
+<body>
+
+<!-- ─────────────────── HEADER ─────────────────── -->
+<header class="site" id="siteHeader">
+  <a href="#top" class="wordmark">
+    Shreya Sanghvi <span class="dot"></span> <em>in the making</em>
+  </a>
+  <nav class="primary">
+    <a href="#approach">Approach</a>
+    <a href="#audience">Work with me</a>
+    <a href="#about">About</a>
+    <a href="#library">Library</a>
+    <a href="#contact" class="cta-btn">Book a free call <span class="arrow">→</span></a>
+  </nav>
+</header>
+
+<a class="wa-float" href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- ─────────────────── HERO ─────────────────── -->
+<section class="hero" id="top">
+  <div class="hero-motif"></div>
+  <div class="hero-mark">~ for the in-between ~</div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow eyebrow">NLP Practitioner · ICF Coach · Counsellor</div>
+        <h1>
+          <span class="in">In the</span>
+          <span class="making">Making<span class="punc">.</span></span>
+        </h1>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div>
+        <p class="hero-subhead">Therapy, coaching, and counselling for the in-between.</p>
+        <p class="hero-body">
+          I work with people living between two worlds. Two cultures. Two careers. Two versions of themselves. Whether you are rebuilding after immigration, navigating family expectations across generations, or leading a team while your nervous system is screaming — this is a practice for the part of you that has not finished becoming.
+        </p>
+      </div>
+      <div class="hero-side">
+        <ul class="trust-list">
+          <li>6+ years</li>
+          <li>Toronto + Online</li>
+          <li>English & हिंदी</li>
+          <li>NLP · ICF · Counselling</li>
+        </ul>
+        <div class="hero-actions">
+          <a href="#contact" class="cta-btn">Book a free 15-minute call <span class="arrow">→</span></a>
+          <a href="#library" class="link-action">Read the Substack</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── WHO I'M FOR ─────────────────── -->
+<section class="audience" id="audience">
+  <div class="container">
+    <div class="audience-head reveal">
+      <div>
+        <span class="eyebrow">§ 01 · Who I'm for</span>
+        <h2>If any of these is you<br>— you are in the right place.</h2>
+      </div>
+      <p>The site is built for three people. Not because they are the only ones I work with, but because — when you can see yourself in someone's words within ten seconds — you stop having to wonder whether you belong here.</p>
+    </div>
+
+    <div class="persona-stack">
+      <article class="persona reveal">
+        <div class="persona-portrait">
+          <span class="label">[ photo · Priya, 32 · Toronto ]</span>
+        </div>
+        <div class="persona-body">
+          <span class="persona-tag">The Achieving Daughter</span>
+          <h3>Priya</h3>
+          <p class="persona-quote">"I'm tired of being the responsible one. I cried in the bathroom at work three times this month and I cannot tell if it's burnout or my whole personality."</p>
+          <div class="persona-prose">
+            <p>For the one who has been the responsible one her whole life. The one whose therapist <em>"is great but doesn't get the family thing."</em> The one who tried to set boundaries with her parents the way the American self-help book said to and discovered that book was written by someone who had never met her mother.</p>
+            <p>You do not have to translate your culture before you can start your healing. We work in the language your nervous system actually speaks.</p>
+          </div>
+          <div class="persona-fit">
+            <span class="persona-fit-label">Best fit: <strong>The Reset Pack</strong> · 4 sessions on one pattern</span>
+            <a href="#contact" class="link-action">Begin the Reset</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="persona reveal">
+        <div class="persona-portrait">
+          <span class="label">[ photo · Arjun, 36 · GTA ]</span>
+        </div>
+        <div class="persona-body">
+          <span class="persona-tag">The Newcomer Professional</span>
+          <h3>Arjun</h3>
+          <p class="persona-quote">"I was somebody. Now I sit in a one-bedroom in Mississauga and apply to roles a decade below where I was. I cannot tell my parents how it actually is."</p>
+          <div class="persona-prose">
+            <p>For the one who was somebody at home and is starting over in a country that does not yet recognise who he was. The one whose recruiter said <em>"overqualified"</em> and <em>"no Canadian experience"</em> in the same email. The one who cannot tell his parents how it actually is.</p>
+            <p>I have lived this transition. The work here is practical first, therapeutic underneath. You do not need to be broken to do this work. You need a translator for the gap between two professional identities.</p>
+          </div>
+          <div class="persona-fit">
+            <span class="persona-fit-label">Best fit: <strong>The Newcomer Navigator</strong> · 4 sessions, sliding scale</span>
+            <a href="#contact" class="link-action">Find your footing</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="persona reveal">
+        <div class="persona-portrait">
+          <span class="label">[ photo · Sara &amp; Vikram, mid-30s · Toronto ]</span>
+        </div>
+        <div class="persona-body">
+          <span class="persona-tag">The Stuck Couple</span>
+          <h3>Sara &amp; Vikram</h3>
+          <p class="persona-quote">"We've had the same fight for three years. We can't tell if we're in trouble or just tired. We tried therapy once and never went back."</p>
+          <div class="persona-prose">
+            <p>For the two of you who keep having the same fight. Who can't tell if you're in trouble or just tired. Who don't want a couples therapist who'll explain joint families to you, and don't want to tell anyone they're seeing one.</p>
+            <p>The work here is South-Asian-aware by default, short-arc by design — three sessions or eight, with a clear end — and structured around the cycle you keep repeating, not the surface of this week's argument.</p>
+          </div>
+          <div class="persona-fit">
+            <span class="persona-fit-label">Best fit: <strong>The Couples Intensive</strong> · 3 sessions, 90 min each</span>
+            <a href="#contact" class="link-action">Book the intensive</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── F-B-T APPROACH ─────────────────── -->
+<section class="approach" id="approach">
+  <div class="container">
+    <div class="approach-grid">
+      <div class="approach-prose reveal">
+        <span class="eyebrow">§ 02 · The F-B-T Approach</span>
+        <h2>The feeling always<br>comes first.</h2>
+        <p>Most therapy starts with the thought. We start with the feeling. The deepest behaviours do not live in the rational brain — they live in the nervous system, in patterns formed long before you had language to describe them.</p>
+        <p>The F-B-T Approach reverses the sequence: <strong style="color:#E8B58A;font-weight:500;">Feeling → Behaviour → Thought</strong>. When the body is met first, the rest follows. Anchoring, parts work, submodality shifts, the meta-model — the techniques are NLP-grounded, but the philosophy is older. It is what every grandmother who calmed you down already knew.</p>
+        <a href="#approach" class="link-action read-more">Read the full approach</a>
+      </div>
+
+      <div class="fbt-diagram reveal delay-1">
+        <svg viewBox="0 0 540 480" xmlns="http://www.w3.org/2000/svg" aria-label="F-B-T diagram">
+          <!-- background concentric arcs -->
+          <defs>
+            <radialGradient id="g1" cx="50%" cy="55%" r="50%">
+              <stop offset="0%" stop-color="#B8643D" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#B8643D" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="g2" cx="50%" cy="55%" r="50%">
+              <stop offset="0%" stop-color="#C8932E" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#C8932E" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- F: Feeling - largest circle, primary -->
+          <circle cx="270" cy="280" r="200" fill="url(#g1)" />
+          <circle cx="270" cy="280" r="200" fill="none" stroke="#E8B58A" stroke-width="0.8" stroke-opacity="0.5"/>
+          <text x="60" y="300" class="layer-tag">F · the body</text>
+          <text x="60" y="334" class="layer-label">Feeling</text>
+          <text x="60" y="364" class="layer-desc">Where the work begins.</text>
+
+          <!-- B: Behaviour - middle ring -->
+          <circle cx="270" cy="240" r="130" fill="url(#g2)" />
+          <circle cx="270" cy="240" r="130" fill="none" stroke="#E8B58A" stroke-width="0.8" stroke-opacity="0.4"/>
+          <text x="270" y="220" text-anchor="middle" class="layer-tag">B · the pattern</text>
+          <text x="270" y="252" text-anchor="middle" class="layer-label">Behaviour</text>
+
+          <!-- T: Thought - smallest, top -->
+          <circle cx="270" cy="180" r="64" fill="none" stroke="#E8B58A" stroke-width="0.8" stroke-opacity="0.5"/>
+          <text x="270" y="172" text-anchor="middle" class="layer-tag">T · the story</text>
+          <text x="270" y="198" text-anchor="middle" class="layer-label">Thought</text>
+
+          <!-- Vertical guide line + arrow indicating sequence -->
+          <line x1="438" y1="180" x2="438" y2="450" stroke="#E8B58A" stroke-opacity="0.35" stroke-width="0.8"/>
+          <line x1="434" y1="446" x2="438" y2="450" stroke="#E8B58A" stroke-opacity="0.5" stroke-width="0.8"/>
+          <line x1="442" y1="446" x2="438" y2="450" stroke="#E8B58A" stroke-opacity="0.5" stroke-width="0.8"/>
+          <text x="448" y="180" class="layer-desc">surface</text>
+          <text x="448" y="455" class="layer-desc">depth</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── WAYS TO WORK ─────────────────── -->
+<section class="ways" id="ways">
+  <div class="container">
+    <div class="ways-head reveal">
+      <div>
+        <span class="eyebrow">§ 03 · Ways to work</span>
+        <h2>Four ways in.<br>Pick the one that fits<br>where you are right now.</h2>
+      </div>
+      <p>Most people who arrive here will never sit in a 50-minute session — and that's intentional. There are smaller, lower-stakes ways to begin. Start where it makes sense; deepen when you're ready.</p>
+    </div>
+
+    <div class="tier-grid reveal">
+      <div class="tier">
+        <span class="tier-num">— 01</span>
+        <h3>Read</h3>
+        <span class="tier-price">Free · weekly</span>
+        <p class="tier-desc"><em>"In the Making"</em> — the Substack. One short essay every Sunday. No advice. No prescriptions. Just one observation about the in-between life, in 600 words.</p>
+        <a href="#library" class="tier-cta">Subscribe free</a>
+      </div>
+
+      <div class="tier">
+        <span class="tier-num">— 02</span>
+        <h3>Begin</h3>
+        <span class="tier-price">The Calling · single session</span>
+        <p class="tier-desc">A single 60-minute session for one specific challenge. No package commitment. No clinical record. One conversation about one thing that has been stuck.</p>
+        <a href="#contact" class="tier-cta">Book the Calling</a>
+      </div>
+
+      <div class="tier">
+        <span class="tier-num">— 03</span>
+        <h3>Commit</h3>
+        <span class="tier-price">The Reset Pack · 4 sessions</span>
+        <p class="tier-desc">Four sessions over four-to-six weeks, focused on one pattern: the inner critic, people-pleasing, the recurring trigger, the family-system loop. Most patterns shift noticeably here.</p>
+        <a href="#contact" class="tier-cta">Begin the Reset</a>
+      </div>
+
+      <div class="tier">
+        <span class="tier-num">— 04</span>
+        <h3>Transform</h3>
+        <span class="tier-price">The Container · 8–12 sessions</span>
+        <p class="tier-desc">Eight to twelve sessions over three months. For deep attachment patterns, identity-level beliefs, or long-standing emotional responses that need real time and space. Application required.</p>
+        <a href="#contact" class="tier-cta">Apply for the Container</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── ABOUT BRIEF ─────────────────── -->
+<section class="about-brief" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-portrait reveal">
+        <span class="caption">Shreya · Toronto, 2026</span>
+      </div>
+      <div class="about-prose reveal delay-1">
+        <span class="eyebrow">§ 04 · The practitioner</span>
+        <p class="greeting">Hi, I'm Shreya.</p>
+        <p>I am a certified NLP practitioner, ICF coach, and counsellor based in Toronto. I trained first in India, where I founded and led the Learning &amp; Talent Development practice at Psychologia Connect — India's first web-based psychology services platform. I now work with individuals, couples, and organisations across the GTA and online across Ontario.</p>
+        <p>When I moved from India to Canada, I lived first-hand what many of my clients are navigating — the quiet disorientation of rebuilding professional identity in a new country, the gap between who you were and who you are permitted to be here, the weight of family expectations carried across borders. <em>That transition is not just what I counsel. It is what I have lived.</em></p>
+        <a href="#about" class="link-action" style="margin-top:16px;">Read my full story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── TESTIMONIAL ─────────────────── -->
+<section class="testimony">
+  <div class="container reveal">
+    <div class="testimony-quote">
+      <span class="mark">"</span>
+      Shreya is the rare practitioner who can hold both the clinical and the cultural in the same room — and never make you choose.
+    </div>
+    <div class="testimony-attr">
+      <strong>Dr. Mehak Jain</strong> · Counselling psychologist · LinkedIn
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── LIBRARY ─────────────────── -->
+<section class="library" id="library">
+  <div class="container">
+    <div class="library-head reveal">
+      <span class="eyebrow">§ 05 · The library</span>
+      <h2>Notes from the in-between.</h2>
+    </div>
+    <div class="library-grid">
+      <ul class="essay-list reveal">
+        <li>
+          <h3 class="essay-title">The good daughter's field guide to boundaries</h3>
+          <span class="essay-meta">Issue 04 · 8 min read</span>
+        </li>
+        <li>
+          <h3 class="essay-title">What 'overqualified' actually means in a Canadian recruiter's inbox</h3>
+          <span class="essay-meta">Issue 03 · 6 min read</span>
+        </li>
+        <li>
+          <h3 class="essay-title">Why couples have the same fight for three years (and what changes it)</h3>
+          <span class="essay-meta">Issue 02 · 7 min read</span>
+        </li>
+        <li>
+          <h3 class="essay-title">The 23 hours: where between-session change actually happens</h3>
+          <span class="essay-meta">Issue 01 · 5 min read</span>
+        </li>
+      </ul>
+
+      <aside class="signup reveal delay-1">
+        <span class="eyebrow">The Substack</span>
+        <h3><em>In the Making.</em></h3>
+        <p>One short essay every Sunday. On the in-between life — across cultures, careers, and the part of yourself you haven't finished becoming.</p>
+        <form class="signup-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Welcome ✓';">
+          <input type="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="signup-meta">Free. Weekly. No spam, ever.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── CONTACT ─────────────────── -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-prose reveal">
+        <span class="eyebrow">§ 06 · Get in touch</span>
+        <h2>You don't have to wait until things get worse.</h2>
+        <p>The free 15-minute call is genuinely free and genuinely introductory. No intake forms. No clinical questionnaires. No commitment.</p>
+        <p>Both of us decide whether the work is the right fit for where you are right now. If it is not — I will tell you honestly, and point you toward someone who is.</p>
+        <ul class="channels">
+          <li><strong>Email</strong> hello@shreyasanghvi.com</li>
+          <li><strong>Whatsapp</strong> available on request</li>
+          <li><strong>Toronto</strong> in-person + online</li>
+          <li><strong>Languages</strong> English &amp; हिंदी</li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal delay-1" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent — talk soon ✓';">
+        <div class="row">
+          <label>First name
+            <input type="text" required>
+          </label>
+          <label>Last name
+            <input type="text" required>
+          </label>
+        </div>
+        <div class="row">
+          <label>Email
+            <input type="email" required>
+          </label>
+          <label>Phone (optional)
+            <input type="tel">
+          </label>
+        </div>
+        <label>I'm here for…
+          <select>
+            <option>Individual therapy or coaching</option>
+            <option>Couples work</option>
+            <option>Newcomer / career transition support</option>
+            <option>Leadership / ICF coaching</option>
+            <option>Corporate &amp; organisations</option>
+            <option>Not sure yet — let's talk</option>
+          </select>
+        </label>
+        <label>Briefly, what's on your mind?
+          <textarea rows="3" placeholder="A sentence or two is plenty."></textarea>
+        </label>
+        <button type="submit">Send my request — I'll respond within 24 hours →</button>
+        <p class="form-note">Your information is kept fully confidential. Practising under CCPA &amp; ICF ethical guidelines. CRPO registration in progress.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── FOOTER ─────────────────── -->
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="wordmark">Shreya Sanghvi <span class="dot"></span></div>
+        <p class="footer-tagline">Therapy, coaching, and counselling for the in-between.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="#approach">The F-B-T Approach</a></li>
+          <li><a href="#audience">Work with me</a></li>
+          <li><a href="#about">About Shreya</a></li>
+          <li><a href="#library">Library</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ways to work</h4>
+        <ul>
+          <li><a href="#ways">The Calling — single session</a></li>
+          <li><a href="#ways">The Reset Pack — 4 sessions</a></li>
+          <li><a href="#ways">The Container — 8–12 sessions</a></li>
+          <li><a href="#ways">For organisations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@shreyasanghvi.com">hello@shreyasanghvi.com</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Substack</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="creds">NLP Practitioner · ICF Certified Coach · CCPA Member · CRPO registration in progress</span>
+      <span>© 2026 Shreya Sanghvi · Toronto</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky header on scroll
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => {
+    if (window.scrollY > 24) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Reveal-on-scroll
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

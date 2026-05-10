@@ -33,9 +33,9 @@ const methods = [
 
 export default function Approach() {
   return (
-    <section className="bg-white py-20 md:py-3" id="approach">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+    <section className="bg-white md:py-3" id="approach">
+      <div className="mx-auto px-4 sm:px-6">
+        <div className="flex flex-col lg:flex-row md:flex-row gap-16 lg:gap-24 items-start">
           
           {/* Left Column: Theory & Narrative */}
           <div className="space-y-8">
@@ -47,21 +47,20 @@ export default function Approach() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-serif text-[#1A2B1C] leading-tight">
-              The <span className="italic text-[#C9A961]">F-B-T Link</span> —<br />
-              Feeling, Behaviour, Thought
+            <span className="italic text-[#C9A961]">The Feeling Always Comes First </span><br />
             </h2>
 
             <div className="space-y-6 text-[#3D5E44] font-serif text-lg leading-relaxed">
               <p>
-                Pivots from traditional cognitive models by prioritizing the somatic and emotional experience over intellectual analysis. While classical Cognitive Behavioral Therapy (CBT) often relies on "top-down" processing, your model advocates for a "bottom-up" approach that respects the biological reality of the nervous system.
+                Most therapy starts with the thought. We start with the feeling. The deepest behaviours do not live in the rational brain  they live in the nervous system, in patterns formed long before you had language to describe them.
+<br/><br/>
+We have spent decades treating ourselves and our workplaces like machines to be optimized. In the pursuit of efficiency, we’ve sterilized our professional lives until they feel flat, mechanical, and disconnected from the vibrancy of being human. My work begins with a simple provocation: there is a world of difference between not being dead and being alive.
               </p>  
               <p className="border-l-2 border-[#C9A961]/30 pl-6 py-2 italic text-[#1A2B1C]">
-                The F-B-T Link reverses the sequence. Start at the Feeling. From that understanding, 
-                the Behaviour becomes navigable. From the behavioural shift, the Thought transforms naturally.
+                We often try to think our way into a new life, but the feeling always comes first. My work reverses the traditional script through the F-B-T Approach: meeting the nervous system before the mind. By anchoring the body through the mechanics of NLP, we settle the pulse so that behavior and eventually thought can finally shift.
               </p>
               <p>
-                Every NLP technique works at the level of state before it works at the level of cognition. 
-                The F-B-T Link makes this explicit and teachable.
+                I act as a philosopher of the human condition and a permission giver, bridging the gap between ancient intuitive wisdom and modern innovation. Whether for the collective or the individual, I do not offer clinical diagnoses or simplistic solutions. I offer a pathway to dismantle stasis and reclaim the courage to be truly, vibrantly alive.
               </p>
             </div>
 
@@ -74,20 +73,19 @@ export default function Approach() {
             </a>
             <div className="block md:hidden mt-8">
               <img
-                src="/fbtapproach.jpeg"
+                src="/fbtapproach.png"
                 alt="F-B-T Approach"
-                className="w-full h-auto rounded-xl object-cover"
+                className="w-fit h-fit rounded-xl object-cover"
               />
             </div>
           </div>
 
-          {/* Right Column: Image & Methods */}
-          <div className="space-y-12">
-            <div className="hidden md:block">
+          <div className="flex flex-col space-y-12">
+            <div className=" flex flex-col align-center justify-center hidden md:block">
               <img
-                src="/fbtapproach.jpeg"
+                src="/fbtapproach.png"
                 alt="F-B-T Approach"
-                className="w-full h-auto rounded-xl object-cover"
+                className="md:w-500 md:h-200 rounded-xl"
               />
             </div>
 

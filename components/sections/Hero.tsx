@@ -79,10 +79,10 @@ export default function Hero() {
                 {/* GTA Section */}
                 <div className="flex flex-col items-center text-center px-2">
                   <div className="text-[#C9A961] text-2xl lg:text-4xl font-serif tracking-tight">
-                    GTA
+                    Life Coach
                   </div>
                   <div className="text-[#FAF8F4] text-[10px] lg:text-xs mt-3 font-light tracking-[0.2em] uppercase leading-tight">
-                    Toronto<br className="sm:hidden" /> Based
+                    ICF Accredited
                   </div>
                 </div>
               </div>
@@ -90,13 +90,13 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="bg-[#1C2B1E] px-0 py-2 lg:px-0 overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap font-serif text-sm md:text-sm lg:text-sm text-background">
+      <div className="bg-[#1C2B1E] px-0 py-2 lg:px-0 overflow-hidden w-full">
+        <div className="animate-marquee flex whitespace-nowrap w-max font-serif text-sm md:text-sm lg:text-sm text-background">
           <span className="flex items-center gap-3">
             {Array.from({ length: 2 }).map((_, iteration) => (
-              <div key={iteration} className="flex items-center gap-3">
-                {['Adult Learning', 'Gratitude Practice', 'Career Counselling', 'NLP Counselling', 'Leadership & Change', 'Relationship issue', 'Online Sessions', 'Individual Sessions', 'Parenting Workshop', 'Anxiety & Stress', 'Social & Emotional Learning', 'Corporate Wellness'].map((item, index) => (
-                  <div key={`${iteration}-${index}`} className="flex items-center gap-1">
+              <div key={iteration} className="flex items-center gap-10 pr-10">
+                {['NLP Counselling', 'Leadership & Change Coaching', 'Relationship Counselling', 'Anxiety & Stress Management', 'Corporate Wellness Programs'].map((item, index) => (
+                  <div key={`${iteration}-${index}`} className="flex items-center gap-30">
                     <span>{item}</span>
                     <Dot size={16} className="text-[#C9A961] flex-shrink-0" />
                   </div>
@@ -113,11 +113,11 @@ export default function Hero() {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-70%);
+              transform: translateX(-50%);
             }
           }
           .animate-marquee {
-            animation: marquee 10s linear infinite;
+            animation: marquee 25s linear infinite;
           }
         `}</style>
     </section>
