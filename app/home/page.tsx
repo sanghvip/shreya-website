@@ -14,7 +14,7 @@ import ScrollToTop from '@/components/ui/ScroolToTop';
 import Testimonials from '@/components/sections/Testimonials';
 
 export const metadata: Metadata = {
-  title: 'Shreya Sanghvi | Emotional Regulation | Relationship | Leadership Coaching,
+  title: 'Shreya Sanghvi | Emotional Regulation | Relationship | Leadership Coaching',
   description: 
     'Find clarity, healing, and transformation. Online therapy and coaching sessions across Canada with Shreya Sanghvi, a registered psychotherapist and NLP certified coach.',
 };
