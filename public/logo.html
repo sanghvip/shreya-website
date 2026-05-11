@@ -4,48 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreya Sanghvi Branding Assets</title>
-    <style>
-        :root {
-            --forest-green: #3A5244;
-            --gold: #C9A961;
-            --sage-green: #8B9C7F;
-            --ivory: #FBF9F6;
-            --grey: #666666;
-        }
-        body {
-            background-color: var(--ivory);
-            font-family: 'Cormorant Garamond', serif;
-            color: var(--forest-green);
-            margin: 0;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 60px;
-        }
-        .container {
-            width: 100%;
-            max-width: 900px;
-            text-align: center;
-        }
-        .label {
-            font-family: sans-serif;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--grey);
-            margin-bottom: 20px;
-        }
-        .dark-bg {
-            background-color: var(--forest-green);
-            padding: 60px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .dark-bg .label { color: var(--sage-green); }
-        
-        svg { max-width: 100%; height: auto; }
-    </style>
+    <link rel="stylesheet" href="logo.css">
 </head>
 <body>
 
@@ -77,7 +36,7 @@
 
     <!-- 2. Primary Lockup (Dark Background) -->
     <div class="dark-bg">
-        <div class="container" style="margin: 0 auto;">
+        <div class="container">
             <p class="label">Primary Lockup (Dark Forest Green)</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150">
                 <g transform="translate(20, 25)">
@@ -99,7 +58,7 @@
     </div>
 
     <!-- 3. Icon Mark (Square) -->
-    <div class="container" style="max-width: 200px;">
+    <div class="container icon-container">
         <p class="label">Icon Mark Only</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="48" fill="none" stroke="#3A5244" stroke-width="3"/>

@@ -142,11 +142,13 @@
     gap: 24px;
     transition: padding 0.4s ease, background 0.4s ease, border-color 0.4s ease;
     border-bottom: 1px solid transparent;
+    -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
   }
   header.site.scrolled {
     padding: 14px var(--gutter);
     background: rgba(250, 246, 238, 0.88);
+    -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     border-bottom-color: var(--line);
   }
@@ -1212,7 +1214,7 @@
         <span class="eyebrow">§ 02 · The F-B-T Approach</span>
         <h2>The feeling always<br>comes first.</h2>
         <p>Most therapy starts with the thought. We start with the feeling. The deepest behaviours do not live in the rational brain — they live in the nervous system, in patterns formed long before you had language to describe them.</p>
-        <p>The F-B-T Approach reverses the sequence: <strong style="color:#E8B58A;font-weight:500;">Feeling → Behaviour → Thought</strong>. When the body is met first, the rest follows. Anchoring, parts work, submodality shifts, the meta-model — the techniques are NLP-grounded, but the philosophy is older. It is what every grandmother who calmed you down already knew.</p>
+        <p>The F-B-T Approach reverses the sequence: <strong class="fbt-sequence">Feeling → Behaviour → Thought</strong>. When the body is met first, the rest follows. Anchoring, parts work, submodality shifts, the meta-model — the techniques are NLP-grounded, but the philosophy is older. It is what every grandmother who calmed you down already knew.</p>
         <a href="#approach" class="link-action read-more">Read the full approach</a>
       </div>
 
@@ -1319,7 +1321,7 @@
         <p class="greeting">Hi, I'm Shreya.</p>
         <p>I am a certified NLP practitioner, ICF coach, and counsellor based in Toronto. I trained first in India, where I founded and led the Learning &amp; Talent Development practice at Psychologia Connect — India's first web-based psychology services platform. I now work with individuals, couples, and organisations across the GTA and online across Ontario.</p>
         <p>When I moved from India to Canada, I lived first-hand what many of my clients are navigating — the quiet disorientation of rebuilding professional identity in a new country, the gap between who you were and who you are permitted to be here, the weight of family expectations carried across borders. <em>That transition is not just what I counsel. It is what I have lived.</em></p>
-        <a href="#about" class="link-action" style="margin-top:16px;">Read my full story</a>
+        <a href="#about" class="link-action link-action-spaced">Read my full story</a>
       </div>
     </div>
   </div>
