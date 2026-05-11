@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="bg-background border-b border-border">
       <div className="px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex flex-row items-center justify-between font-serif">
+        <div className="flex flex-row items-center justify-between font-comic">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-10">
             <div className="w-15 h-15 flex items-center justify-center rounded-full overflow-hidden">
@@ -23,7 +23,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col justify-start items-center gap-1">
               <p className="text-xl lg:text-2xl text-foreground">Shreya Sanghvi</p>
-              <p className="text-sm lg:text-sm text-foreground">Integrated Psychotherapist | NLP Practitioner</p>
+              <p className="text-sm lg:text-sm text-foreground"> Emotional Regulation | Relationship | Leadership Coaching</p>
             </div>
           </div>
 

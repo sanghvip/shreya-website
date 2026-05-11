@@ -712,7 +712,11 @@
     color: var(--forest);
     max-width: 18ch;
     margin: 0 auto;
-    text-wrap: balance;
+  }
+  @supports (text-wrap: balance) {
+    .testimony-quote {
+      text-wrap: balance;
+    }
   }
   .testimony-quote .mark {
     color: var(--terracotta);

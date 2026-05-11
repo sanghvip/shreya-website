@@ -10,11 +10,11 @@ export default function HowItWorks() {
           <span className="text-[#C9A961] font-bold tracking-[0.3em] text-xs uppercase block mb-6">
             The process
           </span>
-          <h2 className="text-4xl md:text-6xl font-serif text-[#1A2B1C] leading-[1.1] mb-8">
+          <h2 className="text-4xl md:text-6xl font-comic text-[#1A2B1C] leading-[1.1] mb-8">
             What happens ?<br />
             <span className="italic text-[#7A8C7E]">when you work with me</span>
           </h2>
-          <p className="text-lg md:text-xl text-[#7A8C7E] font-serif leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-xl text-[#7A8C7E] font-comic leading-relaxed max-w-2xl">
             Every session follows a deliberate curated & structure as per need it not a script, but a framework that ensures the work goes to the level where change actually happens. My approach doesn't follow a rigid script; we follow a dynamic framework. ach session is structured to meet your specific needs while ensuring the work reaches the level where actual growth and shifts happen.
           </p>
         </div>
@@ -44,15 +44,15 @@ export default function HowItWorks() {
           ].map((step, idx) => (
             <div key={idx} className="group flex flex-col space-y-6">
               <div className="flex items-baseline gap-4">
-                <span className="text-3xl md:text-4xl font-serif text-[#C9A961]/40 group-hover:text-[#C9A961] transition-colors duration-500">
+                <span className="text-3xl md:text-4xl font-comic text-[#C9A961]/40 group-hover:text-[#C9A961] transition-colors duration-500">
                   {step.num}
                 </span>
                 <div className="h-[1px] flex-grow bg-[#C9A961]/20 group-hover:bg-[#C9A961]/50 transition-all duration-700" />
               </div>
-              <h3 className="text-xl font-serif text-[#1A2B1C] leading-tight min-h-[3rem]">
+              <h3 className="text-xl font-comic text-[#1A2B1C] leading-tight min-h-[3rem]">
                 {step.title}
               </h3>
-              <p className="text-[#3D5E44] text-sm leading-relaxed font-serif">
+              <p className="text-[#3D5E44] text-sm leading-relaxed font-comic">
                 {step.desc}
               </p>
             </div>
@@ -66,7 +66,7 @@ export default function HowItWorks() {
               A note on how long it takes
             </h4>
             <div className="max-w-5xl">
-              <p className="text-[#3D5E44] text-base md:text-lg lg:text-xl font-serif leading-relaxed italic">
+              <p className="text-[#3D5E44] text-base md:text-lg lg:text-xl font-comic leading-relaxed italic">
                 I prioritize efficient results, delivering rapid shifts within 4 sessions or deeper transformations through 12. My commitment is to provide the precise duration necessary for sustainable outcomes, ensuring integrity and focused progress.
               </p>
             </div>

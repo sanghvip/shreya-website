@@ -17,11 +17,11 @@ export default function Hero() {
           <div className="flex flex-col py-8 px-4 md:py-12 lg:py-16 justify-center">
             {/* Headline Text */}
             <div className='flex flex-col mt-3 lg:mb-10 text-center md:text-left lg:text-left'>
-              <h1 className="text-4xl lg:text-7xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-foreground mb-4 text-balance ">
+              <h1 className="text-2xl lg:text-5xl md:text-5xl font-serif transform scale-y-100 origin-bottom leading-[1.3] text-foreground mb-4 text-balance ">
                 Regulate the nervous system.<br />
                 <span className="text-primary italic">
-                  <em className='text-[#7A8C7E]'>Transform</em>
-                  <br/><div className='text-[#C9A961]'>emotional patterns. Rebuild your life</div></span>
+                  <em className='text-[#7A8C7E]'>Transform emotional patterns.</em>
+                  <br/><div className='text-[#000000]'> Rebuild your life</div></span>
               </h1>
               <p className="text-[#7A8C7E] text-sm lg:text-m md:text-lg mb-6 font-serif leading-relaxed">
                 Quit justifying your past. Design your future. Who are you choosing to be right now?
@@ -47,15 +47,20 @@ export default function Hero() {
               </CustomButton></a>
             </div>
           </div>
-          <div className='flex flex-col h-full justify-end text-white p-4' style={{ background: 'linear-gradient(180deg,  #C9A961 0%,#3A5244 90%, #7A8C7E 100%' }}>
-            <div className='flex flex-col justify-center'>
-              <p className="text-xl mb-0 text-center font-serif font-light leading-[1.3] lg:mb-20 mx-auto md:text-lg lg:text-2xl drop-shadow-md italic">
-                "We live in the space between who we are 
-                <br/>and who we are permitted to be."
-              </p>
+          <div className='relative flex flex-col h-full justify-end text-white overflow-hidden rounded-3xl'>
+            <Image
+              src='/heroimage.jpg'
+              alt='Hero image background'
+              fill
+              className='absolute inset-0 object-cover object-center'
+              priority
+            />
+            <div className='absolute inset-0 bg-black/35' />
+            <div className='relative flex flex-col justify-end p-4 h-full'>
+      
             </div>
-            <div className='flex flex-col gap-4 mt-10 sm:py-2 lg:py-2 md:py-2'>
-              <div className="grid grid-cols-3 rounded-lg bg-[#1A2B1C] py-6 px-4">
+            <div className='relative flex flex-col gap-4 mt-5 sm:py-2 lg:py-2 md:py-2'>
+              <div className="grid grid-cols-3 rounded-lg bg-[#1A2B1C] py-4 px-2">
                 {/* NLP Section */}
                 <div className="flex flex-col items-center text-center px-2">
                   <div className="text-[#C9A961] text-2xl lg:text-4xl font-serif tracking-tight">
