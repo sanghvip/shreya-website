@@ -1,0 +1,327 @@
+
+    <div className="bg-[#FBF9F6] text-[#3A5244] min-h-screen font-sans">
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 bg-[#FBF9F6]/90 backdrop-blur border-b border-[#e8e3da]">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl tracking-wide font-serif">Shreya Sanghvi</h1>
+            <p className="text-xs uppercase tracking-[0.3em] text-[#666666] mt-1">
+              Emotional Regulation & Nervous System Specialist
+            </p>
+          </div>
+
+          <nav className="hidden md:flex gap-8 text-sm items-center">
+            <a href="#method" className="hover:text-[#C9A961] transition">Method</a>
+            <a href="#services" className="hover:text-[#C9A961] transition">Services</a>
+            <a href="#insights" className="hover:text-[#C9A961] transition">Insights</a>
+            <a href="#about" className="hover:text-[#C9A961] transition">About</a>
+            <button className="bg-[#3A5244] text-[#FBF9F6] px-5 py-3 rounded-full hover:opacity-90 transition">
+              Book Consultation
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p className="uppercase tracking-[0.35em] text-sm text-[#8B9C7F] mb-6">
+            Nervous System • Emotional Intelligence • FBT Framework
+          </p>
+
+          <h2 className="text-5xl lg:text-7xl leading-tight font-serif mb-8">
+            Regulate the nervous system.
+            <br />
+            Transform emotional patterns.
+          </h2>
+
+          <p className="text-lg leading-8 text-[#666666] max-w-xl mb-10">
+            Integrating NLP, emotional regulation, and the FBT methodology
+            to help individuals, couples, and organizations create lasting
+            behavioural and relational transformation.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <button className="bg-[#3A5244] text-[#FBF9F6] px-7 py-4 rounded-full text-sm tracking-wide hover:opacity-90 transition">
+              Begin Your Journey
+            </button>
+
+            <button className="border border-[#3A5244] px-7 py-4 rounded-full text-sm tracking-wide hover:bg-[#3A5244] hover:text-white transition">
+              Explore Services
+            </button>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="rounded-[2rem] overflow-hidden shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+              alt="Shreya Sanghvi"
+              className="w-full h-[700px] object-cover"
+            />
+          </div>
+
+          <div className="absolute -bottom-8 -left-8 bg-white shadow-xl rounded-3xl p-8 max-w-xs border border-[#ebe5da]">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#8B9C7F] mb-3">
+              Signature Approach
+            </p>
+            <h3 className="text-2xl font-serif mb-4">FBT Framework</h3>
+            <p className="text-[#666666] leading-7 text-sm">
+              Feeling → Behaviour → Thought.
+              Transformation begins with emotional safety before cognition.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section className="bg-[#F4F1EB] py-24">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="uppercase tracking-[0.3em] text-sm text-[#8B9C7F] mb-6">
+            Why Traditional Mindset Work Often Fails
+          </p>
+
+          <h3 className="text-4xl lg:text-5xl font-serif leading-tight mb-10">
+            Thoughts change sustainably only when the nervous system feels safe.
+          </h3>
+
+          <p className="text-lg text-[#666666] leading-9 max-w-4xl mx-auto">
+            Most transformation approaches attempt to change thinking first.
+            But emotional states drive behaviour, reactions, communication,
+            and relationship patterns. Real healing happens when emotional
+            regulation creates internal safety for behavioural change.
+          </p>
+        </div>
+      </section>
+
+      {/* Method */}
+      <section id="method" className="max-w-7xl mx-auto px-6 py-28">
+        <div className="text-center mb-20">
+          <p className="uppercase tracking-[0.3em] text-sm text-[#8B9C7F] mb-5">
+            The FBT Method
+          </p>
+          <h3 className="text-5xl font-serif mb-8">
+            A nervous-system informed transformation framework.
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: 'Feeling',
+              description:
+                'Emotional states influence perception, communication, and behaviour before conscious thought appears.',
+            },
+            {
+              title: 'Behaviour',
+              description:
+                'When regulation increases, behaviours naturally shift toward healthier responses and boundaries.',
+            },
+            {
+              title: 'Thought',
+              description:
+                'Cognition transforms sustainably after emotional safety and behavioural alignment are established.',
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-white p-10 rounded-[2rem] border border-[#ebe5da] shadow-sm hover:shadow-xl transition"
+            >
+              <div className="w-14 h-14 rounded-full bg-[#3A5244] text-white flex items-center justify-center text-xl mb-8">
+                {index + 1}
+              </div>
+
+              <h4 className="text-3xl font-serif mb-6">{item.title}</h4>
+              <p className="text-[#666666] leading-8">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="bg-[#3A5244] text-[#FBF9F6] py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20 text-center">
+            <p className="uppercase tracking-[0.3em] text-sm text-[#C9A961] mb-6">
+              Services
+            </p>
+            <h3 className="text-5xl font-serif">
+              Transformation pathways designed for modern emotional challenges.
+            </h3>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Individuals',
+                items: ['Burnout recovery', 'Emotional regulation', 'Self-worth', 'High-functioning anxiety'],
+              },
+              {
+                title: 'Couples',
+                items: ['Communication repair', 'Attachment patterns', 'Conflict regulation', 'Emotional triggers'],
+              },
+              {
+                title: 'Corporate Wellness',
+                items: ['Leadership resilience', 'Burnout prevention', 'Emotional intelligence', 'Team regulation'],
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="bg-[#4B6555] rounded-[2rem] p-10 border border-[#617b6a]"
+              >
+                <h4 className="text-3xl font-serif mb-8">{service.title}</h4>
+
+                <ul className="space-y-4 text-[#E7E3DA]">
+                  {service.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-[#C9A961] mt-1">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className="mt-10 border border-[#C9A961] px-6 py-3 rounded-full hover:bg-[#C9A961] hover:text-[#3A5244] transition text-sm tracking-wide">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Authority */}
+      <section className="max-w-7xl mx-auto px-6 py-28">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="uppercase tracking-[0.3em] text-sm text-[#8B9C7F] mb-6">
+              Trusted Transformation
+            </p>
+
+            <h3 className="text-5xl font-serif leading-tight mb-8">
+              Bridging emotional intelligence with practical behavioural change.
+            </h3>
+
+            <p className="text-lg leading-9 text-[#666666] mb-10">
+              Through nervous-system informed methodologies, NLP integration,
+              emotional regulation practices, and the FBT framework, clients
+              experience sustainable transformation in relationships,
+              communication, confidence, and resilience.
+            </p>
+
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                'NLP Integration',
+                'Corporate Workshops',
+                'Relationship Coaching',
+                'Emotional Regulation',
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-[#F4F1EB] rounded-2xl p-6 text-center"
+                >
+                  <p className="font-medium">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-[#F4F1EB] rounded-[2rem] p-12 border border-[#ebe5da]">
+            <p className="uppercase tracking-[0.3em] text-sm text-[#8B9C7F] mb-5">
+              Client Experience
+            </p>
+
+            <blockquote className="text-3xl font-serif leading-relaxed mb-8">
+              “The work didn’t just change my thoughts — it changed the way my body responded to stress, conflict, and relationships.”
+            </blockquote>
+
+            <p className="text-[#666666]">Client Testimonial</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Insights */}
+      <section id="insights" className="bg-[#F4F1EB] py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+            <div>
+              <p className="uppercase tracking-[0.3em] text-sm text-[#8B9C7F] mb-5">
+                Insights & Articles
+              </p>
+              <h3 className="text-5xl font-serif max-w-3xl">
+                Thought leadership on emotional regulation and nervous system healing.
+              </h3>
+            </div>
+
+            <button className="border border-[#3A5244] px-6 py-3 rounded-full hover:bg-[#3A5244] hover:text-white transition w-fit">
+              View All Articles
+            </button>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {[
+              'Why High-Functioning Anxiety Often Goes Unnoticed',
+              'The Nervous System and Relationship Conflict Cycles',
+              'Emotional Regulation for Burnout Recovery',
+            ].map((title, index) => (
+              <article
+                key={index}
+                className="bg-white rounded-[2rem] overflow-hidden border border-[#ebe5da] hover:shadow-xl transition"
+              >
+                <div className="h-64 bg-[#d7ddd4]" />
+
+                <div className="p-8">
+                  <p className="uppercase tracking-[0.25em] text-xs text-[#8B9C7F] mb-4">
+                    Emotional Wellness
+                  </p>
+
+                  <h4 className="text-2xl font-serif leading-snug mb-6">
+                    {title}
+                  </h4>
+
+                  <button className="text-[#3A5244] border-b border-[#3A5244] pb-1 text-sm tracking-wide">
+                    Read Article
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-32 text-center max-w-5xl mx-auto px-6">
+        <p className="uppercase tracking-[0.3em] text-sm text-[#8B9C7F] mb-6">
+          Begin Your Transformation
+        </p>
+
+        <h3 className="text-5xl lg:text-6xl font-serif leading-tight mb-10">
+          Transformation begins when safety replaces survival.
+        </h3>
+
+        <button className="bg-[#3A5244] text-white px-10 py-5 rounded-full text-sm tracking-[0.2em] uppercase hover:opacity-90 transition">
+          Schedule Consultation
+        </button>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-[#ebe5da] py-12">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between gap-8">
+          <div>
+            <h4 className="text-2xl font-serif mb-3">Shreya Sanghvi</h4>
+            <p className="text-[#666666] max-w-md leading-7">
+              Nervous system informed emotional transformation for individuals,
+              couples, and organizations.
+            </p>
+          </div>
+
+          <div className="flex gap-10 text-sm text-[#666666]">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Email</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+

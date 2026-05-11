@@ -7,7 +7,7 @@ export default function CTA() {
     <section className="bg-primary py-12 md:py-12 lg:py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-comic font-bold text-primary-foreground mb-3 text-balance">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground mb-3 text-balance">
           Don't see what you're looking for or have a question?
         </h2>
 

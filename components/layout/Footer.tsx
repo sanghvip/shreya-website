@@ -36,7 +36,7 @@ export default function Footer() {
               />
             </div>
             <div>
-            <p className="flex flex-row text-2xl lg:text-2xl lg:font-semibold font-comic text-white">Shreya Sanghvi</p>
+            <p className="flex flex-row text-2xl lg:text-2xl lg:font-semibold font-serif text-white">Shreya Sanghvi</p>
           </div>
           </div>
           

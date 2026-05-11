@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="bg-background border-b border-border">
       <div className="px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex flex-row items-center justify-between font-comic">
+        <div className="flex flex-row items-center justify-between font-comic sans">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-10">
             <div className="w-15 h-15 flex items-center justify-center rounded-full overflow-hidden">

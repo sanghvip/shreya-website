@@ -23,7 +23,7 @@ export default function Services() {
     <section className="bg-background py-12 md:py-12 lg:py-16">
       <div className="px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-comic font-bold text-foreground text-center mb-12 text-balance">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground text-center mb-12 text-balance">
           Services to Support Your Growth
         </h2>
 
