@@ -15,8 +15,8 @@ export default function HowItWorks() {
             <span className="italic text-[#7A8C7E]">when you work with me</span>
           </h2>
           <p className="text-lg md:text-xl text-[#7A8C7E] font-comic leading-relaxed max-w-2xl">
-            Every session follows a deliberate curated & structure as per need it not a script, but a framework that ensures the work goes to the level where change actually happens. My approach doesn't follow a rigid script; we follow a dynamic framework. ach session is structured to meet your specific needs while ensuring the work reaches the level where actual growth and shifts happen.
-          </p>
+
+Every session is a curated framework a deliberate process designed to meet specific needs, guided by the stewardship of industry experts.</p>
         </div>
 
         {/* Steps Grid */}
