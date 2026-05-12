@@ -1,5 +1,7 @@
 'use client';
 
+import { Phone, Zap, Lightbulb, TrendingUp } from 'lucide-react';
+
 export default function HowItWorks() {
   return (
     <section className="bg-[#FAF8F3] py-20 md:py-3" id="how">
@@ -10,11 +12,11 @@ export default function HowItWorks() {
           <span className="text-[#C9A961] font-bold tracking-[0.3em] text-xs uppercase block mb-6">
             The process
           </span>
-          <h2 className="text-4xl md:text-6xl font-comic text-[#1A2B1C] leading-[1.1] mb-8">
+          <h2 className="text-4xl md:text-6xl font-comic sans text-[#1A2B1C] leading-[1.1] mb-8">
             What happens ?<br />
             <span className="italic text-[#7A8C7E]">when you work with me</span>
           </h2>
-          <p className="text-lg md:text-xl text-[#7A8C7E] font-comic leading-relaxed max-w-2xl">
+          <p className="text-lg md:text-xl text-[#7A8C7E] font-comic sans leading-relaxed max-w-2xl">
 
 Every session is a curated framework a deliberate process designed to meet specific needs, guided by the stewardship of industry experts.</p>
         </div>
@@ -24,24 +26,30 @@ Every session is a curated framework a deliberate process designed to meet speci
           {[
             {
               num: "01",
+              icon: Phone,
               title: "The free intro call",
-              desc: "15 minutes. Let’s bypass the paperwork and focus on your objectives. We will discuss your goals and evaluate how my methodology aligns with your vision. If we aren’t a strategic fit, I’ll ensure you leave with a direct referral to the specific expert or resource better suited for your journey."
+              desc: "15 Minutes. We bypass the paperwork to focus on your objectives and evaluate our alignment. If we aren’t a strategic fit, I will provide a direct referral to the specific expert or resource you need."
             },
             {
               num: "02",
+icon: Zap,
               title: "The Internal State",
-              desc: "By starting with the Internal State, we bypass the intellectual \"noise\" that often fills up questionnaires. This isn't about what you think is wrong; it's about what you are actually experiencing. We remain in this exploration until we understand the mechanism, because you cannot shift what you haven't first clearly identified.",
+              desc: <>We analyze your challenges to pinpoint your actual, lived experience. Through a <strong>customized approach</strong>, we ensure you feel safe and grounded before addressing the raw emotions necessary for your <strong>power shift</strong>.</>,
             },
             {
               num: "03",
+              icon: Lightbulb,
               title: "The Mechanics of Change",
               desc: "Once your current patterns are identified, I introduce a cognitive shift technique curated to your needs—anchoring, submodality shift, or parts integration. You experience the change directly, rather than just discussing it."},
             {
               num: "04",
+              icon: TrendingUp,
               title: "The change between sessions",
-              desc: "The 23 hours between sessions are where real change happens. Every session ends with a specific homework practice. You bring what you noticed back. The work compounds. This is how lasting change is built."
+              desc: "Transformation happens between sessions. Every meeting ends with a targeted practice to turn immediate shifts into permanent habits, creating the compounding momentum needed for lasting change."
             }
-          ].map((step, idx) => (
+          ].map((step, idx) => {
+            const IconComponent = step.icon;
+            return (
             <div key={idx} className="group flex flex-col space-y-6">
               <div className="flex items-baseline gap-4">
                 <span className="text-3xl md:text-4xl font-comic text-[#C9A961]/40 group-hover:text-[#C9A961] transition-colors duration-500">
@@ -52,11 +60,15 @@ Every session is a curated framework a deliberate process designed to meet speci
               <h3 className="text-xl font-comic text-[#1A2B1C] leading-tight min-h-[3rem]">
                 {step.title}
               </h3>
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#C9A961]/10 group-hover:bg-[#C9A961]/20 transition-colors duration-500 mx-auto mb-2">
+                <IconComponent className="w-8 h-8 text-[#C9A961] group-hover:text-[#3A5244] transition-colors duration-500" />
+              </div>
               <p className="text-[#3D5E44] text-sm leading-relaxed font-comic">
-                {step.desc}
+                {typeof step.desc === 'string' ? step.desc : step.desc}
               </p>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Note Box - Updated for full width and readability */}
