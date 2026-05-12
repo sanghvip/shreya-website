@@ -154,10 +154,10 @@ export default function Contact() {
               </h2>
               <div className="space-y-4 text-[#3D5E44] font-serif text-lg leading-relaxed max-w-xl">
                 <p>
-                  The free 15-minute intro call is genuinely free and genuinely introductory. No intake forms, no clinical questionnaires, no commitment required. 
+                  Curious if this is right for you? Skip the long intake forms and just hop on a quick, free 15-minute call. It’s a simple 'vibe check' to see if we can help. No pressure, no sales pitch just a genuine conversation to explore your needs and how we might work together.
                 </p>
                 <p>
-                  Both of us decide whether it is the right fit for where you are right now. If it's not — we will point you toward something that is.
+                  Both of us decide whether it is the right fit for where you are right now. If it's not  we will point you toward something that is.
                 </p>
               </div>
             </div>
@@ -167,13 +167,13 @@ export default function Contact() {
               <ContactLink 
                 icon={<MapPin className="w-5 h-5" />} 
                 label="Location" 
-                value="Downtown Toronto · George Brown area (200 King St E) · Online across Ontario" 
+                value="Downtown Toronto, Online across Ontario" 
               />
               <ContactLink 
                 icon={<Mail className="w-5 h-5" />} 
                 label="Email" 
-                value="info@kalptriva.com" 
-                url="mailto:info@kalptriva.com"
+                value="info@shreyasanghvi.com" 
+                url="mailto:info@shreyasanghvi.com"
               />
               <ContactLink 
                 icon={<Instagram className="w-5 h-5" />} 
