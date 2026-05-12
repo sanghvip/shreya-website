@@ -26,15 +26,15 @@ Every session is a curated framework a deliberate process designed to meet speci
           {[
             {
               num: "01",
-              icon: Phone,
-              title: "The free intro call",
-              desc: "15 Minutes. We bypass the paperwork to focus on your objectives and evaluate our alignment. If we aren’t a strategic fit, I will provide a direct referral to the specific expert or resource you need."
+              icon: Zap,
+              title: "The Internal State",
+              desc: <>We analyze your challenges to pinpoint your actual, lived experience. Through a <strong>customized approach</strong>, we ensure you feel safe and grounded before addressing the raw emotions necessary for your <strong>power shift</strong>.</>,
             },
             {
               num: "02",
-icon: Zap,
-              title: "The Internal State",
-              desc: <>We analyze your challenges to pinpoint your actual, lived experience. Through a <strong>customized approach</strong>, we ensure you feel safe and grounded before addressing the raw emotions necessary for your <strong>power shift</strong>.</>,
+icon: Phone,
+              title: "The free intro call",
+              desc: "15 Minutes. We bypass the paperwork to focus on your objectives and evaluate our alignment. If we aren’t a strategic fit, I will provide a direct referral to the specific expert or resource you need."
             },
             {
               num: "03",
