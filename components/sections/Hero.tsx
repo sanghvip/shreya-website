@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import CustomButton from '@/components/ui/CustomButton';
-import { Globe, Shield, Dot, StarIcon } from 'lucide-react';
+import { Globe, Shield, Dot, StarIcon, Leaf } from 'lucide-react';
 import { useMediaQuery } from "@/hooks/user-media-query";
 
 export default function Hero() {
@@ -61,11 +61,9 @@ export default function Hero() {
               <div className="grid grid-cols-3 rounded-md sm:rounded-lg bg-[#1A2B1C] py-2 sm:py-3 md:py-4 px-1 sm:px-2 md:px-3 gap-1 sm:gap-2">
                 {/* NLP Section */}
                 <div className="flex flex-col items-center text-center px-0.5 sm:px-1 md:px-2">
-                  <div className="text-[#C9A961] text-xs sm:text-base md:text-lg lg:text-2xl font-comic tracking-tight">
-                    NLP
-                  </div>
+                  <Leaf className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#C9A961]" />
                   <div className="text-[#FAF8F4] text-[6px] sm:text-[7px] md:text-xs lg:text-xs mt-1 sm:mt-2 md:mt-3 font-light tracking-[0.05em] sm:tracking-[0.1em] md:tracking-[0.2em] uppercase leading-tight">
-                    Certified<br className="sm:hidden" /> Practioner
+                    Holistic yet<br className="hidden sm:block" /> Practical Approach
                   </div>
                 </div>
 
