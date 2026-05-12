@@ -2,14 +2,38 @@
 
 import { useState } from 'react';
 import { Menu, X, Flower2 } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
     { label: 'Home', href: '/home' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' }
+    { label: 'About', href: '/about', dropdown: [
+      { label: 'My Team', href: '/team' }
+    ]},
+    { label: 'Services', href: '/services', dropdown: [
+      { label: 'Counselling', href: '/counselling' },
+      { label: 'Corporate Wellness Programs', href: '/corporate-wellness' },
+      { label: 'Corporate Training and Workshops', href: '/corporate-training' }
+    ]},
+    { label: 'Resources', href: '/resources', dropdown: [
+      { label: 'Articles', href: '/articles' },
+      { label: 'Blogs', href: '/blogs' },
+      { label: 'Newsletters', href: '/newsletters' },
+      { label: 'Subscriptions', href: '/subscriptions' }
+    ]},
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Initiative', href: '/initiative', dropdown: [
+      { label: 'Events', href: '/events' },
+      { label: 'Workshops', href: '/workshops' },
+      { label: 'Webinar', href: '/webinar' }
+    ]}
   ];
 
   return (
@@ -32,13 +56,30 @@ export default function Header() {
           <div className='flex flex-row justify-end mr-5 items-center'>
           <nav className="hidden md:flex gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-foreground hover:text-primary transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </a>
+              link.dropdown ? (
+                <DropdownMenu key={link.label}>
+                  <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+                    {link.label}
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    {link.dropdown.map((subLink) => (
+                      <DropdownMenuItem key={subLink.label} asChild>
+                        <a href={subLink.href} className="cursor-pointer">
+                          {subLink.label}
+                        </a>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-foreground hover:text-primary transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </nav>
           </div>
@@ -71,13 +112,31 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-3">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-foreground hover:text-primary transition-colors text-sm font-medium py-2"
-              >
-                {link.label}
-              </a>
+              <div key={link.label}>
+                {link.dropdown ? (
+                  <>
+                    <div className="text-foreground text-sm font-medium py-2">
+                      {link.label}
+                    </div>
+                    {link.dropdown.map((subLink) => (
+                      <a
+                        key={subLink.label}
+                        href={subLink.href}
+                        className="text-foreground hover:text-primary transition-colors text-sm font-medium py-2 pl-4"
+                      >
+                        {subLink.label}
+                      </a>
+                    ))}
+                  </>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="text-foreground hover:text-primary transition-colors text-sm font-medium py-2"
+                  >
+                    {link.label}
+                  </a>
+                )}
+              </div>
             ))}
             <button className="w-full px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-90 transition-all text-sm font-medium mt-2">
               Book a Session
