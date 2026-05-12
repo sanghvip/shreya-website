@@ -45,6 +45,21 @@ export default function Hero() {
               >
                 START THE TRANSFORMATION
               </CustomButton></a>
+              <a href="https://ca.trustpilot.com/review/shreyasanghvi.com">
+              <CustomButton
+                variant="outline"
+                size={buttonSize}
+                className="flex flex-row sm:w-fit font-montserrat font-bold justify-center align-middle lg:justify-center"
+              >
+                <Image
+                  src="/trustpilot.svg"
+                  alt="Trustpilot"
+                  width={20}
+                  height={20}
+                  className=""
+                />
+                Trustpilot
+              </CustomButton></a>
             </div>
           </div>
           <div className='relative flex flex-col h-[280px] sm:h-[350px] md:h-[420px] lg:h-[550px] justify-end text-white overflow-hidden'>
