@@ -11,8 +11,9 @@ export default function Hero() {
 
   return (
     <section className="bg-background w-full">
-      <div className="px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center min-h-fit md:min-h-[600px]">
+      <div className="px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center min-h-fit md:min-h-[600px] lg:min-h-[700px]">
           {/* Text Content */}
           <div className="flex flex-col py-6 sm:py-8 md:py-10 lg:py-16 justify-center w-full">
             {/* Headline Text */}
@@ -104,8 +105,9 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        </div>
       </div>
-      <div className="bg-[#1C2B1E] px-1 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 md:py-1 lg:py-1 overflow-hidden w-full">
+      <div className="bg-[#1C2B1E] px-1 sm:px-3 md:px-4 lg:px-6 xl:px-8 py-1.5 sm:py-2 md:py-1 lg:py-2 overflow-hidden w-full">
         <div className="animate-marquee flex whitespace-nowrap w-max font-serif text-[9px] sm:text-xs md:text-sm lg:text-sm text-background">
           <span className="flex items-center gap-2 sm:gap-3">
             {Array.from({ length: 2 }).map((_, iteration) => (

@@ -37,9 +37,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-background border-b border-border">
-      <div className="px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex flex-row items-center justify-between font-comic sans">
+    <header className="bg-background border-b border-border sticky top-0 z-50">
+      <div className="px-4 sm:px-6 lg:px-8 xl:px-12 py-4">
+        <div className="max-w-7xl mx-auto flex flex-row items-center justify-between font-comic sans">
           {/* Logo and Company Name */}
           <div className="flex items-center gap-10">
             <div className="w-15 h-15 flex items-center justify-center rounded-full overflow-hidden">
@@ -58,13 +58,13 @@ export default function Header() {
             {navLinks.map((link) => (
               link.dropdown ? (
                 <DropdownMenu key={link.label}>
-                  <DropdownMenuTrigger className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+                  <DropdownMenuTrigger className="text-foreground hover:text-primary hover:underline transition-colors text-sm font-medium cursor-pointer">
                     {link.label}
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     {link.dropdown.map((subLink) => (
                       <DropdownMenuItem key={subLink.label} asChild>
-                        <a href={subLink.href} className="cursor-pointer">
+                        <a href={subLink.href} className="cursor-pointer hover:bg-slate-100 transition-colors">
                           {subLink.label}
                         </a>
                       </DropdownMenuItem>
@@ -75,7 +75,7 @@ export default function Header() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-foreground hover:text-primary transition-colors text-sm font-medium"
+                  className="text-foreground hover:text-primary hover:underline transition-colors text-sm font-medium"
                 >
                   {link.label}
                 </a>
@@ -87,7 +87,7 @@ export default function Header() {
           {/* Desktop CTA Button */}
           <div className='flex flex-row'>
             <a href='https://calendly.com/shreyasanghvi/new-meeting'>
-          <button className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-90 transition-all text-sm font-medium">
+          <button className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-80 hover:shadow-lg transition-all text-sm font-medium">
             BOOK A FREE CALL
           </button>
           </a>
@@ -110,7 +110,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-3">
+          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-3 px-4 sm:px-6 lg:px-8 xl:px-12">
             {navLinks.map((link) => (
               <div key={link.label}>
                 {link.dropdown ? (

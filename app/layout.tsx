@@ -43,8 +43,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
-        {children}
+      <body className="font-sans antialiased bg-background">
+        <div className="flex flex-col min-h-screen">
+          {children}
+        </div>
         <Analytics />
       </body>
     </html>
