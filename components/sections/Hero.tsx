@@ -92,12 +92,9 @@ export default function Hero() {
 
                 {/* GTA Section */}
                 <div className="flex flex-col items-center text-center px-0.5 sm:px-1 md:px-2">
-                  <Image
-                    src='/logo.png'
-                    alt='Life Coach Logo'
-                    width={32}
-                    height={32}
-                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+                  <Shield
+                    size={32}
+                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#C9A961]"
                   />
                   <div className="text-[#FAF8F4] text-[6px] sm:text-[7px] md:text-xs lg:text-xs mt-1 sm:mt-2 md:mt-3 font-light tracking-[0.05em] sm:tracking-[0.1em] md:tracking-[0.2em] uppercase leading-tight">
                     Safe, Supportive,<br className="hidden sm:block" /> Transformative
