@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import CustomButton from '@/components/ui/CustomButton';
-import { Globe, Shield, Dot, StarIcon, Leaf } from 'lucide-react';
+import { Globe, Shield, Dot, StarIcon, Leaf, Users } from 'lucide-react';
 import { useMediaQuery } from "@/hooks/user-media-query";
 
 export default function Hero() {
@@ -69,13 +69,7 @@ export default function Hero() {
 
                 {/* F.B.T. Section - with vertical dividers */}
                 <div className="flex flex-col items-center text-center border-x border-[#FAF8F4]/10 px-0.5 sm:px-1 md:px-2">
-                  <Image
-                    src='/icon.svg'
-                    alt='Human Community Logo'
-                    width={32}
-                    height={32}
-                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
-                  />
+                  <Users className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#C9A961]" />
                   <div className="text-[#FAF8F4] text-[6px] sm:text-[7px] md:text-xs lg:text-xs mt-1 sm:mt-2 md:mt-3 font-light tracking-[0.05em] sm:tracking-[0.1em] md:tracking-[0.2em] uppercase leading-tight">
                     Evidence Based<br className="hidden sm:block" /> Approach
                   </div>
