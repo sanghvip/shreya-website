@@ -14,9 +14,7 @@ export default function Header() {
 
   const navLinks = [
     { label: 'Home', href: '/home' },
-    { label: 'About', href: '/about', dropdown: [
-      { label: 'My Team', href: '/team' }
-    ]},
+    { label: 'About', href: '/about'},
     { label: 'Services', href: '/services', dropdown: [
       { label: 'Counselling', href: '/counselling' },
       { label: 'Corporate Wellness Programs', href: '/corporate-wellness' },

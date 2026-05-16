@@ -3,7 +3,6 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Services from '@/app/services/Services';
-import CTA from '@/components/sections/CTA';
 import SectionSeparator from '@/components/ui/SectionSeparator';
 import Bio from '@/components/sections/Bio';
 import HowItWorks from '@/components/sections/HowItWorks';
@@ -64,8 +63,7 @@ export default function Home() {
 
       <Contact/>
 
-      {/* CTA Section
-      <CTA /> */}
+      {/* CTA Section (unused import removed) */}
 
       {/* Footer */}
       <Footer />

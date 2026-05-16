@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import CustomButton from '../ui/CustomButton';
 import { Mail, Instagram, ArrowRight } from 'lucide-react';
+import Team from './Team';
 
 
 export default function AboutHero() {
@@ -28,7 +29,7 @@ export default function AboutHero() {
   const tags = ["NLP", "F-B-T Link", "Adult Learning", "Bloom's Taxonomy", "Andragogy", "Career Counselling", "Attachment Theory", "Gottman Method", "Polyvagal Theory", "Hindi · English"];
   return (
     <div>
-      <section className="bg-[#FAF8F3] py-20 md:py-32" id="practitioner">
+      <section className="bg-[#FAF8F3] py-20 md:py-20" id="practitioner">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
 
@@ -124,6 +125,7 @@ export default function AboutHero() {
           </div>
         </div>
       </section>
+      <Team/>
       <section className="relative overflow-hidden bg-[#1A2B1C] py-20 md:py-32">
         {/* Subtle Background Texture/Overlay */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
