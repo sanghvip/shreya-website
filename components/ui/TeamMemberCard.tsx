@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 
 interface Member {
@@ -6,19 +7,26 @@ interface Member {
   name: string
   designation: string
   bio?: string
+  profilePic: string
 }
 
 interface Props {
   member: Member
   showLearnMore?: boolean
   onLearnMore?: (m: Member) => void
+  learnMoreClassName?: string
 }
 
-export default function TeamMemberCard({ member, showLearnMore = true, onLearnMore }: Props) {
+export default function TeamMemberCard({ member, showLearnMore = true, onLearnMore, learnMoreClassName }: Props) {
   return (
     <div className="bg-card border border-border rounded-lg p-6 flex flex-col items-center text-center">
-      <div className="w-24 h-24 bg-muted border border-border rounded-md mb-4 flex items-center justify-center">
-        {/* empty image box placeholder */}
+      <div className="relative w-24 h-24 rounded-md mb-4 overflow-hidden">
+        <Image
+          src={member.profilePic}
+          alt={member.name}
+          fill
+          className="object-cover"
+        />
       </div>
 
       <h4 className="text-base font-semibold text-foreground">{member.name}</h4>
@@ -26,9 +34,10 @@ export default function TeamMemberCard({ member, showLearnMore = true, onLearnMo
 
       {showLearnMore && (
         <Button
-          variant="outline"
+          variant="default"
           size="sm"
           onClick={() => onLearnMore && onLearnMore(member)}
+          className= {learnMoreClassName}
         >
           Learn more
         </Button>
