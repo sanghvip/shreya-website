@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import ServiceList from '@/app/services/Services';
+import ServiceList from '@/components/sections/Services';
 
 export default function Services() {
   return (

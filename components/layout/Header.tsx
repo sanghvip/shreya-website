@@ -15,24 +15,23 @@ export default function Header() {
   const navLinks = [
     { label: 'Home', href: '/home' },
     { label: 'About', href: '/about'},
-    { label: 'Services', href: '/services', dropdown: [
-      { label: 'Counselling', href: '/counselling' },
-      { label: 'Corporate Wellness Programs', href: '/corporate-wellness' },
-      { label: 'Corporate Training and Workshops', href: '/corporate-training' }
-    ]},
-    { label: 'Resources', href: '/resources', dropdown: [
-      { label: 'Articles', href: '/articles' },
-      { label: 'Blogs', href: '/blogs' },
-      { label: 'Newsletters', href: '/newsletters' },
-      { label: 'Subscriptions', href: '/subscriptions' }
-    ]},
+    { label: 'Services', href: '/services'},
     { label: 'FAQ', href: '/faq' },
-    { label: 'Initiative', href: '/initiative', dropdown: [
-      { label: 'Events', href: '/events' },
-      { label: 'Workshops', href: '/workshops' },
-      { label: 'Webinar', href: '/webinar' }
-    ]}
+    { label: 'Initiative', href: '/initiative'}
   ];
+
+  // { label: 'Resources', href: '/resources', dropdown: [
+  //     { label: 'Articles', href: '/articles' },
+  //     { label: 'Blogs', href: '/blogs' },
+  //     { label: 'Newsletters', href: '/newsletters' },
+  //     { label: 'Subscriptions', href: '/subscriptions' }
+  //   ]},
+
+    //   { label: 'Initiative', href: '/initiative', dropdown: [
+    //   { label: 'Events', href: '/events' },
+    //   { label: 'Workshops', href: '/workshops' },
+    //   { label: 'Webinar', href: '/webinar' }
+    // ]}
 
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50">

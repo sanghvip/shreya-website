@@ -29,38 +29,46 @@ export default function Hero() {
               </p>
             </div>
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 mb-2 justify-center md:justify-start items-center w-full">
-              <a href="https://calendly.com/shreyasanghvi/new-meeting?month=2026-04" className="w-full sm:w-fit">
-              <CustomButton
-                variant="dark"
-                size={buttonSize}
-                className="w-full sm:w-fit justify-center"
-              >
-                BOOK A FREE INTRO CALL →
-              </CustomButton></a>
-              <a href='/services' className="w-full sm:w-fit">
-              <CustomButton
-                variant="outline"
-                size={buttonSize}
-                className="w-full sm:w-fit justify-center"
-              >
-                START THE TRANSFORMATION
-              </CustomButton></a>
-              <a href="https://ca.trustpilot.com/review/shreyasanghvi.com">
-              <CustomButton
-                variant="outline"
-                size={buttonSize}
-                className="flex flex-row sm:w-fit font-montserrat font-bold justify-center align-middle lg:justify-center"
-              >
-                <Image
-                  src="/trustpilot.svg"
-                  alt="Trustpilot"
-                  width={20}
-                  height={20}
-                  className=""
-                />
-                Trustpilot
-              </CustomButton></a>
+            <div className="flex flex-col gap-3 sm:gap-4 mb-2 w-fit md:w-fit">
+              <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-center md:justify-start w-fit sm:w-fit">
+                <a href="https://calendly.com/shreyasanghvi/new-meeting?month=2026-04" className="flex-1 sm:flex-initial">
+                  <CustomButton
+                    variant="dark"
+                    size={buttonSize}
+                    className="w-full sm:w-fit justify-center whitespace-nowrap"
+                  >
+                    BOOK A FREE INTRO CALL →
+                  </CustomButton>
+                </a>
+                <a href="https://ca.trustpilot.com/review/shreyasanghvi.com" className="flex-1 sm:flex-initial">
+                  <CustomButton
+                    variant="outline"
+                    size={buttonSize}
+                    className="flex flex-row w-full sm:w-fit font-montserrat font-bold justify-center items-center whitespace-nowrap gap-2"
+                  >
+                    <Image
+                      src="/trustpilot.svg"
+                      alt="Trustpilot"
+                      width={20}
+                      height={20}
+                      className="shrink-0"
+                    />
+                    Trustpilot
+                  </CustomButton>
+                </a>
+              </div>
+              
+              <div className="flex justify-center md:justify-center w-full sm:w-fit">
+                <a href='/services' className="w-full">
+                  <CustomButton
+                    variant="outline"
+                    size={buttonSize}
+                    className="w-full justify-center"
+                  >
+                    START THE TRANSFORMATION
+                  </CustomButton>
+                </a>
+              </div>
             </div>
           </div>
           <div className='relative flex flex-col h-[280px] sm:h-[350px] md:h-[420px] lg:h-[550px] justify-end text-white overflow-hidden'>

@@ -1,14 +1,16 @@
+import type { Metadata } from 'next';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import Events from '@/components/sections/Events';
+
 export default function Initiative() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h1 className="text-4xl md:text-6xl font-comic sans text-[#1A2B1C] leading-[1.1] mb-8">
-          Initiative Make Session
-        </h1>
-        <p className="text-lg md:text-xl text-[#7A8C7E] font-comic sans leading-relaxed">
-          Coming soon...
-        </p>
-      </div>
-    </div>
+    <main className="bg-background text-foreground min-h-screen">
+      {/* Header Navigation */}
+      <Header />
+      <Events/>
+      {/* Footer */}
+      <Footer />
+    </main>
   );
 }
