@@ -38,13 +38,15 @@ export default function Header() {
       <div className="px-4 sm:px-6 lg:px-8 xl:px-12 py-4">
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between font-comic sans">
           {/* Logo and Company Name */}
-          <div className="flex items-center gap-10">
-            <div className="w-15 h-15 flex items-center justify-center rounded-full overflow-hidden">
-              <img src="/logo.png" alt="Shreya Sanghvi Logo" className="w-full h-full object-cover" />
+          <div className="flex items-center gap-10 flex-1 md:flex-none justify-center md:justify-start">
+            <div className="hidden md:flex w-20 h-20 items-center justify-center">
+              <img src="/logo.png" alt="Shreya Sanghvi Logo" className="w-20 h-20 object-cover" />
             </div>
-            <div className="flex flex-col justify-start items-center gap-1">
-              <p className="text-xl lg:text-2xl text-foreground">Shreya Sanghvi</p>
-              <p className="text-sm lg:text-sm text-foreground"> Emotional Regulation | Relationship | Leadership Coaching</p>
+            <div className="flex flex-col justify-center md:justify-start items-center gap-1 w-full md:w-auto text-center md:text-left">
+              <p className="text-2xl lg:text-2xl text-foreground">Shreya Sanghvi</p>
+              <p className="text-[10px] sm:text-xs md:text-sm lg:text-sm text-foreground leading-tight text-center">
+                Learning | Development | Leadership Coaching
+              </p>
             </div>
           </div>
 
@@ -107,19 +109,19 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-3 px-4 sm:px-6 lg:px-8 xl:px-12">
+          <nav className="md:hidden mt-4 pb-4 flex flex-col items-center gap-3 px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
             {navLinks.map((link) => (
-              <div key={link.label}>
+              <div key={link.label} className="w-full flex flex-col items-center">
                 {link.dropdown ? (
                   <>
-                    <div className="text-foreground text-sm font-medium py-2">
+                    <div className="text-foreground text-sm font-medium py-2 text-center">
                       {link.label}
                     </div>
                     {link.dropdown.map((subLink) => (
                       <a
                         key={subLink.label}
                         href={subLink.href}
-                        className="text-foreground hover:text-primary transition-colors text-sm font-medium py-2 pl-4"
+                        className="text-foreground hover:text-primary transition-colors text-sm font-medium py-2 text-center"
                       >
                         {subLink.label}
                       </a>
@@ -128,14 +130,14 @@ export default function Header() {
                 ) : (
                   <a
                     href={link.href}
-                    className="text-foreground hover:text-primary transition-colors text-sm font-medium py-2"
+                    className="w-full text-foreground hover:text-primary transition-colors text-sm font-medium py-2 text-center"
                   >
                     {link.label}
                   </a>
                 )}
               </div>
             ))}
-            <button className="w-full px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-90 transition-all text-sm font-medium mt-2">
+            <button className="w-full max-w-xs px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-90 transition-all text-sm font-medium mt-2 text-center">
               Book a Session
             </button>
           </nav>
