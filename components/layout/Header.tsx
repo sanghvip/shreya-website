@@ -87,7 +87,7 @@ export default function Header() {
           <div className='flex flex-row'>
             <a href='https://calendly.com/shreyasanghvi/new-meeting'>
           <button className="hidden md:block px-6 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-80 hover:shadow-lg transition-all text-sm font-medium">
-            BOOK A FREE CALL
+            Book a consultation
           </button>
           </a>
 
@@ -138,7 +138,7 @@ export default function Header() {
               </div>
             ))}
             <button className="w-full max-w-xs px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-opacity-90 transition-all text-sm font-medium mt-2 text-center">
-              Book a Session
+              Book a consultation
             </button>
           </nav>
         )}

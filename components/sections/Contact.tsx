@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Mail, MapPin, Instagram, Linkedin, Youtube, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function Contact() {
@@ -16,6 +16,21 @@ export default function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const params = new URLSearchParams(window.location.search);
+    const isSpeakerRequest = params.get('speaker') === 'true';
+
+    if (!isSpeakerRequest) return;
+
+    setFormData((prev) => ({
+      ...prev,
+      focusArea: 'Speaking & workshops',
+      message: prev.message || 'I would like to book Shreya as a speaker for an event, workshop, or panel.',
+    }));
+  }, []);
 
   const validate = () => {
     const newErrors: Record<string, string> = {};
@@ -292,8 +307,9 @@ export default function Contact() {
                         <option value="Relationship counselling">Relationship counselling</option>
                         <option value="Leadership & career coaching">Leadership & career coaching</option>
                         <option value="Corporate wellness enquiry">Corporate wellness enquiry</option>
-                        <option value="Corporate wellness enquiry">Career Counselling</option>
-                        <option value="Corporate wellness enquiry">Gratitude Practice & Workshops</option>
+                        <option value="Career Counselling">Career Counselling</option>
+                        <option value="Speaking & workshops">Speaking & workshops</option>
+                        <option value="Gratitude Practice & Workshops">Gratitude Practice & Workshops</option>
                       </select>
                       <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
                         <svg className="w-4 h-4 text-[#7A8C7E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

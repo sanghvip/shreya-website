@@ -8,17 +8,17 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         
         {/* Header Section */}
-        <div className="max-w-3xl mb-16 md:mb-24">
-          <span className="text-[#C9A961] font-bold tracking-[0.3em] text-xs uppercase block mb-6">
+        <div className="max-w-3xl mb-12 sm:mb-16 md:mb-24">
+          <span className="text-[#C9A961] font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[10px] sm:text-xs uppercase block mb-4 sm:mb-6">
             The process
           </span>
-          <h2 className="text-4xl md:text-6xl font-comic sans text-[#1A2B1C] leading-[1.1] mb-8">
-            What happens ?<br />
-            <span className="italic text-[#7A8C7E]">when you work with me</span>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-comic sans text-[#1A2B1C] leading-[1.1] mb-5 sm:mb-8 max-w-[18rem] sm:max-w-none">
+            <span className="block">What happens?</span>
+            <span className="italic text-[#7A8C7E] block">when you work with me</span>
           </h2>
-          <p className="text-lg md:text-xl text-[#7A8C7E] font-comic sans leading-relaxed max-w-2xl">
-
-Every session is a curated framework a deliberate process designed to meet specific needs, guided by the stewardship of industry experts.</p>
+          <p className="text-sm sm:text-base md:text-xl text-[#7A8C7E] font-comic sans leading-relaxed max-w-2xl">
+            Every session is a curated framework — a deliberate process designed to meet specific needs, guided by the stewardship of industry experts.
+          </p>
         </div>
 
         {/* Steps Grid */}

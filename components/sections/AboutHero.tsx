@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import CustomButton from '../ui/CustomButton';
-import { Mail, Instagram, ArrowRight } from 'lucide-react';
-import Team from './Team';
+import { Mail, Instagram, ArrowRight, Mic } from 'lucide-react';
+// import Team from './Team';
 
 
 export default function AboutHero() {
@@ -125,7 +125,7 @@ export default function AboutHero() {
           </div>
         </div>
       </section>
-      <Team/>
+      {/* <Team/> */}
       <section className="relative overflow-hidden bg-[#1A2B1C] py-20 md:py-32">
         {/* Subtle Background Texture/Overlay */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -148,20 +148,29 @@ export default function AboutHero() {
               Reaching out is not a sign of weakness. It is one of the most courageous things a person can do for themselves and those they love.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4 w-full sm:w-auto">
               <a
                 href="/home#contact"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#1A2B1C] hover:bg-[#FAF8F3] transition-all duration-300 rounded-sm font-medium text-sm group"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-3 px-6 py-3 bg-white text-[#1A2B1C] hover:bg-[#FAF8F3] transition-all duration-300 rounded-sm font-medium text-sm group"
               >
                 <Mail className="w-4 h-4" />
                 Email me directly
               </a>
 
               <a
+                href="/home?speaker=true#contact"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-3 px-6 py-3 bg-[#3A5244] text-white hover:bg-[#4A6354] transition-all duration-300 rounded-sm font-medium text-sm border border-[#7A8C7E]/20 group"
+              >
+                <Mic className="w-4 h-4" />
+                Book me as a speaker
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+
+              <a
                 href="https://www.instagram.com/neuromco/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#3A5244] text-white hover:bg-[#4A6354] transition-all duration-300 rounded-sm font-medium text-sm border border-[#7A8C7E]/20 group"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-3 px-6 py-3 bg-[#1A2B1C] text-white hover:bg-[#4A6354] transition-all duration-300 rounded-sm font-medium text-sm border border-[#7A8C7E]/20 group"
               >
                 <Instagram className="w-4 h-4" />
                 DM on Instagram

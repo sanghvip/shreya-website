@@ -3,10 +3,8 @@ import { MessageCircle } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="flex flex-row justify-center mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Footer Grid */}
-        <div className="flex flex-col md:flex-row md:justify-between gap-10 sm:align-center md:gap-40 mb-8">
-          {/* Quick Links */}
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="flex flex-col items-center text-center gap-8 md:flex-row md:items-center md:justify-between md:text-left">
           <div>
             <ul className="space-y-2 text-sm">
               <li>
@@ -26,47 +24,22 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          {/* Logo Section */}
-          <div className="flex flex-row items-center gap-2 justify-between">
-            <div className="w-20 h-20 flex items-center justify-center rounded-full overflow-hidden bg-[#F5F3F0]">
+
+          <div className="flex flex-col items-center gap-3 md:flex-row md:items-center md:gap-2">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-full overflow-hidden bg-[#F5F3F0]">
               <img
                 src="/logo.png"
                 alt="Shreya Sanghvi Logo"
                 className="w-7/8 h-7/8 object-contain"
               />
             </div>
-            <div>
-            <p className="flex flex-row text-2xl lg:text-2xl lg:font-semibold font-serif text-white">Shreya Sanghvi</p>
+            <p className="text-xl sm:text-2xl font-serif text-white">Shreya Sanghvi</p>
           </div>
-          </div>
-          
-          {/* Services Links */}
-          {/* <div>
-            <h3 className="font-semibold text-sm mb-3">Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
-                  Therapy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
-                  Coaching
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:opacity-80 transition-opacity">
-                  Relationship
-                </a>
-              </li>
-            </ul>
-          </div> */}
 
-          {/* Contact Section */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="/home#contact">
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
+            <a href="/home#contact" className="w-full md:w-auto">
               <button
-                className="flex flex-row items-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-sm font-medium"
+                className="flex w-full md:w-auto items-center justify-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-sm font-medium"
                 aria-label="Ask a question on WhatsApp"
               >
                 <MessageCircle className="w-5 h-5 text-[#C9A961]" />

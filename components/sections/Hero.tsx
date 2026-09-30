@@ -17,21 +17,22 @@ export default function Hero() {
           {/* Text Content */}
           <div className="flex flex-col py-6 sm:py-8 md:py-10 lg:py-16 justify-center w-full">
             {/* Headline Text */}
-            <div className='flex flex-col mt-1 sm:mt-2 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center md:text-left lg:text-left'>
-              <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-serif transform scale-y-100 origin-bottom leading-[1.15] sm:leading-[1.2] md:leading-[1.3] text-foreground mb-2 sm:mb-3 md:mb-4 text-balance">
+            <div className='flex flex-col mt-1 sm:mt-2 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center md:text-left lg:text-left max-w-full md:max-w-xl'>
+              <h1 className="text-[1.15rem] sm:text-xl md:text-3xl lg:text-4xl font-serif transform scale-y-100 origin-bottom leading-[1.2] sm:leading-[1.25] md:leading-[1.3] text-foreground mb-2 sm:mb-3 md:mb-4 text-balance break-words">
                 Regulate the nervous system.<br />
                 <span className="text-primary italic">
-                  <em className='text-[#7A8C7E]'>Transform emotional patterns.</em>
-                  <br/><div className='text-[#000000]'>Rebuild your life</div></span>
+                  <em className='text-[#7A8C7E] block'>Transform emotional patterns.</em>
+                  <span className='mt-1 block text-[#000000]'>Rebuild your life</span>
+                </span>
               </h1>
-              <p className="text-[#7A8C7E] text-[11px] sm:text-sm md:text-base lg:text-lg mb-3 sm:mb-4 md:mb-6 font-serif leading-snug sm:leading-relaxed">
+              <p className="text-[#7A8C7E] text-[11.5px] sm:text-sm md:text-base lg:text-lg mb-3 sm:mb-4 md:mb-6 font-serif leading-snug sm:leading-relaxed max-w-[26rem] mx-auto md:mx-0">
                  Integrating NLP, FBT, and nervous-system informed approaches to help you heal, grow and create lasting change in relationships, work and within.
               </p>
             </div>
             {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 sm:gap-4 mb-2 w-fit md:w-fit">
-              <div className="flex flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-center md:justify-start w-fit sm:w-fit">
-                <a href="https://calendly.com/shreyasanghvi/new-meeting?month=2026-04" className="flex-1 sm:flex-initial">
+            <div className="flex flex-col gap-3 sm:gap-4 mb-2 w-full md:w-fit">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 items-stretch justify-center md:justify-start w-full sm:w-fit">
+                <a href="https://calendly.com/shreyasanghvi/new-meeting?month=2026-04" className="w-full sm:flex-initial">
                   <CustomButton
                     variant="dark"
                     size={buttonSize}
@@ -40,7 +41,7 @@ export default function Hero() {
                     BOOK A FREE INTRO CALL →
                   </CustomButton>
                 </a>
-                <a href="https://ca.trustpilot.com/review/shreyasanghvi.com" className="flex-1 sm:flex-initial">
+                <a href="https://ca.trustpilot.com/review/shreyasanghvi.com" className="w-full sm:flex-initial">
                   <CustomButton
                     variant="outline"
                     size={buttonSize}
@@ -59,11 +60,11 @@ export default function Hero() {
               </div>
               
               <div className="flex justify-center md:justify-center w-full sm:w-fit">
-                <a href='/services' className="w-full">
+                <a href='/services' className="w-full sm:w-fit">
                   <CustomButton
                     variant="outline"
                     size={buttonSize}
-                    className="w-full justify-center"
+                    className="w-full sm:w-fit justify-center"
                   >
                     START THE TRANSFORMATION
                   </CustomButton>
