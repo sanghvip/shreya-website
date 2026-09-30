@@ -12,6 +12,9 @@ import Audience from '@/components/sections/Audience';
 import ScrollToTop from '@/components/ui/ScroolToTop';
 import Testimonials from '@/components/sections/Testimonials';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: 'Shreya Sanghvi | Psychotherapist & NLP Coach',
   description:

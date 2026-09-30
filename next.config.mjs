@@ -11,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/home', // Replace this with your specific page path
+        destination: '/home',
         permanent: false,
       },
     ]
