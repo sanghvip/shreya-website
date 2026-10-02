@@ -33,7 +33,7 @@ Everything begins with your State your inner energy and nervous‑system baselin
               </p>
             </div>
             <div className='flex flex-row justify-center'>
-              <a href='#approach'>
+              <a href='/blogs'>
                 <CustomButton variant="dark" size="md" className="justify-center sm:justify-start">
                   LEARN MORE ABOUT MY APPROACH
                 </CustomButton>

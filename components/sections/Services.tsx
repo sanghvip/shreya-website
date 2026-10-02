@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const services = [
+  /*
   {
     id: "01 · Individual",
     title: "NLP & Counselling Sessions",
@@ -32,6 +33,7 @@ const services = [
     tags: ["Attachment", "Conflict", "Gottman", "Repair", "Boundaries"],
     for: "Individuals and couples navigating the same argument, the pursuer-withdrawer dynamic, attachment anxiety or avoidance, boundary challenges, post-conflict repair."
   },
+  */
   {
     id: "03 · Leadership",
     title: "Leadership & Change Coaching",
@@ -60,6 +62,7 @@ const services = [
     tags: ["EAP", "Workshops", "Bloom's Taxonomy", "Andragogy", "Gamification"],
     for: "HR directors, L&D teams, and People & Culture leaders in Toronto."
   },
+  /*
   {
     id: "05 · Career",
     title: "Career Counselling",
@@ -74,6 +77,7 @@ const services = [
     tags: ["Career transitions", "Values clarity", "Newcomers", "Identity", "Interview prep"],
     for: "International professionals, newcomers to Canada, and anyone at a meaningful career crossroads."
   },
+  */
   {
     id: "06 · Gratitude",
     title: "Gratitude Practice & Workshops",
@@ -94,11 +98,6 @@ export default function Services() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [active, setActive] = useState(0);
   const tabDefinitions = [
-    {
-      id: 'counselling',
-      label: 'Counselling',
-      titles: ['NLP & Counselling Sessions', 'Relationship Counselling', 'Career Counselling']
-    },
     {
       id: 'corporate',
       label: 'Corporate Wellness',

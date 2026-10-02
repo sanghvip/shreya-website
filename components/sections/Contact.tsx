@@ -95,34 +95,24 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      const form = e.currentTarget;
-      const submitData = new FormData();
-      
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
-
-      
-      if (!accessKey) {
-        throw new Error('Our messaging service is currently undergoing maintenance. Please try again in a few minutes or contact us directly via email.');
-      }
-
-      submitData.append("access_key", accessKey);
-      submitData.append("firstName", formData.firstName);
-      submitData.append("lastName", formData.lastName);
-      submitData.append("email", formData.email);
-      submitData.append("phone", formData.phone);
-      submitData.append("focusArea", formData.focusArea);
-      submitData.append("message", formData.message);
-      // Optional: Add a subject for the email
-      submitData.append("subject", `New Intro Call Request from ${formData.firstName} ${formData.lastName}`);
-
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: submitData
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          focusArea: formData.focusArea,
+          message: formData.message,
+        }),
       });
 
       const data = await response.json();
 
-      if (!data.success) {
+      if (!response.ok || !data.success) {
         throw new Error(data.message || 'Failed to submit form');
       }
 

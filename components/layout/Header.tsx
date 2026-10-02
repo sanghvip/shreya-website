@@ -15,17 +15,16 @@ export default function Header() {
   const navLinks = [
     { label: 'Home', href: '/home' },
     { label: 'About', href: '/about'},
-    { label: 'Services', href: '/services'},
+    { label: 'Corporate', href: '/services'},
+    { label: 'Resources', href: '/resources', dropdown: [
+      { label: 'Publications', href: '/articles' },
+      { label: 'Blogs', href: '/blogs' },
+      { label: 'Newsletters', href: '/newsletters' },
+      { label: 'Subscriptions', href: '/subscriptions' }
+    ]},
     { label: 'FAQ', href: '/faq' },
     { label: 'Initiative', href: '/initiative'}
   ];
-
-  // { label: 'Resources', href: '/resources', dropdown: [
-  //     { label: 'Articles', href: '/articles' },
-  //     { label: 'Blogs', href: '/blogs' },
-  //     { label: 'Newsletters', href: '/newsletters' },
-  //     { label: 'Subscriptions', href: '/subscriptions' }
-  //   ]},
 
     //   { label: 'Initiative', href: '/initiative', dropdown: [
     //   { label: 'Events', href: '/events' },

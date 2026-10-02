@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import { Instagram, Linkedin, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -36,7 +36,28 @@ export default function Footer() {
             <p className="text-xl sm:text-2xl font-serif text-white">Shreya Sanghvi</p>
           </div>
 
-          <div className="w-full md:w-auto flex justify-center md:justify-end">
+          <div className="flex flex-col items-center gap-4 md:items-end">
+            <div className="flex items-center justify-center gap-3 md:justify-end">
+              <a
+                href="https://ca.linkedin.com/in/shreyapsanghvi"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Shreya Sanghvi on LinkedIn"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition-colors hover:bg-white/10 hover:text-[#C9A961]"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/shreyasanghvvi/reels/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Shreya Sanghvi on Instagram"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition-colors hover:bg-white/10 hover:text-[#C9A961]"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+            </div>
+
             <a href="/home#contact" className="w-full md:w-auto">
               <button
                 className="flex w-full md:w-auto items-center justify-center gap-2 bg-primary-foreground text-primary px-4 py-2 rounded-full hover:opacity-90 transition-opacity text-sm font-medium"

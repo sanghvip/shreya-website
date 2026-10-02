@@ -1,90 +1,207 @@
 'use client';
 
-import { Phone, Zap, Lightbulb, TrendingUp } from 'lucide-react';
+import { MessageCircleMore, MapPinned, Clock3, TrendingUp } from 'lucide-react';
+
+/*
+const previousSteps = [
+  {
+    num: '1',
+    label: 'Step 1',
+    title: 'Talk',
+    description: 'Free discovery call.',
+    icon: MessageCircleMore,
+  },
+  {
+    num: '2',
+    label: 'Step 2',
+    title: 'Map',
+    description: 'Find the pattern.',
+    icon: MapPinned,
+  },
+  {
+    num: '3',
+    label: 'Step 3',
+    title: 'Practise',
+    description: 'In your 23 hours.',
+    icon: Clock3,
+  },
+  {
+    num: '4',
+    label: 'Step 4',
+    title: 'Grow',
+    description: 'Make it last.',
+    icon: TrendingUp,
+  },
+];
 
 export default function HowItWorks() {
   return (
-    <section className="bg-[#FAF8F3] py-20 md:py-28 lg:py-32 xl:py-40" id="how">
+    <section className="bg-[#112E2B] py-16 md:py-20 lg:py-24 xl:py-28" id="how">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        
-        {/* Header Section */}
-        <div className="max-w-3xl mb-12 sm:mb-16 md:mb-24">
-          <span className="text-[#C9A961] font-bold tracking-[0.2em] sm:tracking-[0.3em] text-[10px] sm:text-xs uppercase block mb-4 sm:mb-6">
-            The process
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-comic sans text-[#1A2B1C] leading-[1.1] mb-5 sm:mb-8 max-w-[18rem] sm:max-w-none">
-            <span className="block">What happens?</span>
-            <span className="italic text-[#7A8C7E] block">when you work with me</span>
-          </h2>
-          <p className="text-sm sm:text-base md:text-xl text-[#7A8C7E] font-comic sans leading-relaxed max-w-2xl">
-            Every session is a curated framework — a deliberate process designed to meet specific needs, guided by the stewardship of industry experts.
-          </p>
+        <h2 className="text-[3rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] font-serif text-[#F0EDE7] leading-none tracking-[-0.04em] mb-14 md:mb-20">
+          How it works
+        </h2>
+
+        <div className="hidden md:block relative">
+          <div className="absolute left-0 right-0 top-[4.5rem] h-px bg-[#D8D0C6]/35" />
+
+          <div className="grid grid-cols-4 gap-8 lg:gap-10 relative z-10">
+            {previousSteps.map((step) => {
+              const Icon = step.icon;
+
+              return (
+                <div key={step.num} className="flex flex-col items-start">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full border border-[#D8D0C6]/30 bg-[#1B443D] shadow-[inset_0_0_0_1px_rgba(216,208,198,0.15)] mb-8">
+                    <Icon className="h-8 w-8 text-[#D5C29A]" />
+                  </div>
+
+                  <div className="w-full">
+                    <p className="text-[0.7rem] uppercase tracking-[0.2em] text-[#C9A961] mb-3">
+                      {step.label}
+                    </p>
+                    <h3 className="text-3xl md:text-[2.25rem] font-serif text-[#F0EDE7] leading-none mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-[#F0EDE7]/80 text-base md:text-lg font-serif leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-12">
-          {[
-            {
-              num: "01",
-              icon: Zap,
-              title: "The Internal State",
-              desc: <>We analyze your challenges to pinpoint your actual, lived experience. Through a <strong>customized approach</strong>, we ensure you feel safe and grounded before addressing the raw emotions necessary for your <strong>power shift</strong>.</>,
-            },
-            {
-              num: "02",
-icon: Phone,
-              title: "The free intro call",
-              desc: "15 Minutes. We bypass the paperwork to focus on your objectives and evaluate our alignment. If we aren’t a strategic fit, I will provide a direct referral to the specific expert or resource you need."
-            },
-            {
-              num: "03",
-              icon: Lightbulb,
-              title: "The Mechanics of Change",
-              desc: "Once your current patterns are identified, I introduce a cognitive shift technique curated to your needs—anchoring, submodality shift, or parts integration. You experience the change directly, rather than just discussing it."},
-            {
-              num: "04",
-              icon: TrendingUp,
-              title: "The change between sessions",
-              desc: "Transformation happens between sessions. Every meeting ends with a targeted practice to turn immediate shifts into permanent habits, creating the compounding momentum needed for lasting change."
-            }
-          ].map((step, idx) => {
-            const IconComponent = step.icon;
+        <div className="md:hidden space-y-8">
+          {previousSteps.map((step) => {
+            const Icon = step.icon;
+
             return (
-            <div key={idx} className="group flex flex-col space-y-6">
-              <div className="flex items-baseline gap-4">
-                <span className="text-3xl md:text-4xl font-comic text-[#C9A961]/40 group-hover:text-[#C9A961] transition-colors duration-500">
-                  {step.num}
-                </span>
-                <div className="h-[1px] flex-grow bg-[#C9A961]/20 group-hover:bg-[#C9A961]/50 transition-all duration-700" />
+              <div key={step.num} className="flex items-start gap-4 border-b border-[#D8D0C6]/20 pb-6 last:border-b-0 last:pb-0">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#D8D0C6]/30 bg-[#1B443D]">
+                  <Icon className="h-6 w-6 text-[#D5C29A]" />
+                </div>
+
+                <div className="flex-1">
+                  <p className="text-[0.7rem] uppercase tracking-[0.2em] text-[#C9A961] mb-2">
+                    {step.label}
+                  </p>
+                  <h3 className="text-3xl font-serif text-[#F0EDE7] leading-none mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-[#F0EDE7]/80 text-base font-serif leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-comic text-[#1A2B1C] leading-tight min-h-[3rem]">
-                {step.title}
-              </h3>
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-[#C9A961]/10 group-hover:bg-[#C9A961]/20 transition-colors duration-500 mx-auto mb-2">
-                <IconComponent className="w-8 h-8 text-[#C9A961] group-hover:text-[#3A5244] transition-colors duration-500" />
-              </div>
-              <p className="text-[#3D5E44] text-sm leading-relaxed font-comic">
-                {typeof step.desc === 'string' ? step.desc : step.desc}
-              </p>
-            </div>
             );
           })}
         </div>
+      </div>
+    </section>
+  );
+}
+*/
 
-        {/* Note Box - Updated for full width and readability */}
-        {/* <div className="mt-20 md:mt-32 p-8 md:p-12 lg:p-16 bg-[#3A5244]/5 border border-[#3A5244]/10 rounded-2xl w-full">
-          <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-start">
-            <h4 className="text-[#C9A961] font-bold tracking-widest text-xs uppercase whitespace-nowrap pt-1.5">
-              A note on how long it takes
-            </h4>
-            <div className="max-w-5xl">
-              <p className="text-[#3D5E44] text-base md:text-lg lg:text-xl font-comic leading-relaxed italic">
-                I prioritize efficient results, delivering rapid shifts within 4 sessions or deeper transformations through 12. My commitment is to provide the precise duration necessary for sustainable outcomes, ensuring integrity and focused progress.
-              </p>
-            </div>
+const steps = [
+  {
+    num: '1',
+    label: 'Step 1',
+    title: 'Talk',
+    description: 'Free discovery call.',
+    icon: MessageCircleMore,
+  },
+  {
+    num: '2',
+    label: 'Step 2',
+    title: 'Map',
+    description: 'Find the pattern.',
+    icon: MapPinned,
+  },
+  {
+    num: '3',
+    label: 'Step 3',
+    title: 'Practise',
+    description: 'In your 23 hours.',
+    icon: Clock3,
+  },
+  {
+    num: '4',
+    label: 'Step 4',
+    title: 'Grow',
+    description: 'In your 23 hours.',
+    icon: TrendingUp,
+  },
+];
+
+export default function HowItWorks() {
+  return (
+    <section className="bg-[#112E2B] py-16 md:py-20 lg:py-24 xl:py-28" id="how">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <h2 className="text-[2.6rem] sm:text-[3rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] font-serif text-[#F0EDE7] leading-none tracking-[-0.04em] mb-10 sm:mb-14 md:mb-20">
+          How it works
+        </h2>
+
+        <div className="hidden md:block relative">
+          <div className="grid grid-cols-4 gap-8 lg:gap-10 relative z-10">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              const showConnector = index < steps.length - 1;
+
+              return (
+                <div key={step.num} className="flex flex-col items-start">
+                  <div className="flex w-full items-center gap-4 mb-8">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-full border border-[#D8D0C6]/30 bg-[#1B443D] shadow-[inset_0_0_0_1px_rgba(216,208,198,0.15)] shrink-0">
+                      <Icon className="h-8 w-8 text-[#C9A961]" />
+                    </div>
+
+                    {showConnector && (
+                      <div className="h-px flex-1 bg-[#C9A961]/80" />
+                    )}
+                  </div>
+
+                  <div className="w-full">
+                    <p className="text-[0.7rem] uppercase tracking-[0.2em] text-[#C9A961] mb-3">
+                      {step.label}
+                    </p>
+                    <h3 className="text-3xl md:text-[2.25rem] font-serif text-[#F0EDE7] leading-none mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-[#F0EDE7]/80 text-base md:text-lg font-serif leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div> */}
+        </div>
 
+        <div className="md:hidden space-y-6">
+          {steps.map((step) => {
+            const Icon = step.icon;
+
+            return (
+              <div key={step.num} className="flex items-start gap-4 border-b border-[#D8D0C6]/20 pb-5 last:border-b-0 last:pb-0">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#D8D0C6]/30 bg-[#1B443D]">
+                  <Icon className="h-6 w-6 text-[#C9A961]" />
+                </div>
+
+                <div className="flex-1">
+                  <p className="text-[0.7rem] uppercase tracking-[0.2em] text-[#C9A961] mb-2">
+                    {step.label}
+                  </p>
+                  <h3 className="text-2xl font-serif text-[#F0EDE7] leading-none mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-[#F0EDE7]/80 text-sm font-serif leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
