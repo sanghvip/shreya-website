@@ -41,6 +41,19 @@ export default function LeadCaptureModal() {
     return () => window.clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+
+    const originalOverflow = document.body.style.overflow;
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen]);
+
   const closeModal = () => {
     if (typeof window !== 'undefined') {
       window.sessionStorage.setItem('lead-modal-shown', 'true');
@@ -142,18 +155,23 @@ export default function LeadCaptureModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#112E2B]/70 p-4 backdrop-blur-sm">
-      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-[28px] border border-[#E7DFD4] bg-[#FAF8F3] shadow-[0_25px_80px_rgba(17,46,43,0.25)]">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#112E2B]/70 p-3 backdrop-blur-sm sm:p-4">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Lead capture form"
+        className="relative w-full max-w-[31rem] max-h-[85vh] overflow-y-auto overscroll-contain rounded-[22px] border border-[#E7DFD4] bg-[#FAF8F3] shadow-[0_25px_80px_rgba(17,46,43,0.25)] sm:rounded-[28px] md:max-w-2xl"
+      >
         <button
           type="button"
           aria-label="Close lead form"
           onClick={closeModal}
-          className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-[#E7DFD4] bg-white text-[#1A2B1C] transition-colors hover:border-[#C9A961] hover:text-[#C9A961]"
+          className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-[#E7DFD4] bg-white text-[#1A2B1C] transition-colors hover:border-[#C9A961] hover:text-[#C9A961] sm:right-4 sm:top-4 sm:h-10 sm:w-10"
         >
-          <X className="h-5 w-5" />
+          <X className="h-4 w-4 sm:h-5 sm:w-5" />
         </button>
 
-        <div className="p-5 sm:p-8 md:p-10">
+        <div className="p-4 sm:p-8 md:p-10">
           {isSuccess ? (
             <div className="flex min-h-[260px] flex-col items-center justify-center text-center">
               <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#3A5244]/10 text-[#3A5244]">
