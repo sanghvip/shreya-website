@@ -3,7 +3,8 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   try {
     const payload = await request.json();
-    const accessKey = process.env.LEAD_FORM_ACCESS_KEY;
+    const accessKey =
+      process.env.WEB3FORMS_ACCESS_KEY || process.env.LEAD_FORM_ACCESS_KEY;
 
     if (!accessKey) {
       return NextResponse.json(
@@ -38,17 +39,42 @@ export async function POST(request: Request) {
       body: formData,
     });
 
-    const data = await response.json();
+    const responseBody = await response.text();
+    let data: unknown;
 
-    return NextResponse.json(data, { status: response.ok ? 200 : 400 });
+    try {
+      data = JSON.parse(responseBody);
+    } catch {
+      console.error('Lead form service returned a non-JSON response:', response.status);
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'The form service returned an invalid response. Please try again.',
+        },
+        { status: 502 }
+      );
+    }
+
+    if (typeof data !== 'object' || data === null || Array.isArray(data)) {
+      console.error('Lead form service returned an unexpected response:', response.status);
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'The form service returned an invalid response. Please try again.',
+        },
+        { status: 502 }
+      );
+    }
+
+    return NextResponse.json(data, { status: response.ok ? 200 : 502 });
   } catch (error) {
     console.error('Lead form route error:', error);
     return NextResponse.json(
       {
         success: false,
-        message: 'Something went wrong while submitting the form.',
+        message: 'Unable to reach the form service. Please try again shortly.',
       },
-      { status: 500 }
+      { status: 502 }
     );
   }
 }
