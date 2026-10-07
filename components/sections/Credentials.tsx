@@ -29,6 +29,28 @@ export default function Credentials() {
       issuer: 'Canadian Counselling and Psychotherapy Association',
       year: '2020-Present',
     },
+    {
+      title: 'IBM Project Manager Professional Certificate',
+      issuer: 'Coursera',
+      year: 'Professional Certificate',
+    },
+    {
+      title: 'GenAI for Learning and Development',
+      issuer: 'Coursera',
+      year: 'Certificate',
+    },
+    {
+      title: 'Certificate in Workplace Learning and Adult Education',
+      issuer: 'George Brown College, Toronto',
+      year: 'Dec 2025 – Nov 2026 · In progress',
+      details:
+        'Coursework: Learning Facilitation & Delivery, Instructional Design & Development, Adult Learning Evaluation, Learning Needs Assessment, and eLearning.',
+    },
+    {
+      title: 'Certificate in Project Management',
+      issuer: 'Schulich School of Business, York University',
+      year: 'Oct 2026 – Jan 2027 · Part-time · In progress',
+    },
   ];
 
   return (
@@ -38,14 +60,19 @@ export default function Credentials() {
           Credentials & Qualifications
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {credentials.map((credential, index) => (
-            <div key={index} className="flex gap-4 items-start">
-              <CheckCircle className="w-6 h-6 text-[#C9A961] flex-shrink-0 mt-1" />
-              <div className="flex-1">
-                <h3 className="font-semibold text-foreground">{credential.title}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          {credentials.map((credential) => (
+            <div key={credential.title} className="flex min-w-0 items-start gap-3 sm:gap-4">
+              <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#C9A961] sm:h-6 sm:w-6" />
+              <div className="min-w-0 flex-1">
+                <h3 className="break-words font-semibold text-foreground">{credential.title}</h3>
                 <p className="text-muted-foreground text-sm">{credential.issuer}</p>
-                <p className="text-muted-foreground text-xs mt-1">{credential.year}</p>
+                <p className="mt-1 break-words text-xs text-muted-foreground">{credential.year}</p>
+                {'details' in credential && (
+                  <p className="mt-2 break-words text-sm leading-relaxed text-muted-foreground">
+                    {credential.details}
+                  </p>
+                )}
               </div>
             </div>
           ))}

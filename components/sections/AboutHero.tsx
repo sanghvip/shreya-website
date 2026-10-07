@@ -18,7 +18,19 @@ export default function AboutHero() {
     },
     {
       title: "George Brown College — Workplace Learning",
-      desc: "Adult Learning Fundamentals, Learning Facilitation & Delivery, and Bloom's Taxonomy applied practice."
+      desc: "Certificate in Workplace Learning and Adult Education in progress (Dec 2025–Nov 2026). Coursework includes facilitation and delivery, instructional design, adult learning evaluation, needs assessment, and eLearning."
+    },
+    {
+      title: "IBM Project Manager Professional Certificate",
+      desc: "Professional project management certificate from Coursera."
+    },
+    {
+      title: "GenAI for Learning and Development",
+      desc: "Coursera certificate focused on generative AI in learning and development."
+    },
+    {
+      title: "Schulich School of Business — Project Management",
+      desc: "Part-time Certificate in Project Management at York University, in progress (Oct 2026–Jan 2027)."
     },
     {
       title: "TEDx Circle Speaker",
@@ -93,15 +105,15 @@ export default function AboutHero() {
               </div>
 
               {/* Credentials List */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-[#EBE5D8]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-8 border-t border-[#EBE5D8]">
                 {credentials.map((cred, i) => (
-                  <div key={i} className="flex gap-4 group">
+                  <div key={i} className="flex min-w-0 gap-3 sm:gap-4 group">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-1.5 shrink-0 group-hover:scale-150 transition-transform duration-300" />
-                    <div className="space-y-1">
+                    <div className="min-w-0 space-y-1">
                       <h4 className="text-sm font-bold text-[#1A2B1C] uppercase tracking-wide leading-tight">
                         {cred.title}
                       </h4>
-                      <p className="text-[13px] text-[#7A8C7E] leading-relaxed">
+                      <p className="break-words text-[13px] text-[#7A8C7E] leading-relaxed">
                         {cred.desc}
                       </p>
                     </div>
