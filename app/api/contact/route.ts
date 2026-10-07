@@ -1,20 +1,42 @@
 import { NextResponse } from 'next/server';
 
-export async function POST(request: Request) {
-  try {
-    const payload = await request.json();
-    const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
 
-    if (!accessKey) {
+export async function POST(request: Request) {
+  let payload: Record<string, unknown>;
+
+  try {
+    const body: unknown = await request.json();
+    if (!isRecord(body)) {
       return NextResponse.json(
-        {
-          success: false,
-          message: 'Form service is not configured yet.',
-        },
-        { status: 500 }
+        { success: false, message: 'Invalid form submission.' },
+        { status: 400 }
       );
     }
+    payload = body;
+  } catch (error) {
+    console.error('Contact form request parsing error:', error);
+    return NextResponse.json(
+      { success: false, message: 'Invalid form submission.' },
+      { status: 400 }
+    );
+  }
 
+  const accessKey = process.env.WEB3FORMS_ACCESS_KEY?.trim();
+  if (!accessKey || accessKey === 'your_web3forms_access_key_here') {
+    console.error('Contact form service is not configured with a valid Web3Forms access key.');
+    return NextResponse.json(
+      {
+        success: false,
+        message: 'The contact form is not configured correctly. Please contact us directly.',
+      },
+      { status: 500 }
+    );
+  }
+
+  try {
     const formData = new FormData();
     formData.append('access_key', accessKey);
     formData.append('firstName', String(payload.firstName ?? ''));
@@ -38,17 +60,55 @@ export async function POST(request: Request) {
       body: formData,
     });
 
-    const data = await response.json();
+    const responseBody = await response.text();
+    let data: unknown;
 
-    return NextResponse.json(data, { status: response.ok ? 200 : 400 });
+    try {
+      data = JSON.parse(responseBody);
+    } catch (error) {
+      console.error('Contact form service returned a non-JSON response:', {
+        status: response.status,
+        contentType: response.headers.get('content-type'),
+        error,
+      });
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'The form service could not process the request. Please try again shortly.',
+        },
+        { status: 502 }
+      );
+    }
+
+    if (!isRecord(data)) {
+      console.error('Contact form service returned an unexpected response:', response.status);
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'The form service returned an invalid response. Please try again.',
+        },
+        { status: 502 }
+      );
+    }
+
+    if (!response.ok || data.success !== true) {
+      const message =
+        typeof data.message === 'string' && data.message.trim()
+          ? data.message
+          : 'The form service could not accept the request. Please try again.';
+      console.error('Contact form service rejected the submission:', response.status, message);
+      return NextResponse.json({ success: false, message }, { status: 502 });
+    }
+
+    return NextResponse.json(data);
   } catch (error) {
-    console.error('Contact form route error:', error);
+    console.error('Contact form service request error:', error);
     return NextResponse.json(
       {
         success: false,
-        message: 'Something went wrong while submitting the form.',
+        message: 'Unable to reach the form service. Please try again shortly.',
       },
-      { status: 500 }
+      { status: 502 }
     );
   }
 }
