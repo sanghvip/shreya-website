@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Mail, MapPin, Instagram, Linkedin, Youtube, CheckCircle2, AlertCircle } from 'lucide-react';
+import { submitContactForm } from '@/lib/web3forms';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -95,26 +96,10 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          focusArea: formData.focusArea,
-          message: formData.message,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Failed to submit form');
-      }
+      await submitContactForm(
+        formData,
+        `New Intro Call Request from ${formData.firstName} ${formData.lastName}`.trim()
+      );
 
       setIsSuccess(true);
       setFormData({
@@ -131,9 +116,14 @@ export default function Contact() {
         window.location.href = 'https://calendly.com/shreyasanghvi/new-meeting';
       }, 2000);
 
-    } catch (error: any) {
+    } catch (error) {
       console.error('Submission error:', error);
-      setErrors({ submit: error.message || 'Something went wrong. Please try again later.' });
+      setErrors({
+        submit:
+          error instanceof Error
+            ? error.message
+            : 'Something went wrong. Please try again later.',
+      });
     } finally {
       setIsSubmitting(false);
     }

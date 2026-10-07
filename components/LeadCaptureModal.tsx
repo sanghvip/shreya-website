@@ -2,6 +2,7 @@
 
 import { AlertCircle, CheckCircle2, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { submitContactForm } from '@/lib/web3forms';
 
 type FormState = {
   firstName: string;
@@ -119,34 +120,22 @@ export default function LeadCaptureModal() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          focusArea: formData.focusArea,
-          message: formData.message,
-        }),
-      });
-
-      const data = await response.json();
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Failed to submit the form');
-      }
+      await submitContactForm(
+        formData,
+        `New Lead Capture Form Submission from ${formData.firstName} ${formData.lastName}`.trim()
+      );
 
       setIsSuccess(true);
       setFormData(initialForm);
       setTimeout(() => {
         closeModal();
       }, 1800);
-    } catch (error: any) {
+    } catch (error) {
       console.error('Lead modal submission error:', error);
-      setErrors({ submit: error.message || 'Something went wrong. Please try again.' });
+      setErrors({
+        submit:
+          error instanceof Error ? error.message : 'Something went wrong. Please try again.',
+      });
     } finally {
       setIsSubmitting(false);
     }
