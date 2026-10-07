@@ -19,6 +19,10 @@ export async function POST(request: Request) {
     formData.append('access_key', accessKey);
     formData.append('firstName', String(payload.firstName ?? ''));
     formData.append('lastName', String(payload.lastName ?? ''));
+    formData.append(
+      'name',
+      `${String(payload.firstName ?? '')} ${String(payload.lastName ?? '')}`.trim()
+    );
     formData.append('email', String(payload.email ?? ''));
     formData.append('phone', String(payload.phone ?? ''));
     formData.append('focusArea', String(payload.focusArea ?? ''));
