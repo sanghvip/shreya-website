@@ -9,28 +9,24 @@ import { Mail, Instagram, ArrowRight, Mic } from 'lucide-react';
 export default function AboutHero() {
   const credentials = [
     {
-      title: "Certified NLP Practitioner",
-      desc: "Certified in Neuro-Linguistic Programming techniques including anchoring, submodalities, parts work, and timeline work."
+      title: "NLP Certification — International Association of NLP",
+      desc: "Certified in 2021, with training in anchoring, submodalities, parts work, and timeline work."
     },
     {
       title: "Certified Career Counsellor",
       desc: "Specialist in career transitions, newcomer pathway navigation, and professional identity building."
     },
     {
-      title: "George Brown College — Workplace Learning",
-      desc: "Certificate in Workplace Learning and Adult Education in progress (Dec 2025–Nov 2026). Coursework includes facilitation and delivery, instructional design, adult learning evaluation, needs assessment, and eLearning."
-    },
-    {
       title: "IBM Project Manager Professional Certificate",
-      desc: "Professional project management certificate from Coursera."
+      desc: "Professional certificate completed through Coursera."
     },
     {
-      title: "GenAI for Learning and Development",
-      desc: "Coursera certificate focused on generative AI in learning and development."
+      title: "Certificate in Workplace Learning and Adult Education",
+      desc: "George Brown College, Toronto · In progress (Dec 2025–Nov 2026). Coursework includes Learning Facilitation & Delivery, Instructional Design & Development, Adult Learning Evaluation, Learning Needs Assessment, and eLearning."
     },
     {
-      title: "Schulich School of Business — Project Management",
-      desc: "Part-time Certificate in Project Management at York University, in progress (Oct 2026–Jan 2027)."
+      title: "Certificate in Project Management",
+      desc: "Schulich School of Business, York University · Part-time, in progress (Oct 2026–Jan 2027)."
     },
     {
       title: "TEDx Circle Speaker",
@@ -104,22 +100,29 @@ export default function AboutHero() {
                 </div>
               </div>
 
-              {/* Credentials List */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 pt-8 border-t border-[#EBE5D8]">
-                {credentials.map((cred, i) => (
-                  <div key={i} className="flex min-w-0 gap-3 sm:gap-4 group">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-1.5 shrink-0 group-hover:scale-150 transition-transform duration-300" />
+              <section className="border-t border-[#EBE5D8] pt-8" aria-labelledby="about-credentials-heading">
+                <h3
+                  id="about-credentials-heading"
+                  className="mb-6 font-serif text-2xl text-primary sm:text-3xl"
+                >
+                  Credentials &amp; Qualifications
+                </h3>
+                <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
+                {credentials.map((cred) => (
+                  <div key={cred.title} className="group flex min-w-0 gap-3 sm:gap-4">
+                    <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#C9A961] transition-transform duration-300 group-hover:scale-150" />
                     <div className="min-w-0 space-y-1">
-                      <h4 className="text-sm font-bold text-[#1A2B1C] uppercase tracking-wide leading-tight">
+                      <h4 className="text-sm font-bold uppercase leading-tight tracking-wide text-[#1A2B1C]">
                         {cred.title}
                       </h4>
-                      <p className="break-words text-[13px] text-[#7A8C7E] leading-relaxed">
+                      <p className="break-words text-[13px] leading-relaxed text-[#7A8C7E]">
                         {cred.desc}
                       </p>
                     </div>
                   </div>
                 ))}
-              </div>
+                </div>
+              </section>
 
               {/* Skill Tags */}
               <div className="flex flex-wrap gap-2 pt-6">

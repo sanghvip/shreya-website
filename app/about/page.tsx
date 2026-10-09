@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import AboutHero from '@/components/sections/AboutHero';
-import Credentials from '@/components/sections/Credentials';
 import Team from '@/components/sections/Team';
 
 export const dynamic = 'force-dynamic';
@@ -23,8 +22,6 @@ export default function About() {
       {/* About Hero Section */}
       <AboutHero />
 
-      <Credentials />
-
       {/* Section Separator */}
       {/* <SectionSeparator variant="organic" /> */}
 
@@ -39,9 +36,6 @@ export default function About() {
 
       {/* Section Separator */}
       {/* <SectionSeparator variant="organic" /> */}
-
-      {/* Credentials Section */}
-      {/* <Credentials /> */}
 
       {/* Section Separator */}
       {/* <SectionSeparator variant="dots" /> */}
